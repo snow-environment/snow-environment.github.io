@@ -1,0 +1,170 @@
+body{
+    margin: 0px;
+}
+.diw-logo{
+    width: 160px;
+    height: 160px;
+    margin-right: 10px;
+  
+ 
+    border: 6px solid red;
+    border-radius: 95px;
+    box-shadow: 0px 0px 30px 0px #ff0000;
+
+    // 2nd way
+    position: absolute;
+    top: 240px;
+    left: 873px;
+
+}
+.login{
+    border: 5px solid #ffffffb8;
+    box-shadow: 0px 0px 30px 0px #92cc8391;
+    background: #293e40;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    border-top-left-radius: 60px;
+    margin-top: 160px;
+  
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow-x: hidden;
+    
+}
+html{
+    background: #546666;
+}
+// .diw-logo {
+//     height: 250px;
+//     width: 250px;
+//     // background: url("../img/DIW-logo.png");
+//     margin: auto;
+//     border-radius: 50%;
+//     box-sizing: border-box;
+//     box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+// }
+label,
+input {
+    display: block;
+    width: 55%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 12px;
+    border-radius: 25px;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 27px;
+    color: white;
+    margin-top: 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+label:nth-of-type(2) {
+    margin-top: 20px;
+}
+
+input::placeholder {
+    color: rgba(184, 179, 179, 0.678);
+};
+.submit{
+    padding-top: 15px; 
+ 
+    background: #abd7abb3;
+    margin-top: 30px;
+    font-size: 20px;
+  
+}
+.container input.submit:hover{
+    transition: 1.25s;
+    cursor: pointer;
+    background: #66df66;
+    box-shadow: 0px 0px 30px 0px #66df66;
+
+}
+.container{
+    padding-bottom: 60px;
+}
+.light-me-up{
+    font-size: 15px;
+    padding-left: 20px;
+}
+.light-me-up:hover{
+    transition: 0.5s;
+    box-shadow: 0px 0px 30px 0px #fffffe85;
+}
+.logo{
+    padding-top: 30px;
+}
+.error{
+    border: 2px solid #ff000087;
+    box-shadow: 0px 0px 30px 0px #ff0000b5;
+}
+.color-spliter{
+    width: 100%;
+    background: #377669;
+    height: 106px;
+}
+label[for="instanceName"] {
+padding-top:50px;
+}
+.visual-nav{
+    height: 60px;
+    width: 100%;
+    background: #293e40;
+    // margin-bottom: 150px;
+}
+.snLogo{
+    width: 200px;
+}
+
+
+.options {
+    text-decoration: none;
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+    display: list-item;
+    padding: 20px;
+    /* border-top: 1px solid white;
+    border-bottom: 1px solid white; */
+    color: white;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    width: 20%;
+    background-color: #74957b;
+    /* border-right: solid 2px black; */
+    border-right: solid 2px #4e7055;
+    overflow-x: hidden;
+    display: none;
+}
+// .content {
+//     background-color: white;
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+ 
+// }
+// .main-content {
+//     margin-left: 100px;
+//     margin-top: 200px;
+//     background-color: white;
+//     width: 60%;
+//     overflow: auto;
+// }
+.spacer {
+    width: 100%;
+    /* height: 100vh; */
+    height: 100%;
+    /* background: #040d22; */
+    background: #74957b;
+
+}

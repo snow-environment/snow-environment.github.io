@@ -13,7 +13,7 @@ const loginPageTemplate = (onSubmit) => html`
     </div>
     <div class="login-wrapper">
         <div class="logo"> 
-            <img src="../front-end/img/DIW-logo.png" alt="" class="diw-logo">
+        <img src="./img/DIW-logo.png" alt="" class="diw-logo">
             <!-- <img src="./img/SN.png"  width="200px" height="200px" background="grey" padding="10px" alt="" class="diw-logo">
             <img src="./img/js.png" alt=""> -->
             <!-- <img src="./img/DIW-logo.png" alt=""> -->
