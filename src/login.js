@@ -96,12 +96,8 @@ export async function loginPage(ctx) {
       else {
         warning();
       }
-
     }
-
-
   }
-
 }
 
 
