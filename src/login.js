@@ -1,5 +1,5 @@
 import { credentials } from './app.js';
-import { render, html } from './lib.js'
+import { render, html, page } from './lib.js'
 import { snowConnection } from './servicenowConn.js';
 // import {ServiceNow} from './lib/servicenow copy.js'
 // import { snowConnection } from './servicenowConn.js';
@@ -25,13 +25,13 @@ const loginPageTemplate = (onSubmit) => html`
               
                 
               <label for="instanceName">Instance Name:</label>
-              <input type="text" id="instanceName" name="instanceName" class="light-me-up" placeholder="dev123456.service-now.com"/>
+              <input type="text" id="instanceName" name="instanceName" class="light-me-up" value="dev104479" placeholder="dev123456.service-now.com"/>
 
               <label for="instanceUserName">Instance User Name:</label>
-              <input type="text" id="instanceUserName" name="instanceUserName" class="light-me-up" placeholder="admin"/>
+              <input type="text" id="instanceUserName" name="instanceUserName" class="light-me-up" value="admin" placeholder="admin"/>
 
               <label for="instance-pass">Instance Password:</label>
-              <input type="password" id="instance-password" name="instance-password" class="light-me-up" placeholder="***********"/>
+              <input type="password" id="instance-password" name="instance-password" class="light-me-up" value="!GZGymlrL*09" placeholder="***********"/>
               <input type="submit" class="btn submit" value="Sign In" />
          
             </div>
@@ -66,11 +66,91 @@ export async function loginPage(ctx) {
       console.log(credentials)
       // await snowConnection(credentials);
       // ----- API call to SN with Credentials. Return true or false!
-
+let xhrCode = false;
       // const sn = require("servicenow-rest-api");
+const alerta = ()=> alert('error')
+      // const request = new XMLHttpRequest();
+      const xhr = new XMLHttpRequest();
+xhr.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
+xhr.onload = () => {
+  console.log(xhr.responseURL); // http://example.com/test
+  console.log(xhr); // http://example.com/test
+  console.log(xhr.status); // http://example.com/test
+};
 
-      await snowConnection(instanceName,instanceUserName,instancePassword)
 
+// xhr.send(null);
+// // --------------------
+//       try {
+//         // request.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
+      
+//         request.responseType = 'json';
+      
+//         request.addEventListener('load', () => {
+//           alerta()
+//         });
+//         // request.addEventListener('error', () => console.error('XHR error'));
+      
+//         request.send();
+//         console.log(request)
+      
+//       } catch (error) {
+        
+//         // console.error(`XHR error ${request.status}`);
+//       }
+//       console.log(request.status)
+// // --------------------
+
+  //     const xhr = new XMLHttpRequest();
+
+  // xhr.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
+
+  //     xhr.onreadystatechange= function() {
+
+  // //       if (this.readyState!==4) return; // not ready yet
+  // //       if (this.status===200) { // HTTP 200 OK
+  // //           alert(this.responseText);
+  // //       } else {
+  // // alert("Please make sure you got correct credentials")
+
+  // //           // server returned an error. Do something with it or ignore it
+  // //       }
+  // console.log(" v XHR >",xhr)
+  // if(xhr.status ==0){
+  //   alert("Please make sure you got correct credentials")
+  // }
+  //   };
+
+
+
+    // xhr.send(null);
+      // xhr.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
+      // xhr.onload = () => {
+      //   console.log(xhr.responseURL); // http://example.com/test
+      //   console.log(xhr.status); // http://example.com/test
+      //   if(xhr.status == 200){
+      //     xhrCode =true;
+          
+      // console.log(request.status)
+
+    // console.log(asd)
+
+      //   }
+       
+      // };
+      // xhr.send(null);
+
+       let login = await snowConnection(instanceName,instanceUserName,instancePassword);
+       
+
+
+       console.log(login)
+if(login){
+  ctx.page.redirect('/tasks')
+}
+// if(!login && xhr.status!==200){
+//   alert("Please make sure you got correct credentials")
+// }
   // const serviceNow = new ServiceNow(credentials.instName, credentials.instUserName, credentials.instPassword);
 
       //   const ServiceNow = new sn("dev109438", "admin", "LrmsjVJB@8^3");

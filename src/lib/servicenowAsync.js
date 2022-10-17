@@ -29,6 +29,7 @@ ServiceNow.prototype.Authenticate=function(){
         console.log('Authenticated');
     },(rej)=>{
         console.log(rej);
+       
     });
 }
 

@@ -1,9 +1,16 @@
 //  import sn from './lib.js';
 // import * as sn from './lib/servicenow.js'
 
-import { ServiceNow } from "./lib/servicenowAsync.js";
+// import { ServiceNow } from "./lib/servicenowAsync.js";
 
 // import { ServiceNow } from "./lib/servicenow copy.js";
+import { ServiceNow } from "./lib/servicenowAsync.js";
+
+// -----------------------
+
+
+
+// -----------------------
 
 
 
@@ -19,7 +26,20 @@ export async function snowConnection(par,par2,par3) {
     // const sN = new sn("dev109438", "admin", "LrmsjVJB@8^3");
     const sN = new sn(par, par2, par3,true);
     // module.exports = { ServiceNow };
-    sN.Authenticate();
+    // sN.Authenticate();
+    
+    let auth = await sN.Authenticate();
+console.log('auth file',auth)
+if(auth.status == 200){
+  return true;
+}
+if(auth.status !== 200){
+  return false;
+}
+
+    // let auth =sN.Authenticate();
+    // let response = await auth.response.json()
+    // console.log('------------->',auth)
     // const connection = ServiceNow.Authenticate();
     // console.log(sn)
   }

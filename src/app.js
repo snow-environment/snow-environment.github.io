@@ -26,3 +26,20 @@ function decoration(ctx,next){
     ctx.render = (content) => render(content,root)
       next()
     }
+
+
+//     const xhr = new XMLHttpRequest();
+// xhr.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
+// xhr.onload = () => {
+//   console.log(xhr.responseURL); // http://example.com/test
+// };
+// xhr.send(null);
+
+//     xhr.open("GET", `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
+// xhr.onreadystatechange = function() {
+//   if (xhr.readyState === 4)  { 
+//     var serverResponse = xhr.responseText;
+//   }
+// };
+// xhr.send(null);
+
