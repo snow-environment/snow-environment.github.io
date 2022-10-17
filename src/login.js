@@ -66,134 +66,33 @@ export async function loginPage(ctx) {
       console.log(credentials)
       let btnSubmit = document.querySelector('.submit')
       console.log(btnSubmit)
-    btnSubmit.disabled = true;
-btnSubmit.classList.add('no-hover')
+      btnSubmit.disabled = true;
+      btnSubmit.classList.add('no-hover')
+      const myTimeout = setTimeout(warning, 3500);
 
-      // await snowConnection(credentials);
-      // ----- API call to SN with Credentials. Return true or false!
-// let xhrCode = false;
-//       // const sn = require("servicenow-rest-api");
-// const alerta = ()=> alert('error')
-//       // const request = new XMLHttpRequest();
-//       const xhr = new XMLHttpRequest();
-// xhr.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
-// xhr.onload = () => {
-//   console.log(xhr.responseURL); // http://example.com/test
-//   console.log(xhr); // http://example.com/test
-//   console.log(xhr.status); // http://example.com/test
-// };
-const myTimeout = setTimeout(warning, 3500);
+      function warning() {
 
-function warning() {
+        document.querySelector(".error-msg").style.opacity = 1;
+        let wrapper = document.querySelector('.login').classList.add('error-box')
+        let btnSubmit = document.querySelector('.submit')
+        btnSubmit.classList.remove('no-hover')
 
-document.querySelector(".error-msg").style.opacity = 1;
-let wrapper = document.querySelector('.login').classList.add('error-box')
-let btnSubmit = document.querySelector('.submit')
-btnSubmit.classList.remove('no-hover')
+        btnSubmit.disabled = false;
+        document.querySelector('#instanceUserName').value = ''
+        document.querySelector('#instance-password').value = ''
 
-btnSubmit.disabled = false;
-document.querySelector('#instanceUserName').value = ''
-document.querySelector('#instance-password').value = ''
-
-}
+      }
+      let login = await snowConnection(instanceName, instanceUserName, instancePassword);
 
 
 
-       let login = await snowConnection(instanceName,instanceUserName,instancePassword);
-       
-
-
-       console.log(login)
-if(login){
-  ctx.page.redirect('/tasks')
-}
-else{
-  warning();
-}
-// if(!login && xhr.status!==200){
-//   alert("Please make sure you got correct credentials")
-// }
-  // const serviceNow = new ServiceNow(credentials.instName, credentials.instUserName, credentials.instPassword);
-
-      //   const ServiceNow = new sn("dev109438", "admin", "LrmsjVJB@8^3");
-       
-      // serviceNow.Authenticate();
-
-      // const connection = serviceNow.Authenticate();
-     
-
-      //  IF we got True 
-      // ctx.redirect("/tasks")
-      // -----------------------
-      //  IF we got False - > Some Error will display
+      console.log(login)
+      if (login) {
+        ctx.page.redirect('/tasks')
+      }
+      else {
+        warning();
+      }
     }
-
-
   }
-
 }
-// export {serviceNow}
-
-
-
-
-// xhr.send(null);
-// // --------------------
-//       try {
-//         // request.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
-      
-//         request.responseType = 'json';
-      
-//         request.addEventListener('load', () => {
-//           alerta()
-//         });
-//         // request.addEventListener('error', () => console.error('XHR error'));
-      
-//         request.send();
-//         console.log(request)
-      
-//       } catch (error) {
-        
-//         // console.error(`XHR error ${request.status}`);
-//       }
-//       console.log(request.status)
-// // --------------------
-
-  //     const xhr = new XMLHttpRequest();
-
-  // xhr.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
-
-  //     xhr.onreadystatechange= function() {
-
-  // //       if (this.readyState!==4) return; // not ready yet
-  // //       if (this.status===200) { // HTTP 200 OK
-  // //           alert(this.responseText);
-  // //       } else {
-  // // alert("Please make sure you got correct credentials")
-
-  // //           // server returned an error. Do something with it or ignore it
-  // //       }
-  // console.log(" v XHR >",xhr)
-  // if(xhr.status ==0){
-  //   alert("Please make sure you got correct credentials")
-  // }
-  //   };
-
-
-
-    // xhr.send(null);
-      // xhr.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
-      // xhr.onload = () => {
-      //   console.log(xhr.responseURL); // http://example.com/test
-      //   console.log(xhr.status); // http://example.com/test
-      //   if(xhr.status == 200){
-      //     xhrCode =true;
-          
-      // console.log(request.status)
-
-    // console.log(asd)
-
-      //   }
-       
-      // };
-      // xhr.send(null);
