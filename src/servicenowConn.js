@@ -52,3 +52,56 @@ if(auth.status !== 200){
 // ServiceNow.Authenticate(); // Authenticate with SNOW instance
 
 
+// import { ServiceNow } from "./lib/servicenowAsync.js";
+
+
+
+// export async function snowConnection(par, par2, par3) {
+
+//   let sn = ServiceNow;
+
+//   // const sN = new sn("dev109438", "admin", "LrmsjVJB@8^3");
+
+//   const connector = new sn(par, par2, par3, true);
+
+//   connector.getSampleData("sys_user", (res) => {
+
+//     console.log(res)
+
+//     if (res.length > 0) {
+
+//       let auth = connector.Authenticate();
+
+//       console.log(auth.status)
+
+//       console.log("Connected");
+
+//       return true;
+
+//     } else {
+
+//       console.log("Failed to connect");
+
+//       return false;
+
+//     }
+
+//   });
+
+  // let auth = await sN.Authenticate();
+
+  // console.log('auth file', auth)
+
+  // if (auth.status == 200) {
+
+  //   return true;
+
+  // }
+
+  // if (auth.status !== 200) {
+
+  //   return false;
+
+  // }
+
+// }

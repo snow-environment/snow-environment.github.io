@@ -16,7 +16,7 @@ body {
 }
 
 .login {
-  border: 5px solid #ffffffb8;
+  border: 5px solid #ffffff;
   -webkit-box-shadow: 0px 0px 30px 0px #92cc8391;
           box-shadow: 0px 0px 30px 0px #92cc8391;
   background: #293e40;
@@ -126,7 +126,7 @@ input::placeholder {
 }
 
 label[for="instanceName"] {
-  padding-top: 50px;
+  margin-top: 0px;
 }
 
 .visual-nav {
@@ -172,5 +172,25 @@ label[for="instanceName"] {
   height: 100%;
   /* background: #040d22; */
   background: #74957b;
+}
+
+.error-msg {
+  margin-top: 68px;
+  margin-bottom: 0px;
+  display: hidden;
+  opacity: 0;
+  font-size: 20px;
+  color: red;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+}
+
+.error-box {
+  -webkit-box-shadow: 0px 0px 30px 0px #f30404fa;
+          box-shadow: 0px 0px 30px 0px #f30404fa;
+}
+
+.no-hover {
+  pointer-events: none;
 }
 /*# sourceMappingURL=style.css.map */
