@@ -9,70 +9,63 @@ export async function verifyTask() {
   console.log(connector)
 
   let isTableFound = false;
-  let isDescriptionFound = false;
-  let isShortDescriptionFound = false;
-  let isAssignedToFound = false;
+  let isFirstNameFound = false;
+  let isLastNameFound = false;
+  let isEmailAddressFound = false;
+
+  // Get table 
+  const tableData = await connector.getSampleData('sys_user', (res) => { console.log(res) });
+  if (tableData.status == 200) {
+    let resultTable = '';
+    for (const key in tableData) {
+      if (key == "data") {
+        resultTable = tableData[key].result;
+        if (resultTable.length > 0) {
+          isTableFound = true;
+          console.log("Test One: Table Found.")
+        }
+      }
+    }
+  }
+  console.log(tableData);
+
+
 
   // Get data from table
-  console.log('----')
-  const tableData = await connector.getSampleData('sys_user', (res) => {console.log(res)});
-  //   //   // if (res.length > 0) {
-  //   //   //   console.log(`Test One: Table "u_project_verify" found.`);
-  //   //   //   isTableFound = true;
-  //   //   //   for (let i = 0; i < res.length; i++) {
-  //   //   //     const object = res[i];
-  //   //   //     for (const key in object) {
-  //   //   //       if (key == "u_description" && object[key] == "Test Task 1") {
-  //   //   //         isDescriptionFound = true;
-  //   //   //         console.log(`Test One: Field "${key}" found with value "${object[key]}".`);
-  //   //   //       }
-  //   //   //       if (key == "u_short_description" && object[key] == "Test 1") {
-  //   //   //         isShortDescriptionFound = true;
-  //   //   //         console.log(`Test One: Field "${key}" found with value "${object[key]}".`);
-  //   //   //       }
-  //   //   //       if (key == "u_assigned_to" && object[key] == "5695d69673500010c2e7660c4cf6a789"){
-  //   //   //         isAssignedToFound = true;
-  //   //   //         console.log(`Test One: Field "${key}" found with value "${object[key]}".`);
-  //   //   //       }
-  //   //   //     }
-  //   //   //   }
-  //   //   // }
-  //   //   // if (isTableFound && isDescriptionFound && isShortDescriptionFound && isAssignedToFound){
-  //   //   //   console.log("Test One Completed")
-  //   //   //   return true;
-  //   //   // } else {
-  //   //   //   console.log("Test One Failed")
-  //   //   //   return false;
-  //   //   // }
-  // });
-  console.log(tableData);
-  
   const fields = [
     'first_name',
     'last_name',
     'email',
   ];
   const filters = [
-    'first_name=survey',
+    'first_name=John',
+    'last_name=Doe',
   ];
-  const tableRecords = await connector.getTableData(fields, filters, 'sys_user', function(res){console.log(res)});
-  
+  const tableRecords = await connector.getTableData(fields, filters, 'sys_user', function (res) { console.log(res) });
+
   console.log(tableRecords);
   let resultQuery = '';
   for (const key in tableRecords) {
-    if (key == 'data'){
-      console.log(tableRecords[key].result);
-      resultQuery = tableRecords[key].result;
-      for (let i = 0; i < resultQuery.length; i++){
-        console.log(resultQuery[i]);
-        for (const value in resultQuery[i]){
-          if (resultQuery[i] == "user"){
-          console.log(`${value} : ${resultQuery[i]}`);
-          }
-        }
+    if (key == "data") {
+      resultQuery = tableRecords[key].result[0];
+      console.log(resultQuery);
+      if (resultQuery["first_name"] == "John") {
+        isFirstNameFound = true;
+      }
+      if (resultQuery["last_name"] == "Doe") {
+        isLastNameFound = true;
+      }
+      if (resultQuery["email"] == "john.doe@example.com") {
+        isEmailAddressFound = true;
       }
     }
   }
+  if (isTableFound && isFirstNameFound && isLastNameFound && isEmailAddressFound) {
+    console.log("Test One: All Found.");
+    return true;
+  } else {
+    console.log("Test One: Not All Found.");
+    return false; 
+  }
 }
-
 // verifyTask();
