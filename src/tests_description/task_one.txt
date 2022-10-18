@@ -1,0 +1,18 @@
+### Task One ###
+
+1. Create a custom table with label 'Project Verify' and name 'u_project_verify':
+ - create a custom field with column label 'Description' and column name 'u_description'. Field type 'String' with max lenght 100
+ - create a custom field with column label 'Short Description' and column name 'u_short_description'. Field type 'String' with max lenght 20
+ - create a custom field with column label 'Assigned to' and column name 'u_assigned_to'. Field type 'List'. Set the reference of the field to 'sys_user' table
+
+OPTIONAL:
+ - Modify the default field layout(or create a new layout) to display only the following fields --> 'Description', 'Short Description', 'Assigned to','Created by' and 'Created'(last two fields are existing by default)
+
+2. In the newly created table, create a new record:
+ - 'Description' = 'Test Task 1'
+ - 'Short Description' = 'Test 1'
+ - 'Created by' = 'admin' (by default)
+ - 'Assigned to' = 'Jason Roy'(choose user from the choice menu)
+ - 'Created' = Current date and time
+
+Click Verify

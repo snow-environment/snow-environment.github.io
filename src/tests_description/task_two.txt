@@ -1,0 +1,14 @@
+### Task Two ###
+
+1. Create a new user:
+ - First Name: "John"
+ - Last Name: "Doe"
+ - Email: "john.doe@example.com"
+ - Leave all the rest fields by default
+
+2. Create a new group with name "Test Group":
+ - you can type in "Description" field anything by your choice
+
+3. Make the newly created user "John Doe" member of the group "Test Group"
+
+Click Verify

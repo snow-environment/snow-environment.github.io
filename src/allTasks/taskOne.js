@@ -1,4 +1,4 @@
-import {render, html} from '../lib.js'
+import { render, html } from '../lib.js'
 import { verifyTask } from '../testOne.js';
 const taskOneTemplate = () => html`
 
@@ -17,15 +17,16 @@ const taskOneTemplate = () => html`
 
 export async function tasksOnePage(ctx) {
 
-    console.log('tasksOnePage')
+  console.log('tasksOnePage')
   ctx.render(taskOneTemplate());
-let validateBtn = document.querySelector('.validate-task-btn')
-console.log(validateBtn)
-validateBtn.addEventListener('click',onSubmit)
-async function onSubmit(e){
-  e.preventDefault()
-  console.log('V A L I D A T E')
- let res = await verifyTask()
- console.log(res)
-}
+  let validateBtn = document.querySelector('.validate-task-btn')
+  console.log(validateBtn)
+  validateBtn.addEventListener('click', onSubmit)
+  async function onSubmit(e) {
+    e.preventDefault()
+    console.log('V A L I D A T E')
+    // let res = await verifyTask()
+    // console.log(res)
+    verifyTask()
   }
+}

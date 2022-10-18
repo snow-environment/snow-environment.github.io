@@ -80,14 +80,8 @@ export async function loginPage(ctx) {
         btnSubmit.disabled = false;
         document.querySelector('#instanceUserName').value = ''
         document.querySelector('#instance-password').value = ''
-
       }
-
-
-
       let login = await snowConnection(instanceName, instanceUserName, instancePassword);
-
-
 
       console.log(login)
       if (login) {
