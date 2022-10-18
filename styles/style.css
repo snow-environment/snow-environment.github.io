@@ -33,6 +33,7 @@ body {
 
 html {
   background: #546666;
+  overflow: hidden;
 }
 
 label,
@@ -133,6 +134,15 @@ label[for="instanceName"] {
   height: 60px;
   width: 100%;
   background: #293e40;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .snLogo {
@@ -148,6 +158,8 @@ label[for="instanceName"] {
   /* border-top: 1px solid white;
     border-bottom: 1px solid white; */
   color: white;
+  border-bottom: 1px solid white;
+  text-align: center;
 }
 
 .menu {
@@ -161,9 +173,24 @@ label[for="instanceName"] {
   width: 20%;
   background-color: #74957b;
   /* border-right: solid 2px black; */
-  border-right: solid 2px #4e7055;
+  border-right: solid 2px white;
   overflow-x: hidden;
   display: none;
+}
+
+.content {
+  background: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 94vh;
+  overflow-x: hidden;
+}
+
+.main-content {
+  overflow: auto;
+  width: 100%;
 }
 
 .spacer {
@@ -192,5 +219,50 @@ label[for="instanceName"] {
 
 .no-hover {
   pointer-events: none;
+}
+
+.task-wrapper {
+  margin-left: 40px;
+  border-bottom: 1px solid green;
+}
+
+.project-heading {
+  margin-left: 200px;
+  font-size: 2rem;
+}
+
+.button-wrapper {
+  margin: 30px;
+}
+
+.validate-task-btn {
+  padding: 2px 10px 2px 10px;
+  font-size: 15px;
+  background: #293e40;
+  color: white;
+  border: 1px solid #293e40;
+  border-radius: 2px;
+}
+
+section.taskOne {
+  margin-left: 30px;
+}
+
+.logout {
+  display: none;
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.task-info {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.req-for-task {
+  font-size: 18px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

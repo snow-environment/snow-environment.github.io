@@ -35,6 +35,7 @@ body{
 }
 html{
     background: #546666;
+    overflow: hidden;
 }
 // .diw-logo {
 //     height: 250px;
@@ -119,6 +120,9 @@ margin-top: 0px;
     height: 60px;
     width: 100%;
     background: #293e40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     // margin-bottom: 150px;
 }
 .snLogo{
@@ -135,6 +139,9 @@ margin-top: 0px;
     /* border-top: 1px solid white;
     border-bottom: 1px solid white; */
     color: white;
+    border-bottom: 1px solid white;
+    text-align: center;
+
 }
 .menu {
     display: flex;
@@ -143,24 +150,24 @@ margin-top: 0px;
     width: 20%;
     background-color: #74957b;
     /* border-right: solid 2px black; */
-    border-right: solid 2px #4e7055;
+    border-right: solid 2px white;
     overflow-x: hidden;
     display: none;
 }
-// .content {
-//     background-color: white;
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
+.content {
+    background: white;
+    width: 100%;
+   
+    display: flex;
+    height: 94vh;
+    overflow-x: hidden;
  
-// }
-// .main-content {
-//     margin-left: 100px;
-//     margin-top: 200px;
-//     background-color: white;
-//     width: 60%;
-//     overflow: auto;
-// }
+}
+.main-content {
+    // background: #e2eff2;
+    overflow: auto;
+    width: 100%;
+}
 .spacer {
     width: 100%;
     /* height: 100vh; */
@@ -187,4 +194,43 @@ margin-top: 0px;
 .no-hover{
     pointer-events: none;
 
+}
+.task-wrapper{
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: 1px solid green;
+}
+.project-heading{
+    margin-left: 200px;
+    font-size: 2rem;
+}
+.button-wrapper{
+    margin: 30px;
+}
+.validate-task-btn{
+    padding: 2px 10px 2px 10px;
+    font-size: 15px;
+    background: #293e40;
+    color: white;
+    border: 1px solid #293e40;
+    border-radius: 2px;
+}
+section.taskOne{
+    margin-left: 30px;
+}
+.logout{
+    display: none;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;  
+}
+.task-info{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.req-for-task{
+    font-size: 18px;
+ 
+    font-weight: bold;
 }

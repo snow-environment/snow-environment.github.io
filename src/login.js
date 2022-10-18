@@ -44,7 +44,9 @@ export async function loginPage(ctx) {
 
   console.log('loginPage')
   ctx.render(loginPageTemplate(onSubmit));
-
+  let mainContentEl = document.querySelector('.main-content')
+  mainContentEl.style.background ='#546666'
+  // console.log(mainContentEl)
   async function onSubmit(e) {
     e.preventDefault()
     console.log(credentials)
@@ -82,10 +84,11 @@ export async function loginPage(ctx) {
         document.querySelector('#instance-password').value = ''
       }
       let login = await snowConnection(instanceName, instanceUserName, instancePassword);
-
+      // mainContentEl.style.background ='#e2eff2'
       console.log(login)
       if (login) {
-        ctx.page.redirect('/tasks')
+        // mainContentEl.style.background ='rgb(226 239 242);'
+        ctx.page.redirect('/projects')
       }
       else {
         warning();

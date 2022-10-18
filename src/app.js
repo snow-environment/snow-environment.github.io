@@ -2,8 +2,8 @@
 import page from './lib/page.mjs'
 import {render, html} from './lib.js'
 import { loginPage } from './login.js'
-import { tasksPage } from './tasks.js'
-import { tasksOnePage } from './allTasks/taskOne.js'
+import { tasksPage } from './projects.js'
+import { tasksOnePage } from './allTasks/miniProjectOne.js'
 import { tasksTwoPage } from './allTasks/taskTwo.js'
 const root = document.querySelector('.main-content')
  export const credentials ={
@@ -11,13 +11,15 @@ const root = document.querySelector('.main-content')
    instUserName:'',
    instPassword:''
  };
+
+//  window.URL.addEventListener('change',()=> {console.log('change----------')})
 page(decoration)
 page('/',loginPage)
 
 page('/login',loginPage)
-page('/tasks',tasksPage)
-page('/tasks/1',tasksOnePage)
-page('/tasks/2',tasksTwoPage)
+page('/projects',tasksPage,)
+page('/projects/1',tasksOnePage)
+page('/projects/2',tasksTwoPage)
 
 
 page.start()
