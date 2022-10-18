@@ -107,6 +107,7 @@ export async function tasksOnePage(ctx) {
     console.log('V A L I D A T E')
     // let res = await verifyTask()
     // console.log(res)
-    verifyTask()
+    let response = await verifyTask()
+    console.log(response);
   }
 }

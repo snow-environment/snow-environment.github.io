@@ -44,28 +44,32 @@ export async function verifyTask() {
   const tableRecords = await connector.getTableData(fields, filters, 'sys_user', function (res) { console.log(res) });
 
   console.log(tableRecords);
-  let resultQuery = '';
-  for (const key in tableRecords) {
-    if (key == "data") {
-      resultQuery = tableRecords[key].result[0];
-      console.log(resultQuery);
-      if (resultQuery["first_name"] == "John") {
-        isFirstNameFound = true;
-      }
-      if (resultQuery["last_name"] == "Doe") {
-        isLastNameFound = true;
-      }
-      if (resultQuery["email"] == "john.doe@example.com") {
-        isEmailAddressFound = true;
+  console.log(tableRecords.data.result);
+  if (tableRecords.data.result.length > 0) {
+    let resultQuery = '';
+    for (const key in tableRecords) {
+      if (key == "data") {
+        let resultQuery = tableRecords[key].result[0];
+        console.log(resultQuery);
+        if (resultQuery["first_name"] == "John") {
+          isFirstNameFound = true;
+        }
+        if (resultQuery["last_name"] == "Doe") {
+          isLastNameFound = true;
+        }
+        if (resultQuery["email"] == "john.doe@example.com") {
+          isEmailAddressFound = true;
+        }
       }
     }
   }
+
   if (isTableFound && isFirstNameFound && isLastNameFound && isEmailAddressFound) {
     console.log("Test One: All Found.");
     return true;
   } else {
     console.log("Test One: Not All Found.");
-    return false; 
+    return false;
   }
 }
 // verifyTask();
