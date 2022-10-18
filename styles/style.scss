@@ -215,6 +215,11 @@ margin-top: 0px;
     border: 1px solid #293e40;
     border-radius: 2px;
 }
+.validate-task-btn:hover{
+    cursor: pointer;
+    background: #409151;
+    transition: 0.5s;
+}
 section.taskOne{
     margin-left: 30px;
 }
@@ -233,4 +238,21 @@ section.taskOne{
     font-size: 18px;
  
     font-weight: bold;
+}
+.grey-me{
+    background: grey  
+}
+.not-validated{
+    display: none;
+    background: #ff000038;
+    width: fit-content;
+    font-weight: bold;
+    padding: 6px 12px 6px 12px;
+}
+.validated{
+    display: none;
+    background: #0368038c;
+    width: fit-content;
+    font-weight: bold;
+    padding: 6px 12px 6px 12px;
 }
