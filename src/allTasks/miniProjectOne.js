@@ -105,8 +105,6 @@ export async function tasksOnePage(ctx) {
   async function onSubmit(e) {
     e.preventDefault()
     console.log('V A L I D A T E')
-    // let res = await verifyTask()
-    // console.log(res)
     let response = await verifyTask()
     console.log(response);
   }
