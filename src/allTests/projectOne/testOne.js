@@ -1,8 +1,7 @@
-import { credentials } from "./app.js";
-import { ServiceNow } from "./lib/servicenowAsync.js";
+import { credentials } from "../../app";
+import { ServiceNow } from "../../lib/servicenowAsync";
 
-
-export async function verifyTask() {
+export async function oneOne() {
   const sn = ServiceNow;
   const connector = new sn(credentials.instName, credentials.instUserName, credentials.instPassword, true);
   connector.Authenticate();
@@ -72,4 +71,4 @@ export async function verifyTask() {
     return false;
   }
 }
-// verifyTask();
+// oneOne();

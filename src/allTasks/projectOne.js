@@ -1,5 +1,6 @@
+import { oneOne } from '../allTests/projectOne/testOne.js';
 import { render, html } from '../lib.js'
-import { verifyTask } from '../testOne.js';
+
 const projectOneTemplate = () => html`
 <section class="taskOne">
   <h1 class="project-heading">Mini Project #1</h1>
@@ -119,7 +120,7 @@ export async function projectOne(ctx) {
     btn.disabled = true;
     btn.classList.add('no-hover')
     btn.classList.add('grey-me')
-    let response = await verifyTask()
+    let response = await oneOne()
   
     console.log(' me o w')
     

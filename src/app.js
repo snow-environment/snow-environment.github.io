@@ -6,7 +6,7 @@ import { tasksPage } from './projects.js'
 import { projectOne } from './allTasks/projectOne.js'
 import { projectTwo } from './allTasks/projectTwo.js'
 import { projectThree } from './allTasks/projectThree.js'
-import { projectFour } from './allTasks/project4.js'
+import { projectFour } from './allTasks/projectFour.js'
 import { projectFive } from './allTasks/projectFive.js'
 import { projectSix } from './allTasks/projectSix.js'
 const root = document.querySelector('.main-content')
