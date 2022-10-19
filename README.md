@@ -29,13 +29,15 @@ The Web Application is running JS scripts to check for the specific tables or re
 * `Max age` --> Leave as 0.
 * `Application` --> Global, by default.
 * `HTTP Methods` --> Leave `GET` and `POST` as set by default.
+
 :warning: To be able to log in, your ServiceNow instance should be in `Online` status. 
+
 :unlock: Getting your instance credentials:
 * Navigate to the [Developer Portal]([ServiceNow Developers](https://developer.servicenow.com/dev.do#!/)) and sign in with your account.
 * On the top-right corner open your profile and choose `Manage instance password`
 * In the newly opened window you can check your credentials. To login in ServiceNow Task Verifier Web Application you will need `Instance name` in format `devXXXXXX`, `Username` and `Password`.
 
-Follow these steps to fullfill and verify the given tasks:
+:arrow_right: Follow these steps to fullfill and verify the given tasks:
 * After succsesful login you will be able to review the pre-made tasks.
 * Check the assignements for every task you will find in the application.
 * Go back in your Developer Instance and perform the tasks. 
@@ -43,7 +45,7 @@ Follow these steps to fullfill and verify the given tasks:
 
 
 ### Contributing :computer:
- You are more than welocme to participate in further developing and maintenance of this project. You can fork the project, commit tour changes and open a pull request. The project uses `servicenow-rest-api` library for javascript to write simple scripts establishing connection to the ServiceNow Instance and verifying the pre-made tasks. 
+ You are more than welocme to participate in further developing and maintenance of this project. You can fork the project, commit your changes and open a pull request. The project is using `servicenow-rest-api` library for javascript to write simple scripts establishing connection to the ServiceNow Instance and verifying the pre-made tasks. 
  
  :warning: To install the ServiceNow API
 ```
@@ -54,14 +56,14 @@ npm install servicenow-rest-api
  *  [ServiceNow REST API Documentation](https://www.npmjs.com/package/servicenow-rest-api-with-promise)
  *  [GitHub Repo](https://github.com/SahilRS200/servicenow-rest-api)
 
- 1. Fork the Project
- 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
- 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
- 4. Push to the Branch (`git push origin feature/AmazingFeature`)
- 5. Open a Pull Request
+ :one:. Fork the Project </br>
+ :two:. Create your Feature Branch (`git checkout -b feature/AmazingFeature`) </br>
+ :three:. Commit your Changes (`git commit -m 'Add some AmazingFeature'`) </br>
+ :four:. Push to the Branch (`git push origin feature/AmazingFeature`) </br>
+ :five:. Open a Pull Request </br>
 
- Also, if you have a suggestion or if you have found a bug, you can fork the repository and create a pull request. You can also simply open an issue with tags `BUG` for fixing a issue or `FEATURE` in case you have an idea for improving or adding some new features. You can aslo participate in improving the documentation opening a issue with tag `DOC`. 
- We highly appreciate giving the project a star! :heart:
+ Also, if you have a suggestion or if you have found a bug, you can fork the repository and create a pull request. You can also simply open an issue with tags `BUG` for fixing a issue or `FEATURE` in case you have an idea for improving or adding some new features. You can aslo participate in improving the documentation opening a issue with tag `DOC`. </br>
+ We highly appreciate giving the project a :star:!
 
 
 ### Licence :scroll:
