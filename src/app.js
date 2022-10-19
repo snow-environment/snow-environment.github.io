@@ -3,8 +3,12 @@ import page from './lib/page.mjs'
 import {render, html} from './lib.js'
 import { loginPage } from './login.js'
 import { tasksPage } from './projects.js'
-import { tasksOnePage } from './allTasks/miniProjectOne.js'
-import { tasksTwoPage } from './allTasks/taskTwo.js'
+import { projectOne } from './allTasks/projectOne.js'
+import { projectTwo } from './allTasks/projectTwo.js'
+import { projectThree } from './allTasks/projectThree.js'
+import { projectFour } from './allTasks/project4.js'
+import { projectFive } from './allTasks/projectFive.js'
+import { projectSix } from './allTasks/projectSix.js'
 const root = document.querySelector('.main-content')
  export const credentials ={
    instName:'',
@@ -12,14 +16,18 @@ const root = document.querySelector('.main-content')
    instPassword:''
  };
 
-//  window.URL.addEventListener('change',()=> {console.log('change----------')})
+
 page(decoration)
 page('/',loginPage)
 
 page('/login',loginPage)
-page('/projects',tasksPage,)
-page('/projects/1',tasksOnePage)
-page('/projects/2',tasksTwoPage)
+page('/projects',tasksPage)
+page('/projects/1',projectOne)
+page('/projects/2',projectTwo)
+page('/projects/3',projectThree)
+page('/projects/4',projectFour)
+page('/projects/5',projectFive)
+page('/projects/6',projectSix)
 
 
 page.start()
@@ -30,18 +38,8 @@ function decoration(ctx,next){
     }
 
 
-//     const xhr = new XMLHttpRequest();
-// xhr.open('GET', `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
-// xhr.onload = () => {
-//   console.log(xhr.responseURL); // http://example.com/test
-// };
-// xhr.send(null);
+let logOutBtn = document.querySelector('.logout').addEventListener('click',logOut)
 
-//     xhr.open("GET", `https://${credentials.instName}.service-now.com/api/now/v2/table/sys_user?user_name=${credentials.instUserName}`, true);
-// xhr.onreadystatechange = function() {
-//   if (xhr.readyState === 4)  { 
-//     var serverResponse = xhr.responseText;
-//   }
-// };
-// xhr.send(null);
-
+function logOut(){
+  window.location.href = "/";
+}

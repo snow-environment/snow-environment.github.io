@@ -1,6 +1,6 @@
 import { render, html } from '../lib.js'
 import { verifyTask } from '../testOne.js';
-const taskOneTemplate = () => html`
+const projectOneTemplate = () => html`
 <section class="taskOne">
   <h1 class="project-heading">Mini Project #1</h1>
   <div class="task-wrapper">
@@ -103,10 +103,10 @@ const taskOneTemplate = () => html`
 `
 
 
-export async function tasksOnePage(ctx) {
+export async function projectOne(ctx) {
 
-  console.log('tasksOnePage')
-  ctx.render(taskOneTemplate());
+  console.log('projectOne')
+  ctx.render(projectOneTemplate());
   let validateBtn = document.querySelector('.validate-task-btn')
   let btn = document.querySelector('.validate-task-btn')
 
