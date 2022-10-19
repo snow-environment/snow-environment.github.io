@@ -1,14 +1,12 @@
-### Task Two ###
+### Test Two ###
 
-1. Create a new user:
- - First Name: "John"
- - Last Name: "Doe"
- - Email: "john.doe@example.com"
- - Leave all the rest fields by default
 
-2. Create a new group with name "Test Group":
- - you can type in "Description" field anything by your choice
+<> Create a new group
+	Name = "ServiceNow MiniProject One"
+	Manager = "Abel Hunter"
+	Group Email = "snow.web.app@example.com"
+	Description = "This is a test group for ServiceNow Task Verifier Web Application."
+	
+<> Assign the user "John Doe" to the "ServiceNow MiniProject One" and "Service Desk" group 
 
-3. Make the newly created user "John Doe" member of the group "Test Group"
-
-Click Verify
+<> Grant the user "john Doe" "itil" role.
