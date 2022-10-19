@@ -1,5 +1,5 @@
-import { credentials } from "../../app";
-import { ServiceNow } from "../../lib/servicenowAsync";
+import { credentials } from "../../app.js";
+import { ServiceNow } from "../../lib/servicenowAsync.js";
 
 export async function oneOne() {
   const sn = ServiceNow;
