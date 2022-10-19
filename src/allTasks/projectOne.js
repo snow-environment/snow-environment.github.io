@@ -35,6 +35,8 @@ const projectOneTemplate = () => html`
             Validate
           </button>
           <p class="not-validated">Requirements are not complete!</p>
+        <p class="validated">Task is completed!</p>
+
           
     </div>
   </div>
