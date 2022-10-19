@@ -140,8 +140,14 @@ margin-top: 0px;
     border-bottom: 1px solid white; */
     color: white;
     border-bottom: 1px solid white;
-    text-align: center;
+    // text-align: center;
+    // transition: all 0.5s  ease-in-out;
+    transition-duration: 0.5;
 
+}
+.options:hover{
+    background: #429553;
+    text-align: center;
 }
 .menu {
     display: flex;

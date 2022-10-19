@@ -159,6 +159,12 @@ label[for="instanceName"] {
     border-bottom: 1px solid white; */
   color: white;
   border-bottom: 1px solid white;
+  -webkit-transition-duration: 0.5;
+          transition-duration: 0.5;
+}
+
+.options:hover {
+  background: #429553;
   text-align: center;
 }
 
