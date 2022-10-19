@@ -120,11 +120,12 @@ export async function projectOne(ctx) {
     let notValidated = document.querySelector('.not-validated')
     notValidated.style.display = 'none'
     btn.disabled = true;
+  
     btn.classList.add('no-hover')
     btn.classList.add('grey-me')
     let response = await oneOne()
   
-    console.log(' me o w')
+
     
 
    
@@ -136,8 +137,9 @@ else{
   btn.disabled = false;
   btn.classList.remove('no-hover')
   btn.classList.remove('grey-me')
-  // btn.style.background ='red'
+
 notValidated.style.display = 'block'
+
 
 }
   }
