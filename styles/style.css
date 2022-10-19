@@ -159,13 +159,15 @@ label[for="instanceName"] {
     border-bottom: 1px solid white; */
   color: white;
   border-bottom: 1px solid white;
-  -webkit-transition-duration: 0.5;
-          transition-duration: 0.5;
+  -webkit-transition: all 0.5s  ease-in-out;
+  transition: all 0.5s  ease-in-out;
+  text-align: center;
 }
 
 .options:hover {
+  -webkit-transform: scaleX(1.1);
+          transform: scaleX(1.1);
   background: #429553;
-  text-align: center;
 }
 
 .menu {
@@ -180,7 +182,6 @@ label[for="instanceName"] {
   background-color: #74957b;
   /* border-right: solid 2px black; */
   border-right: solid 2px white;
-  overflow-x: hidden;
   display: none;
 }
 

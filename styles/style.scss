@@ -141,13 +141,15 @@ margin-top: 0px;
     color: white;
     border-bottom: 1px solid white;
     // text-align: center;
-    // transition: all 0.5s  ease-in-out;
-    transition-duration: 0.5;
+    transition: all 0.5s  ease-in-out;
+    // transition-duration: 0.5;
+    text-align: center;
+
 
 }
 .options:hover{
+    transform: scaleX(1.1);
     background: #429553;
-    text-align: center;
 }
 .menu {
     display: flex;
@@ -157,7 +159,7 @@ margin-top: 0px;
     background-color: #74957b;
     /* border-right: solid 2px black; */
     border-right: solid 2px white;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     display: none;
 }
 .content {
