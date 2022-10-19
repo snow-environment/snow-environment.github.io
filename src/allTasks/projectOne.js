@@ -1,5 +1,7 @@
 import { oneOne } from '../allTests/projectOne/testOne.js';
+import { oneTwo } from '../allTests/projectOne/testTwo.js';
 import { render, html } from '../lib.js'
+import { validation } from '../validate.js';
 
 const projectOneTemplate = () => html`
 <section class="taskOne">
@@ -31,7 +33,7 @@ const projectOneTemplate = () => html`
 
         </div>
         <div class="button-wrapper">
-        <button  class="validate-task-btn">
+        <button  class="validate-task-btn one">
             Validate
           </button>
           <p class="not-validated">Requirements are not complete!</p>
@@ -63,7 +65,7 @@ const projectOneTemplate = () => html`
    </ul>
       </div>
       <div class="button-wrapper">
-      <button  class="validate-task-btn">
+      <button  class="validate-task-btn two">
           Validate
         </button>
         <p class="not-validated">Please make sure you complete all requirements!</p>
@@ -95,7 +97,7 @@ const projectOneTemplate = () => html`
      </ul>
         </div>
         <div class="button-wrapper">
-        <button  class="validate-task-btn">
+        <button  class="validate-task-btn three">
             Validate
           </button>
           <p class="not-validated">Requirements are not complete!</p>
@@ -110,37 +112,66 @@ export async function projectOne(ctx) {
 
   console.log('projectOne')
   ctx.render(projectOneTemplate());
-  let validateBtn = document.querySelector('.validate-task-btn')
+  // let validateBtn = document.querySelector('.validate-task-btn')
   let btn = document.querySelector('.validate-task-btn')
+let validateButtons =document.querySelectorAll('.validate-task-btn').forEach(btn => {
+  btn.addEventListener('click', onSubmit)
+});
 
-  validateBtn.addEventListener('click', onSubmit)
+  // validateBtn.addEventListener('click', onSubmit)
   async function onSubmit(e) {
     e.preventDefault()
+    let eTarget = e.target;
     console.log('V A L I D A T E')
     let notValidated = document.querySelector('.not-validated')
     notValidated.style.display = 'none'
-    btn.disabled = true;
-  
-    btn.classList.add('no-hover')
-    btn.classList.add('grey-me')
-    let response = await oneOne()
-  
+    eTarget.disabled = true;
+    eTarget.classList.add('no-hover')
+    eTarget.classList.add('grey-me')
+//     btn.disabled = true;
+// console.log('notValidated >>>>>>>>>>>>>>',notValidated)
+//     btn.classList.add('no-hover')
+//     btn.classList.add('grey-me')
+    let response = ''
+    if (eTarget.classList.contains('one')) {
+      response = await oneOne()
+      console.log('BTN e 1')
 
-    
+    }
+    if (eTarget.classList.contains('two')) {
+      response = await oneTwo()
+      
+      console.log('BTN e 2')
 
-   
-if(response){
-  btn.style.display ='none'
-document.querySelector('.validated').style.display = 'block'
-}
-else{
-  btn.disabled = false;
-  btn.classList.remove('no-hover')
-  btn.classList.remove('grey-me')
+    }
+    // -----Activate when oneThree logic is ready!!!!------
+    // if (eTarget.classList.contains('three')) {
+    //   response = await oneThree()
+    //   console.log('BTN e 3')
 
-notValidated.style.display = 'block'
+    // }
+
+validation(response,btn,notValidated)
 
 
-}
+
+
+
   }
 }
+// function validation(response,btn,notValidated){
+
+//   if (response) {
+//     btn.style.display = 'none'
+//     document.querySelector('.validated').style.display = 'block'
+//   }
+//   else {
+//     btn.disabled = false;
+//     btn.classList.remove('no-hover')
+//     btn.classList.remove('grey-me')
+
+//     notValidated.style.display = 'block'
+
+
+//   }
+// }
