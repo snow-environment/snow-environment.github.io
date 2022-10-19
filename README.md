@@ -33,7 +33,7 @@ The Web Application is running JS scripts to check for the specific tables or re
 :warning: To be able to log in, your ServiceNow instance should be in `Online` status. 
 
 :unlock: Getting your instance credentials:
-* Navigate to the [Developer Portal]([ServiceNow Developers](https://developer.servicenow.com/dev.do#!/)) and sign in with your account.
+* Navigate to the [Developer Portal](https://developer.servicenow.com/dev.do#!/) and sign in with your account.
 * On the top-right corner open your profile and choose `Manage instance password`
 * In the newly opened window you can check your credentials. To login in ServiceNow Task Verifier Web Application you will need `Instance name` in format `devXXXXXX`, `Username` and `Password`.
 
