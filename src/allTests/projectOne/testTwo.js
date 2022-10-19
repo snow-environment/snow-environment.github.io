@@ -3,10 +3,11 @@ import { ServiceNow } from "../../lib/servicenowAsync.js";
 
 export async function oneTwo() {
     const sn = ServiceNow;
-    const connector = new sn(credentials.instName, credentials.instName, credentials.instPassword);
+    const connector = new sn(credentials.instName, credentials.instUserName, credentials.instPassword, true);
     connector.Authenticate();
     console.log(connector);
 
+   
     // Check if the Group is Created
     let isGroupFound = false;
     const fieldsFindGroup = [
@@ -21,8 +22,8 @@ export async function oneTwo() {
     ]
 
     const findGroup = await connector.getTableData(fieldsFindGroup, filtersFindGroup, 'sys_user_group', function (res) { console.log(res) });
-    console.log(findGroup);
-    console.log(findGroup.data.result);
+    // console.log(findGroup);
+    // console.log(findGroup.data.result);
     if (findGroup.data.result.length > 0) {
         for (const key in findGroup) {
             if (key == "data") {
@@ -30,8 +31,11 @@ export async function oneTwo() {
                 if (resultQuery["name"] == "ServiceNow MiniProject One") {
                     if (resultQuery["email"] == "snow.web.app@example.com") {
                         if (resultQuery["description"] == "This is a test group for ServiceNow Task Verifier Web Application.") {
-                            if (resultQuery["mananger"] == "Abel Tuter") {
-                                isTableFound = true;
+                            let managerName = resultQuery["manager"];
+                            for (const k in managerName) {
+                                if (managerName["display_value"] == "Abel Tuter") {
+                                    isGroupFound = true;
+                                }
                             }
                         }
                     }
