@@ -155,12 +155,10 @@ label[for="instanceName"] {
   letter-spacing: 5px;
   display: list-item;
   padding: 20px;
-  /* border-top: 1px solid white;
-    border-bottom: 1px solid white; */
   color: white;
   border-bottom: 1px solid white;
-  -webkit-transition: all 0.5s  ease-in-out;
-  transition: all 0.5s  ease-in-out;
+  -webkit-transition: all 0.6s  ease-in-out;
+  transition: all 0.6s  ease-in-out;
   text-align: center;
 }
 
@@ -273,8 +271,16 @@ section.taskOne {
   display: none;
   color: white;
   text-decoration: none;
-  margin-right: 20px;
+  margin-right: 25px;
   font-size: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+  color: red;
 }
 
 .task-info {
