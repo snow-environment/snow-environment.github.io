@@ -21,6 +21,14 @@ In addition to the Web Application you can download and use the [Desktop App](ht
 The Web Application is running JS scripts to check for the specific tables or records that you have create on your Developer Instance, following the assegnements. The scripts connects to your instance using a API and pre-made queries to the CMDB are used to extract the values from the tables/records.
 
 
+### Build with :wrench:
+Following technologies were used in the project:
+ * HTML/CSS/Javascript/TypeScript
+ * [ServiceNow Developer Portal](https://developer.servicenow.com/dev.do#!/)
+ * [ServiceNow REST API](https://www.npmjs.com/package/servicenow-rest-api?activeTab=readme)
+ * [Obsidian](https://obsidian.md/) 
+
+
 ### Usage :question:
 :warning: Before logging in the platform you should create a CORS rule in your ServiceNow Instance. Navigate to `Applications --> System Web Services --> REST --> CORS Rules`. Create a new rule with the following data:
 * `Name` --> Give it a name by your choose.
@@ -68,7 +76,6 @@ npm install servicenow-rest-api
 
 ### Licence :scroll:
 * Distributed under the GPL-3.0 license. See [LICENSE](https://github.com/snow-environment/snow-environment.github.io/blob/main/LICENSE.md) for more information.
-
 
 
 ### Contact :mailbox: 
