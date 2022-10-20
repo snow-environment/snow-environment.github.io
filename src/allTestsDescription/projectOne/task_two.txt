@@ -7,6 +7,7 @@
 	Group Email = "snow.web.app@example.com"
 	Description = "This is a test group for ServiceNow Task Verifier Web Application."
 	
+	
 <> Assign the user "John Doe" to the "ServiceNow MiniProject One" and "Service Desk" group 
 
-<> Grant the user "john Doe" "itil" role.
+<> Grant the user "John Doe" "itil" role.
