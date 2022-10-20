@@ -152,9 +152,7 @@ let validateButtons = document.querySelectorAll('.validate-task-btn').forEach(bt
       console.log('BTN e 2')
 
     }
-    else{
-      response = false;
-    }
+
     // -----Activate when oneThree logic is ready!!!!------
     // if (eTarget.classList.contains('three')) {
     //   response = await oneThree()
