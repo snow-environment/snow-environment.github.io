@@ -29,7 +29,6 @@ export async function oneOne() {
   console.log(tableData);
 
 
-
   // Get data from table
   const fields = [
     'first_name',
@@ -41,9 +40,8 @@ export async function oneOne() {
     'last_name=Doe',
   ];
   const tableRecords = await connector.getTableData(fields, filters, 'sys_user', function (res) { console.log(res) });
-
-  console.log(tableRecords);
-  console.log(tableRecords.data.result);
+  // console.log(tableRecords);
+  // console.log(tableRecords.data.result);
   if (tableRecords.data.result.length > 0) {
     let resultQuery = '';
     for (const key in tableRecords) {
@@ -64,10 +62,20 @@ export async function oneOne() {
   }
 
   if (isTableFound && isFirstNameFound && isLastNameFound && isEmailAddressFound) {
-    console.log("Test One: All Found.");
+    console.log("Test One:  All Tasks Completed.");
     return true;
   } else {
-    console.log("Test One: Not All Found.");
+    console.log("Test One: Tasks Not Completed.");
+    // Use the logic below to display which specific task was not completed
+    if (!isTableFound) {
+      console.log("Table `sys_user` not found."); // Basically imposible due to the fact that sys_user is a base table
+    }
+    if (!isFirstNameFound || !isLastNameFound) {
+      console.log("User with name `John Doe` not created.")
+    }
+    if (!isEmailAddressFound) {
+      console.log("Email address for user `John Doe` is not correct.")
+    }
     return false;
   }
 }
