@@ -9,6 +9,8 @@ const projectOneTemplate = () => html`
  
   
   <div class="task-wrapper">
+
+
       <h2>Task 1</h2>
       <div class="short-description">
         <p class="task-info">1. Create a new user:</p>
@@ -68,7 +70,7 @@ const projectOneTemplate = () => html`
       <button  class="validate-task-btn two">
           Validate
         </button>
-        <p class="not-validated">Please make sure you complete all requirements!</p>
+        <p class="not-validated">Requirements are not complete!</p>
         <p class="validated">Task is completed!</p>
 
   </div>
@@ -114,7 +116,7 @@ export async function projectOne(ctx) {
   ctx.render(projectOneTemplate());
   // let validateBtn = document.querySelector('.validate-task-btn')
   let btn = document.querySelector('.validate-task-btn')
-let validateButtons =document.querySelectorAll('.validate-task-btn').forEach(btn => {
+let validateButtons = document.querySelectorAll('.validate-task-btn').forEach(btn => {
   btn.addEventListener('click', onSubmit)
 });
 
@@ -123,7 +125,13 @@ let validateButtons =document.querySelectorAll('.validate-task-btn').forEach(btn
     e.preventDefault()
     let eTarget = e.target;
     console.log('V A L I D A T E')
-    let notValidated = document.querySelector('.not-validated')
+    //change logic with e target
+    console.log('e target > ',eTarget)
+    console.log('parent',eTarget.parentNode)
+    let eParent = eTarget.parentNode;
+    let notValidated =eParent.querySelector('.not-validated')
+    console.log('Not validated',notValidated);
+    // let notValidated = document.querySelector('.not-validated')
     notValidated.style.display = 'none'
     eTarget.disabled = true;
     eTarget.classList.add('no-hover')
@@ -144,6 +152,9 @@ let validateButtons =document.querySelectorAll('.validate-task-btn').forEach(btn
       console.log('BTN e 2')
 
     }
+    else{
+      response = false;
+    }
     // -----Activate when oneThree logic is ready!!!!------
     // if (eTarget.classList.contains('three')) {
     //   response = await oneThree()
@@ -151,7 +162,7 @@ let validateButtons =document.querySelectorAll('.validate-task-btn').forEach(btn
 
     // }
 
-validation(response,btn,notValidated)
+validation(response,eTarget,notValidated)
 
 
 
