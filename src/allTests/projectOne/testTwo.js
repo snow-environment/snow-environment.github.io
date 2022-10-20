@@ -8,7 +8,7 @@ export async function oneTwo() {
     console.log(connector);
 
 
-    // Check if the Group is Created
+    // Check if the Group is Created, a.k.a. Test One
     let isGroupFound = false;
     const fieldsFindGroup = [
         'name',
@@ -44,18 +44,16 @@ export async function oneTwo() {
     }
 
 
-
-    // Check if User is Assigned to the Group sys_user.sys_user_grmember.user_list
+    // Check if User is Assigned to the Group (sys_user_grmember table) a.k.a. Test Two
     let isGroupAssigned = false;
     const fieldsFindGroupAssigned = [
         "group",
         "user",
     ];
     const filtersFindGroupAssigned = [
-        // Leave empty
+        // Leave empty, XML file for the table sys_user_grmember in ServiceNow returns only SysIDs and not the values of the records
     ];
     const findGroupAssigned = await connector.getTableData(fieldsFindGroupAssigned, filtersFindGroupAssigned, 'sys_user_grmember', function (res) { console.log(res) });
-    // console.log(findGroupAssigned.data.result);
     let firstGroupFound = false;
     let secondGroupFound = false;
     for (let i = 0; i < findGroupAssigned.data.result.length; i++) {
@@ -73,8 +71,6 @@ export async function oneTwo() {
             break;
         }
     }
-
-
 
 
     // Check if Roles are Assigned to the User
