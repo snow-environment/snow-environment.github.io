@@ -1,15 +1,37 @@
 ### Task Three ###
 
-1. Create a new discovery schedule:
- - Set "Name" to "Test Schedule"
- - Set "Discover" to "Configuration items"
- - Set "Run" to "Weekly"
- - Set "Day of the week" as "Monday"
+<> Impersonate "ITIL User"
 
-2. Create a new IP range:
- - Set "Name" to "Test IP Range"
- - Set the newly created IP range to "Test Schedule" Discovery Schedule
- - Set "Start IP Address" to "192.168.0.1"
- - Set "End IP Address" to "192.168.0.100"
+<> Navigate to "Application" --> "Incident" --> "Create New" and create new record with the following data:
+	- Caller = "ITIL User"
+	- Category = "Software"
+	- Subcategory = "Operating System"
+	- Configuration item = "container-storage-setup" (find the CI in the search menu)
+	- Short Description = "Network Connectivity Problem"
+	- Description = "Check Network Adapter Config Settings. Network is down since last update."
+	- Channel = "Email"
+	- State = "New"
+	- Impact = "High"
+	- Urgency = "1 - High"
+	- Priority = "1 - Critical"
+	- Assignment Group = "ServiceNow MiniProject One"
+	- Assigned to = "John Doe"
 
- Click Verify
+<> For now, you can try to verify the assignment. Check the error and go back to the Instance to finish the task.
+
+<> Impersonate user "John Doe"
+	- Navigate to "Incidents", find and open the newly created Incident by ITIL User (Incident could be with different number in your instance)
+	- Optionally you can right click on the Navigation bar, click View and choose Default View to show all the fields
+	- Go to "Resolution Information" tab, on Resolition code choose "Solution provided" and insert "ONBOOT=yes set for eth0 network adapter" in the Resolution notes field
+	- Change the State on the incident to "Resolved"
+	- Click "Update" and End Impersonation
+
+<> Check the assignment with "Verify" Button
+
+<> Impersonate again "ITIL User", open Incident and check how the record has been modified
+
+<> End Impersonation and got back as System Administrator
+	- Navigate to "Applications --> Self-Service --> Incidents"
+	- Try to create a new filter and find the incident that you have created as a ITIL User
+	- Open and review the record
+	
