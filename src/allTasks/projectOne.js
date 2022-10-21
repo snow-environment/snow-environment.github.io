@@ -87,6 +87,18 @@ const projectOneTemplate = () => html`
           
         </ul>
         </div>
+        <p class="task-info">3. After you finish with the above assignment press "Verify" button and check the result</p>
+        <p class="task-info">!!OPTIONAL. Below's tasks will not affect the final result!!</p>
+        <p class="task-info">Impersonate user "John Doe"</p>
+        <ul class="requirements">
+          <li class="req-for-task">Navigate to "Incidents", find and open the newly created Incident by ITIL User (use the filter to find the incident)</li>
+          <li class="req-for-task">Optionally you can right click on the Navigation bar, click View and choose Default View to show all the fields</li>
+          <li class="req-for-task">Go to "Resolution Information" tab, on Resolition code choose "Solution provided" and insert "ONBOOT=yes set for eth0 network adapter" in the Resolution notes field</li>
+          <li class="req-for-task">Change the State on the incident to "Resolved"</li>
+          <li class="req-for-task">Click "Update" and End Impersonation</li>
+        
+      </ul>
+
         <div class="button-wrapper">
         <button  class="validate-task-btn three">
             Validate
