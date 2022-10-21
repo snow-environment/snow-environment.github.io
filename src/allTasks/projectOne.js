@@ -64,24 +64,28 @@ const projectOneTemplate = () => html`
   <div class="task-wrapper">
       <h2>Task 3</h2>
       <div class="short-description">
-        <p class="task-info">1. Create a new discovery schedule:</p>
-   <ul class="requirements">
-       <li class="req-for-task">Set "Name" to "Test Schedule"</li>
-       <li class="req-for-task">Set "Discover" to "Configuration items"</li>
-       <li class="req-for-task">Set "Run" to "Weekly"</li>
-       <li class="req-for-task">Set "Day of the week" as "Monday"</li>
-   </ul>
+        <p class="task-info">1. Impersonate "ITIL User"</p>
+
       </div>
       <!--  -->
       <div class="short-description">
-          <p class="task-info">2. Create a new IP range:</p>
-     <ul class="requirements">
-         <li class="req-for-task">Set "Name" to "Test IP Range"</li>
-         <li class="req-for-task">'Short Description' = 'Test 1'</li>
-         <li class="req-for-task">Set the newly created IP range to "Test Schedule" Discovery Schedule</li>
-         <li class="req-for-task">Set "Start IP Address" to "192.168.0.1"</li>
-         <li class="req-for-task">Set "End IP Address" to "192.168.0.100"</li>
-     </ul>
+          <p class="task-info">2. Navigate to "Application" --> "Incident" --> "Create New" and create new record with the following data:</p>
+          <ul class="requirements">
+            <li class="req-for-task">Caller = "ITIL User"</li>
+            <li class="req-for-task">Category = "Software"</li>
+            <li class="req-for-task">Subcategory = "Operating System"</li>
+            <li class="req-for-task">Configuration item = "container-storage-setup" (find the CI in the search menu)</li>
+            <li class="req-for-task">Short Description = "Network Connectivity Problem"</li>
+            <li class="req-for-task">Description = "Check Network Adapter Config Settings. Network is down since last update."</li>
+            <li class="req-for-task">Channel = "Email"</li>
+            <li class="req-for-task">State = "New"</li>
+            <li class="req-for-task">Impact = "High"</li>
+            <li class="req-for-task">Urgency = "1 - High"</li>
+            <li class="req-for-task">Priority = "1 - Critical"</li>
+            <li class="req-for-task">Assignment Group = "ServiceNow MiniProject One"</li>
+            <li class="req-for-task">Assigned to = "John Doe"</li>
+          
+        </ul>
         </div>
         <div class="button-wrapper">
         <button  class="validate-task-btn three">
