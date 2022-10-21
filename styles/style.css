@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap");
 body {
   margin: 0px;
 }
@@ -55,7 +56,7 @@ label {
   font-size: 27px;
   color: white;
   margin-top: 13px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 label:nth-of-type(2) {
@@ -83,6 +84,8 @@ input::placeholder {
   background: #abd7abb3;
   margin-top: 30px;
   font-size: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
 }
 
 .container input.submit:hover {
@@ -191,6 +194,7 @@ label[for="instanceName"] {
   display: flex;
   height: 94vh;
   overflow-x: hidden;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .main-content {
@@ -263,8 +267,9 @@ label[for="instanceName"] {
           box-shadow: 0px 0px 30px 0px #92cc83e1;
 }
 
-section.taskOne {
+section.projectOne {
   margin-left: 30px;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .logout {
@@ -315,6 +320,6 @@ section.taskOne {
   width: -moz-fit-content;
   width: fit-content;
   font-weight: bold;
-  padding: 6px 12px 6px 12px;
+  padding: 10px 12px 10px 12px;
 }
 /*# sourceMappingURL=style.css.map */

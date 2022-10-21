@@ -5,7 +5,7 @@ import { render, html } from '../lib.js'
 import { validation } from '../validate.js';
 
 const projectOneTemplate = () => html`
-<section class="taskOne">
+<section class="projectOne">
 
   <h1 class="project-heading">Mini Project #1</h1>
  
