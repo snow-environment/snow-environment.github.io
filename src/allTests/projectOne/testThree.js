@@ -9,12 +9,12 @@ export async function oneThree() {
     console.log(connector);
 
     // Check if Incident was created
-    let incidentisFound = false;
+    let isIncidentFound = false;
     const fieldsOpenIncident = [
-        "callerid display_value",
+        "caller_id",
         "category",
         "subcategory",
-        "cmdb_ci display_value",
+        "cmdb_ci",
         "short_description",
         "description",
         "contact_type", // Equal to Channel in the Incident table
@@ -22,14 +22,48 @@ export async function oneThree() {
         "impact", // XML returns strings instead of strings
         "urgency", // XML returns strings instead of strings
         "priority", // XML returns strings instead of strings
-        "assignment_group display_value", 
-        "assigned_to display_value",
+        "assignment_group",
+        "assigned_to",
     ];
     const filtersOpenIncident = [
         "short_description=Network Connectivity Problem"
     ];
-    const findOpenIncident = await connector.getTableData(fieldsOpenIncident, filtersOpenIncident, 'incident', function (res) {console.log(res)});
-    console.log(findOpenIncident);
+    const findOpenIncident = await connector.getTableData(fieldsOpenIncident, filtersOpenIncident, 'incident', function (res) {
+        console.log(res)
+        for (let i = 0; i < res.length; i++) { // Bloddy hell that if statement / Any way to optimize?
+            if (res[i]["caller_id"]["display_value"] == "ITIL User") {
+                if (res[i]["category"] == "Software") {
+                    if (res[i]["subcategory"] == "Operating System") {
+                        if (res[i]["cmdb_ci"]["display_value"] == "container-storage-setup") {
+                            if (res[i]["short_description"] == "Network Connectivity Problem") {
+                                if (res[i]["description"] == "Check Network Adapter Config Settings. Network is down since last update.") {
+                                    if (res[i]["contact_type"] == "Email") {
+                                        if (res[i]["state"] == "In Progress") { // Open State
+                                            if (res[i]["impact"] == "1 - High") { // Impact High
+                                                if (res[i]["urgency"] == "1 - High") { // Urgency High
+                                                    if (res[i]["priority"] == "1 - Critical") { // Priority Critical
+                                                        if (res[i]["assignment_group"]["display_value"] == "ServiceNow MiniProject One") {
+                                                            if (res[i]["assigned_to"]["display_value"] == "John Doe") {
+                                                                isIncidentFound = true;
+                                                                console.log("Test Three: Incident found.");
+                                                                return true;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+    });
+
 }
 
 // oneThree();

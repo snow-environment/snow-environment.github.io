@@ -101,6 +101,7 @@ export async function oneTwo() {
         // Use the logic below to display which specific task was not completed
         if (!isGroupFound) {
             console.log("Group `ServiceNow MiniProject One` not created.")
+            return false;
         }
         if (!isGroupFound) {
             if (!firstGroupFound) {
