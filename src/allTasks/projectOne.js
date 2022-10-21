@@ -50,16 +50,7 @@ const projectOneTemplate = () => html`
 
     </div>
     <!--  -->
-    <div class="short-description">
-        <p class="task-info" >2. In the newly created table, create a new record:</p>
-   <ul class="requirements">
-       <li class="req-for-task">'Description' = 'Test Task 1'</li>
-       <li class="req-for-task">'Short Description' = 'Test 1'</li>
-       <li class="req-for-task">'Created by' = 'admin' (by default)</li>
-       <li class="req-for-task">'Assigned to' = 'Jason Roy'(choose user from the choice menu)</li>
-       <li class="req-for-task">'Created' = Current date and time</li>
-   </ul>
-      </div>
+  
       <div class="button-wrapper">
       <button  class="validate-task-btn two">
           Validate
