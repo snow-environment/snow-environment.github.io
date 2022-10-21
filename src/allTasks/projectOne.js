@@ -45,8 +45,8 @@ const projectOneTemplate = () => html`
      <li class="req-for-task">Description = "This is a test group for ServiceNow Task Verifier Web Application."</li>
 </ul>
 
-<p class="task-info">Assign the user "John Doe" to the "ServiceNow MiniProject One" and "Service Desk" group</p>
-<p class="task-info">Grant the user "John Doe" "itil" role.</p>
+<p class="task-info">2. Assign the user "John Doe" to the "ServiceNow MiniProject One" and "Service Desk" group</p>
+<p class="task-info">3. Grant the user "John Doe" "itil" role.</p>
 
     </div>
     <!--  -->
@@ -115,8 +115,8 @@ let validateButtons = document.querySelectorAll('.validate-task-btn').forEach(bt
     console.log('e target > ',eTarget)
     console.log('parent',eTarget.parentNode)
     let eParent = eTarget.parentNode;
-    let notValidated =eParent.querySelector('.not-validated')
-    console.log('Not validated',notValidated);
+    let notValidated = eParent.querySelector('.not-validated')
+    console.log('Not validated',notValidated.parentNode);
     // let notValidated = document.querySelector('.not-validated')
     notValidated.style.display = 'none'
     eTarget.disabled = true;
