@@ -37,13 +37,17 @@ const projectOneTemplate = () => html`
   <div class="task-wrapper">
     <h2>Task 2</h2>
     <div class="short-description">
-      <p class="task-info">1. Create a custom table with label 'Project Verify' and name 'u_project_verify':</p>
+      <p class="task-info">1. Create a new group:</p>
  <ul class="requirements">
-     <li class="req-for-task">create a custom field with column label 'Description' and column name 'u_description'. Field type 'String' with max lenght 100</li>
-     <li class="req-for-task">create a custom field with column label 'Short Description' and column name 'u_short_description'. Field type 'String' with max lenght 20</li>
-     <li class="req-for-task">create a custom field with column label 'Assigned to' and column name 'u_assigned_to'. Field type 'List'. Set the reference of the field to 'sys_user' table</li>
-     <li class="req-for-task">(Optional) modify the default field layout(or create a new layout) to display only the following fields --> 'Description', 'Short Description', 'Assigned to','Created by' and 'Created'(last two fields are existing by default)</li>
- </ul>
+     <li class="req-for-task">Name = "ServiceNow MiniProject One"</li>
+     <li class="req-for-task">Manager = "Abel Hunter"</li>
+     <li class="req-for-task">Group Email = "snow.web.app@example.com"</li>
+     <li class="req-for-task">Description = "This is a test group for ServiceNow Task Verifier Web Application."</li>
+</ul>
+
+<p class="task-info">Assign the user "John Doe" to the "ServiceNow MiniProject One" and "Service Desk" group</p>
+<p class="task-info">Grant the user "John Doe" "itil" role.</p>
+
     </div>
     <!--  -->
     <div class="short-description">
