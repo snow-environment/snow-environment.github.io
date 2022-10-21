@@ -4,7 +4,7 @@ import { ServiceNow } from "../../lib/servicenowAsync.js";
 
 export async function oneThree() {
     const sn = ServiceNow;
-    const connector = new sn(credentials.instName, credentials.instUserName, credentials.instPassword);
+    const connector = new sn(credentials.instName, credentials.instUserName, credentials.instPassword, true);
     connector.Authenticate();
     console.log(connector);
 
@@ -28,26 +28,24 @@ export async function oneThree() {
     const filtersOpenIncident = [
         "short_description=Network Connectivity Problem"
     ];
-    const findOpenIncident = await connector.getTableData(fieldsOpenIncident, filtersOpenIncident, 'incident', function (res) {
-        console.log(res)
-        for (let i = 0; i < res.length; i++) { // Bloddy hell that if statement / Any way to optimize?
-            if (res[i]["caller_id"]["display_value"] == "ITIL User") {
-                if (res[i]["category"] == "Software") {
-                    if (res[i]["subcategory"] == "Operating System") {
-                        if (res[i]["cmdb_ci"]["display_value"] == "container-storage-setup") {
-                            if (res[i]["short_description"] == "Network Connectivity Problem") {
-                                if (res[i]["description"] == "Check Network Adapter Config Settings. Network is down since last update.") {
-                                    if (res[i]["contact_type"] == "Email") {
-                                        if (res[i]["state"] == "In Progress") { // Open State
-                                            if (res[i]["impact"] == "1 - High") { // Impact High
-                                                if (res[i]["urgency"] == "1 - High") { // Urgency High
-                                                    if (res[i]["priority"] == "1 - Critical") { // Priority Critical
-                                                        if (res[i]["assignment_group"]["display_value"] == "ServiceNow MiniProject One") {
-                                                            if (res[i]["assigned_to"]["display_value"] == "John Doe") {
-                                                                isIncidentFound = true;
-                                                                console.log("Test Three: Incident found.");
-                                                                return true;
-                                                            }
+    const findOpenIncident = await connector.getTableData(fieldsOpenIncident, filtersOpenIncident, 'incident', function (res) {console.log(res)});
+    for (let i = 0; i < findOpenIncident.data.result.length; i++) { // Bloddy hell that if statement / Any way to optimize?
+        if (findOpenIncident.data.result[i]["caller_id"]["display_value"] == "ITIL User") {
+            if (findOpenIncident.data.result[i]["category"] == "Software") {
+                if (findOpenIncident.data.result[i]["subcategory"] == "Operating System") {
+                    if (findOpenIncident.data.result[i]["cmdb_ci"]["display_value"] == "container-storage-setup") {
+                        if (findOpenIncident.data.result[i]["short_description"] == "Network Connectivity Problem") {
+                            if (findOpenIncident.data.result[i]["description"] == "Check Network Adapter Config Settings. Network is down since last update.") {
+                                if (findOpenIncident.data.result[i]["contact_type"] == "Email") {
+                                    if (findOpenIncident.data.result[i]["state"] == "In Progress") { // Open State
+                                        if (findOpenIncident.data.result[i]["impact"] == "1 - High") { // Impact High
+                                            if (findOpenIncident.data.result[i]["urgency"] == "1 - High") { // Urgency High
+                                                if (findOpenIncident.data.result[i]["priority"] == "1 - Critical") { // Priority Critical
+                                                    if (findOpenIncident.data.result[i]["assignment_group"]["display_value"] == "ServiceNow MiniProject One") {
+                                                        if (findOpenIncident.data.result[i]["assigned_to"]["display_value"] == "John Doe") {
+                                                            isIncidentFound = true;
+                                                            console.log("Test Three: Incident found.");
+                                                            return true;
                                                         }
                                                     }
                                                 }
@@ -60,10 +58,9 @@ export async function oneThree() {
                     }
                 }
             }
-            return false;
         }
-    });
-
+    }
+    return false;
 }
 
 // oneThree();
