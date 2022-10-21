@@ -1,16 +1,16 @@
 import { oneOne } from '../allTests/projectOne/testOne.js';
+import { oneThree } from '../allTests/projectOne/testThree.js';
 import { oneTwo } from '../allTests/projectOne/testTwo.js';
 import { render, html } from '../lib.js'
 import { validation } from '../validate.js';
 
 const projectOneTemplate = () => html`
 <section class="taskOne">
+
   <h1 class="project-heading">Mini Project #1</h1>
  
   
   <div class="task-wrapper">
-
-
       <h2>Task 1</h2>
       <div class="short-description">
         <p class="task-info">1. Create a new user:</p>
@@ -22,18 +22,8 @@ const projectOneTemplate = () => html`
    </ul>
       </div>
       <!--  -->
-      <div class="short-description">
-          <p class="task-info">2. Create a new group with name "Test Group":</p>
-     <ul class="requirements">
-         <li class="req-for-task">you can type in "Description" field anything by your choice</li>
-         <li class="req-for-task">'Short Description' = 'Test 1'</li>
-       
-     </ul>
-        </div>
-        <div class="short-description">
-          <p class="task-info">Make the newly created user "John Doe" member of the group "Test Group":</p>
 
-        </div>
+  
         <div class="button-wrapper">
         <button  class="validate-task-btn one">
             Validate
@@ -107,6 +97,7 @@ const projectOneTemplate = () => html`
     </div>
   </div>
     </section>
+
 `
 
 
@@ -154,11 +145,11 @@ let validateButtons = document.querySelectorAll('.validate-task-btn').forEach(bt
     }
 
     // -----Activate when oneThree logic is ready!!!!------
-    // if (eTarget.classList.contains('three')) {
-    //   response = await oneThree()
-    //   console.log('BTN e 3')
+    if (eTarget.classList.contains('three')) {
+      response = await oneThree()
+      console.log('BTN e 3')
 
-    // }
+    }
 
 validation(response,eTarget,notValidated)
 
