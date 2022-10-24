@@ -70,7 +70,7 @@ npm install servicenow-rest-api
  :four:. Push to the Branch (`git push origin feature/AmazingFeature`) </br>
  :five:. Open a Pull Request </br>
  
- :bulb: You can open an issue with `[BUG]` tag or `[FEATURE]` if you have an idea for improving the project or adding some new features.
+ :bulb: You can open an issue with `[BUG]` tag or `[FEATURE]` if you have an idea for improving the project or adding some new features. </br>
  :bulb: Open issue with `[DOC]` tag for documentation improvement </br>
  </br>
  We highly appreciate giving the project a :star:!
