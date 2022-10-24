@@ -162,10 +162,13 @@ label[for="instanceName"] {
   letter-spacing: 5px;
   display: list-item;
   padding: 20px;
+  list-style-type: none;
   color: white;
   border-bottom: 1px solid white;
   -webkit-transition: all 0.6s  ease-in-out;
   transition: all 0.6s  ease-in-out;
+  -webkit-transition: all 0.2s  ease-out;
+  transition: all 0.2s  ease-out;
   text-align: center;
 }
 
