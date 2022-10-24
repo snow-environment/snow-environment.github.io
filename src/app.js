@@ -43,3 +43,7 @@ let logOutBtn = document.querySelector('.logout').addEventListener('click',logOu
 function logOut(){
   window.location.href = "/";
 }
+export let localData = {
+  p1:{taskOne:false,taskTwo:false,taskThree:false
+  }
+}
