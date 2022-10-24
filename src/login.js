@@ -46,6 +46,7 @@ export async function loginPage(ctx) {
   ctx.render(loginPageTemplate(onSubmit));
   let mainContentEl = document.querySelector('.main-content')
   mainContentEl.style.background ='#546666'
+  mainContentEl.style.overflow ='hidden'
   // console.log(mainContentEl)
   async function onSubmit(e) {
     e.preventDefault()
