@@ -1,6 +1,7 @@
 import { oneOne } from '../allTests/projectOne/testOne.js';
 import { oneThree } from '../allTests/projectOne/testThree.js';
 import { oneTwo } from '../allTests/projectOne/testTwo.js';
+import { localData } from '../app.js';
 import { render, html } from '../lib.js'
 import { validation } from '../validate.js';
 
@@ -116,7 +117,48 @@ export async function projectOne(ctx) {
 
   console.log('projectOne')
   ctx.render(projectOneTemplate());
-  // let validateBtn = document.querySelector('.validate-task-btn')
+
+  console.log(localData.p1)
+  let currentTests = localData.p1
+  let allWrappers = document.querySelectorAll('.task-wrapper')
+  // console.log('all >',allWrappers)
+  // console.log('1 >',allWrappers[0])
+  // console.log('2 >',allWrappers[1])
+  // console.log('3 >',allWrappers[2])
+  // let allOptions = document.querySelectorAll('.options')
+  // console.log('before',allOptions)
+
+  // allOptions.forEach((btn) =>
+  // {
+  //   console.log(btn)
+  //   btn.classList.remove('clicked')
+   
+  // })
+  // console.log('after',allOptions)
+  // let currentClicked = allOptions[0];
+  // currentClicked.classList.add('clicked')
+
+
+  if(currentTests.taskOne == true){
+    console.log('TASK 1 COMPLATED')
+    let completeSection = allWrappers[0];
+    let removeBtn = completeSection.getElementsByTagName('button')[0]
+ 
+    removeBtn.style.display = 'none'
+
+    completeSection.querySelector('.validated').style.display = 'block'
+  }
+  if(currentTests.taskTwo == true){
+    console.log('TASK 2 COMPLATED')
+
+ 
+  }
+  if(currentTests.taskThree == true){
+    console.log('TASK 3 COMPLATED')
+
+  }
+
+
   let btn = document.querySelector('.validate-task-btn')
 let validateButtons = document.querySelectorAll('.validate-task-btn').forEach(btn => {
   btn.addEventListener('click', onSubmit)
@@ -128,21 +170,18 @@ mainContentEl.style.overflow = 'auto'
     e.preventDefault()
     let eTarget = e.target;
     console.log('V A L I D A T E')
-    //change logic with e target
+
     console.log('e target > ',eTarget)
     console.log('parent',eTarget.parentNode)
     let eParent = eTarget.parentNode;
     let notValidated = eParent.querySelector('.not-validated')
     console.log('Not validated',notValidated.parentNode);
-    // let notValidated = document.querySelector('.not-validated')
+  
     notValidated.style.display = 'none'
     eTarget.disabled = true;
     eTarget.classList.add('no-hover')
     eTarget.classList.add('grey-me')
-//     btn.disabled = true;
-// console.log('notValidated >>>>>>>>>>>>>>',notValidated)
-//     btn.classList.add('no-hover')
-//     btn.classList.add('grey-me')
+
     let response = ''
     if (eTarget.classList.contains('one')) {
       response = await oneOne()
@@ -163,7 +202,7 @@ mainContentEl.style.overflow = 'auto'
 
     }
 
-validation(response,eTarget,notValidated)
+    validation(response,eTarget,notValidated,'p1')
 
 
 
