@@ -45,5 +45,7 @@ function logOut(){
 }
 export let localData = {
   p1:{taskOne:false,taskTwo:false,taskThree:false
+  },
+  p2:{taskOne:false,taskTwo:false,taskThree:false
   }
 }
