@@ -2,7 +2,7 @@
 import page from './lib/page.mjs'
 import {render, html} from './lib.js'
 import { loginPage } from './login.js'
-import { tasksPage } from './projects.js'
+import { welcomePage } from './welcomePage.js'
 import { projectOne } from './allTasks/projectOne.js'
 import { projectTwo } from './allTasks/projectTwo.js'
 import { projectThree } from './allTasks/projectThree.js'
@@ -21,7 +21,7 @@ page(decoration)
 page('/',loginPage)
 
 page('/login',loginPage)
-page('/projects',tasksPage)
+page('/projects',welcomePage)
 page('/projects/1',projectOne)
 page('/projects/2',projectTwo)
 page('/projects/3',projectThree)

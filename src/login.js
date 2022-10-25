@@ -1,6 +1,6 @@
 import { credentials } from './app.js';
 import { render, html, page } from './lib.js'
-import { snowConnection } from './servicenowConn.js';
+import { snowConnection } from './util/servicenowConn.js';
 // import {ServiceNow} from './lib/servicenow copy.js'
 // import { snowConnection } from './servicenowConn.js';
 

@@ -3,7 +3,7 @@ import { oneThree } from '../allTests/projectOne/testThree.js';
 import { oneTwo } from '../allTests/projectOne/testTwo.js';
 import { localData } from '../app.js';
 import { render, html } from '../lib.js'
-import { validation } from '../validate.js';
+import { validation } from '../util/validate.js';
 
 const projectOneTemplate = () => html`
 <section class="projectOne">

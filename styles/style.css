@@ -195,7 +195,7 @@ label[for="instanceName"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 94vh;
+  height: 95vh;
   overflow-x: hidden;
   font-family: 'Work Sans', sans-serif;
 }

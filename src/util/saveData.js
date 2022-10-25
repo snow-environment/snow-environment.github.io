@@ -1,4 +1,4 @@
-import { localData } from "./app.js"
+import { localData } from "../app.js"
 
 
 export function saveMe(btn, currentProject) {

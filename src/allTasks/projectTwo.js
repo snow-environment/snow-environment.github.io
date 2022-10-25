@@ -3,7 +3,7 @@ import { twoOne } from '../allTests/projectTwo/testOne.js';
 import { twoThree } from '../allTests/projectTwo/testThree.js';
 import { twoTwo } from '../allTests/projectTwo/testTwo.js';
 import {render, html} from '../lib.js'
-import { validation } from '../validate.js';
+import { validation } from '../util/validate.js';
 
 const projectTwoTemplate = () => html`
 
