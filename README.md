@@ -53,7 +53,7 @@ Following technologies were used in the project:
 
 
 ### Contributing :computer:
- You are more than welocme to participate in further developing and maintenance of this project. You can fork the project, commit your changes and open a pull request. The project is using `servicenow-rest-api` library for javascript to write simple scripts establishing connection to the ServiceNow Instance and verifying the pre-made tasks. 
+ You are more than welcome to take a part in further developing and maintenance of this project. You can fork the project, commit your changes and open a pull request. The project is using `servicenow-rest-api` library for javascript to write simple scripts establishing connection to the ServiceNow Instance and verifying the pre-made tasks. 
  
  :warning: To install the ServiceNow API
 ```
@@ -69,10 +69,11 @@ npm install servicenow-rest-api
  :three:. Commit your Changes (`git commit -m 'Add some AmazingFeature'`) </br>
  :four:. Push to the Branch (`git push origin feature/AmazingFeature`) </br>
  :five:. Open a Pull Request </br>
-
- Also, if you have a suggestion or if you have found a bug, you can fork the repository and create a pull request. You can also simply open an issue with tags `BUG` for fixing a issue or `FEATURE` in case you have an idea for improving or adding some new features. You can aslo participate in improving the documentation opening a issue with tag `DOC`. </br>
+ 
+ :bulb: You can open an issue with `[BUG]` tag or `[FEATURE]` if you have an idea for improving the project or adding some new features. </br>
+ :bulb: Open issue with `[DOC]` tag for documentation improvement </br>
+ </br>
  We highly appreciate giving the project a :star:!
-
 
 ### Licence :scroll:
 * Distributed under the GPL-3.0 license. See [LICENSE](https://github.com/snow-environment/snow-environment.github.io/blob/main/LICENSE.md) for more information.
