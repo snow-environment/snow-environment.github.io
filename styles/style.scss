@@ -16,8 +16,10 @@ body{
 
     // 2nd way
     position: absolute;
-    top: 200px;
-    left: 970px;
+    // top: 200px;
+    // left: 970px;
+    top: -86px;
+    left: 194px;
 
 }
 .login{
@@ -27,9 +29,9 @@ body{
     // width: 30%;
     width: 567px;
     text-align: center;
-    margin: auto;
+    // margin: auto;
     border-top-left-radius: 60px;
-    margin-top: 115px;
+    // margin-top: 115px;
   
     border-top-right-radius: 60px;
     border-bottom-left-radius: 30px;
@@ -109,6 +111,7 @@ input::placeholder {
 }
 .logo{
     padding-top: 30px;
+    position: relative;
 }
 .error{
     border: 2px solid #ff000087;
@@ -291,25 +294,36 @@ background :#429553;
 transform:scaleX(1.1);
 }
 
+.login-view{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-
-
-
-@media all and (max-width:1920px){
-   
-    .diw-logo{
-        left: 880px;
-    }
-  
 }
-@media (min-width:1500px) and (max-width:1550px){
+
+
+
+
+// @media all and (max-width:1920px){
+   
+//     .diw-logo{
+//         left: 880px;
+//     }
+  
+// }
+@media (min-width:700px) and (max-width:1550px){
    .login{
-           margin-top: 35px;
+        //    margin-top: 35px;
+           width: 456px;
         }
       .diw-logo{
-        left: 685px;
-        top: 120px;
-        
+        // left: 685px;
+        // top: 120px;
+        width: 130px;
+        height: 130px;
+        top: -70px;
+    left: 161px;
       }
       label, input {
           padding: 7px;
@@ -325,47 +339,47 @@ transform:scaleX(1.1);
 
     
 }
-@media all and (max-width:1440){
+// @media all and (max-width:1440){
    
-    .diw-logo{
-        left: 632px;
-    }
+//     .diw-logo{
+//         left: 632px;
+//     }
 
-}
+// }
 
 
-@media (min-width:1346px) and (max-width:1366px){
+// @media (min-width:1346px) and (max-width:1366px){
    
-    .diw-logo{
-        left: 605px;
-    }
+//     .diw-logo{
+//         left: 605px;
+//     }
   
-}
-@media (min-width:1280px) and (max-width:1300px){
+// }
+// @media (min-width:1280px) and (max-width:1300px){
    
-    .diw-logo{
-        left: 560px;
-    }
+//     .diw-logo{
+//         left: 560px;
+//     }
   
-}
-@media (min-width:1000px) and (max-width:1024px){
+// }
+// @media (min-width:1000px) and (max-width:1024px){
    
-    .diw-logo{
-        left: 430px;
-    }
+//     .diw-logo{
+//         left: 430px;
+//     }
   
-}
-@media all and (max-width:820px){
+// }
+// @media all and (max-width:820px){
    
-    .diw-logo{
-        left: 320px;
-    }
+//     .diw-logo{
+//         left: 320px;
+//     }
 
-}
-@media all and (max-width:770px){
+// }
+// @media all and (max-width:770px){
    
-    .diw-logo{
-        left: 300px;
-    }
+//     .diw-logo{
+//         left: 300px;
+//     }
 
-}
+// }

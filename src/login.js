@@ -25,13 +25,13 @@ const loginPageTemplate = (onSubmit) => html`
 
                 
               <label for="instanceName">Instance Name:</label>
-              <input type="text" id="instanceName" name="instanceName" class="light-me-up" value="dev109438" placeholder="dev123456.service-now.com"/>
+              <input type="text" id="instanceName" name="instanceName" class="light-me-up" value="dev104479" placeholder="dev123456"/>
 
               <label for="instanceUserName">Instance User Name:</label>
               <input type="text" id="instanceUserName" name="instanceUserName" class="light-me-up" value="admin" placeholder="admin"/>
 
               <label for="instance-pass">Instance Password:</label>
-              <input type="password" id="instance-password" name="instance-password" class="light-me-up" value="LrmsjVJB@8^3" placeholder="***********"/>
+              <input type="password" id="instance-password" name="instance-password" class="light-me-up" value="!GZGymlrL*09" placeholder="***********"/>
               <input type="submit" class="btn submit" value="Sign In" />
          
             </div>
@@ -47,6 +47,10 @@ export async function loginPage(ctx) {
   let mainContentEl = document.querySelector('.main-content')
   mainContentEl.style.background ='#546666'
   mainContentEl.style.overflow ='hidden'
+mainContentEl.classList.add('login-view')
+  // mainContentEl.style.display.justify-content ='center'
+  
+  // align-items: center;
   // console.log(mainContentEl)
   async function onSubmit(e) {
     e.preventDefault()

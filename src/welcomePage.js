@@ -15,11 +15,13 @@ const welcomePageTemplate = () => html`
 export async function welcomePage(ctx) {
   let mainContentEl = document.getElementById('main-a')
   mainContentEl.style.background ='#e2eff2'
+mainContentEl.classList.remove('login-view')
+
     console.log(mainContentEl)
   ctx.render(welcomePageTemplate());
   let contentEl = document.querySelector('.content')
   let menu = document.querySelector('.menu')
-  console.log(contentEl)
+
   contentEl.style.background ='white';
   contentEl.style.width ='100%';
   contentEl.style.height ='100%';
@@ -28,6 +30,10 @@ export async function welcomePage(ctx) {
   contentEl.style.display ='flex';
   contentEl.style.height = '95vh'
   menu.style.display='flex'
+
+
+
+  mainContentEl.style.display ='block'
  let logOut = document.querySelector('.logout').style.display = 'block'
 
 
