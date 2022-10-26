@@ -132,51 +132,50 @@ export async function projectOne(ctx) {
   // {
   //   console.log(btn)
   //   btn.classList.remove('clicked')
-   
+
   // })
   // console.log('after',allOptions)
   // let currentClicked = allOptions[0];
   // currentClicked.classList.add('clicked')
 
 
-  if(projectTasks.taskOne == true){
+  if (projectTasks.taskOne == true) {
     console.log('TASK 1 COMPLATED')
     let completeSection = allWrappers[0];
     let removeBtn = completeSection.getElementsByTagName('button')[0]
- 
+
     removeBtn.style.display = 'none'
 
     completeSection.querySelector('.validated').style.display = 'block'
   }
-  if(projectTasks.taskTwo == true){
+  if (projectTasks.taskTwo == true) {
     console.log('TASK 2 COMPLATED')
 
- 
   }
-  if(projectTasks.taskThree == true){
+  if (projectTasks.taskThree == true) {
     console.log('TASK 3 COMPLATED')
 
   }
 
 
   let btn = document.querySelector('.validate-task-btn')
-let validateButtons = document.querySelectorAll('.validate-task-btn').forEach(btn => {
-  btn.addEventListener('click', onSubmit)
-});
-let mainContentEl = document.querySelector('.main-content')
-mainContentEl.style.overflow = 'auto'
+  let validateButtons = document.querySelectorAll('.validate-task-btn').forEach(btn => {
+    btn.addEventListener('click', onSubmit)
+  });
+  let mainContentEl = document.querySelector('.main-content')
+  mainContentEl.style.overflow = 'auto'
   // validateBtn.addEventListener('click', onSubmit)
   async function onSubmit(e) {
     e.preventDefault()
     let eTarget = e.target;
     console.log('V A L I D A T E')
 
-    console.log('e target > ',eTarget)
-    console.log('parent',eTarget.parentNode)
+    console.log('e target > ', eTarget)
+    console.log('parent', eTarget.parentNode)
     let eParent = eTarget.parentNode;
     let notValidated = eParent.querySelector('.not-validated')
-    console.log('Not validated',notValidated.parentNode);
-  
+    console.log('Not validated', notValidated.parentNode);
+
     notValidated.style.display = 'none'
     eTarget.disabled = true;
     eTarget.classList.add('no-hover')
@@ -190,7 +189,7 @@ mainContentEl.style.overflow = 'auto'
     }
     if (eTarget.classList.contains('two')) {
       response = await oneTwo()
-      
+
       console.log('BTN e 2')
 
     }
@@ -202,7 +201,7 @@ mainContentEl.style.overflow = 'auto'
 
     }
 
-    validation(response,eTarget,notValidated,'p1')
+    validation(response, eTarget, notValidated, 'p1')
 
 
 
