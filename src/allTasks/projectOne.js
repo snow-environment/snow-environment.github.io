@@ -150,11 +150,21 @@ export async function projectOne(ctx) {
   }
   if (projectTasks.taskTwo == true) {
     console.log('TASK 2 COMPLATED')
+    let completeSection = allWrappers[1];
+    let removeBtn = completeSection.getElementsByTagName('button')[0]
 
+    removeBtn.style.display = 'none'
+
+    completeSection.querySelector('.validated').style.display = 'block'
   }
   if (projectTasks.taskThree == true) {
     console.log('TASK 3 COMPLATED')
+    let completeSection = allWrappers[2];
+    let removeBtn = completeSection.getElementsByTagName('button')[0]
 
+    removeBtn.style.display = 'none'
+
+    completeSection.querySelector('.validated').style.display = 'block'
   }
 
 

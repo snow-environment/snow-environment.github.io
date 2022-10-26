@@ -1,7 +1,7 @@
 import {render, html} from './lib.js'
 const welcomePageTemplate = () => html`
 <section class="taskOne">
-  <h1 class="project-heading">Welcome, Do it Wisers! :)</h1>
+  <h1 class="welcome-heading">Welcome, Do it Wisers! :)</h1>
   <div class="before-you-start">
     <p class="before-info">Coming soon..</p>
     <img src="/img/comingSoon.png" alt="">
@@ -16,7 +16,7 @@ export async function welcomePage(ctx) {
   let mainContentEl = document.getElementById('main-a')
   mainContentEl.style.background ='#e2eff2'
 mainContentEl.classList.remove('login-view')
-
+// mainContentEl.style.overflow ='auto'
     console.log(mainContentEl)
   ctx.render(welcomePageTemplate());
   let contentEl = document.querySelector('.content')
