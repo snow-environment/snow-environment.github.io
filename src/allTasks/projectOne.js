@@ -119,7 +119,7 @@ export async function projectOne(ctx) {
   ctx.render(projectOneTemplate());
 
   console.log(localData.p1)
-  let currentTests = localData.p1
+  let projectTasks = localData.p1
   let allWrappers = document.querySelectorAll('.task-wrapper')
   // console.log('all >',allWrappers)
   // console.log('1 >',allWrappers[0])
@@ -139,7 +139,7 @@ export async function projectOne(ctx) {
   // currentClicked.classList.add('clicked')
 
 
-  if(currentTests.taskOne == true){
+  if(projectTasks.taskOne == true){
     console.log('TASK 1 COMPLATED')
     let completeSection = allWrappers[0];
     let removeBtn = completeSection.getElementsByTagName('button')[0]
@@ -148,12 +148,12 @@ export async function projectOne(ctx) {
 
     completeSection.querySelector('.validated').style.display = 'block'
   }
-  if(currentTests.taskTwo == true){
+  if(projectTasks.taskTwo == true){
     console.log('TASK 2 COMPLATED')
 
  
   }
-  if(currentTests.taskThree == true){
+  if(projectTasks.taskThree == true){
     console.log('TASK 3 COMPLATED')
 
   }
