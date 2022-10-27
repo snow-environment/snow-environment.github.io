@@ -3,6 +3,7 @@ import { oneThree } from '../allTests/projectOne/testThree.js';
 import { oneTwo } from '../allTests/projectOne/testTwo.js';
 import { localData } from '../app.js';
 import { render, html } from '../lib.js'
+import { completeCheck } from '../util/completeChecker.js';
 import { validation } from '../util/validate.js';
 
 const projectOneTemplate = () => html`
@@ -125,18 +126,20 @@ export async function projectOne(ctx) {
   // console.log('1 >',allWrappers[0])
   // console.log('2 >',allWrappers[1])
   // console.log('3 >',allWrappers[2])
-  // let allOptions = document.querySelectorAll('.options')
+  let allOptions = document.querySelectorAll('.options')
   // console.log('before',allOptions)
+// allWrappers[0].classList.add('clicked')
 
-  // allOptions.forEach((btn) =>
-  // {
-  //   console.log(btn)
-  //   btn.classList.remove('clicked')
+  allOptions.forEach((btn) =>
+  {
+    // btn.addEventListener('click',selected)
+    btn.classList.remove('clicked')
 
-  // })
-  // console.log('after',allOptions)
-  // let currentClicked = allOptions[0];
+  })
+  let currentClicked = allOptions[0];
   // currentClicked.classList.add('clicked')
+
+ 
 
 
   if (projectTasks.taskOne == true) {
@@ -216,6 +219,7 @@ export async function projectOne(ctx) {
 
 
 
+    completeCheck(projectTasks,currentClicked)
 
   }
 }
@@ -234,4 +238,9 @@ export async function projectOne(ctx) {
 
 
 //   }
+// }
+
+// export function selected(e){
+// console.log('in selected  > >>  >',e.target)
+// e.target.classList.add('clicked')
 // }

@@ -99,22 +99,22 @@ export async function projectTwo(ctx) {
     console.log('projectTwo')
   ctx.render(projectTwoTemplate());
 
-  // let allWrappers = document.querySelectorAll('.task-wrapper')
-  // console.log('all >',allWrappers)
-  // console.log('1 >',allWrappers[0])
-  // console.log('2 >',allWrappers[1])
-  // console.log('3 >',allWrappers[2])
-  // let allOptions = document.querySelectorAll('.options')
-  // console.log('before',allOptions)
+  let allWrappers = document.querySelectorAll('.task-wrapper')
+  console.log('all >',allWrappers)
+  console.log('1 >',allWrappers[0])
+  console.log('2 >',allWrappers[1])
+  console.log('3 >',allWrappers[2])
+  let allOptions = document.querySelectorAll('.options')
+  console.log('before',allOptions)
 
-  // allOptions.forEach((btn) =>
-  // {
-  //   console.log(btn)
-  //   btn.classList.remove('clicked')
+  allOptions.forEach((btn) =>
+  {
+    console.log(btn)
+    btn.classList.remove('clicked')
    
-  // })
-  // console.log('after',allOptions)
-  // let currentClicked = allOptions[1];
+  })
+  console.log('after',allOptions)
+  let currentClicked = allOptions[1];
   // currentClicked.classList.add('clicked')
 
 

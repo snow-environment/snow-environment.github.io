@@ -1,3 +1,4 @@
+
 import {render, html} from './lib.js'
 const welcomePageTemplate = () => html`
 <section class="taskOne">
@@ -35,7 +36,14 @@ mainContentEl.classList.remove('login-view')
 
   mainContentEl.style.display ='block'
  let logOut = document.querySelector('.logout').style.display = 'block'
+//  let allWrappers = document.querySelectorAll('.task-wrapper')
+//  console.log('all >',allWrappers)
+ let allOptions = document.querySelectorAll('.options')
+ allOptions.forEach((btn) =>
+  {
+    // btn.addEventListener('click',selected)
+    btn.classList.remove('clicked')
 
-
+  })
 
   }
