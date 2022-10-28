@@ -14,4 +14,3 @@ export function completeCheck(tests,clicked){
     clicked.style.background ='#4a8350'
     }
     }
-  

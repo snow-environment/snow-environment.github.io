@@ -122,22 +122,20 @@ export async function projectOne(ctx) {
   console.log(localData.p1)
   let projectTasks = localData.p1
   let allWrappers = document.querySelectorAll('.task-wrapper')
-  // console.log('all >',allWrappers)
-  // console.log('1 >',allWrappers[0])
-  // console.log('2 >',allWrappers[1])
-  // console.log('3 >',allWrappers[2])
+
   let allOptions = document.querySelectorAll('.options')
-  // console.log('before',allOptions)
-// allWrappers[0].classList.add('clicked')
+
 
   allOptions.forEach((btn) =>
   {
-    // btn.addEventListener('click',selected)
+    
     btn.classList.remove('clicked')
 
   })
+// allWrappers[0] current project menu option.
+
   let currentClicked = allOptions[0];
-  // currentClicked.classList.add('clicked')
+  currentClicked.classList.add('clicked')
 
  
 

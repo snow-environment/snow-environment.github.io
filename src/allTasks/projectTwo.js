@@ -100,10 +100,7 @@ export async function projectTwo(ctx) {
   ctx.render(projectTwoTemplate());
 
   let allWrappers = document.querySelectorAll('.task-wrapper')
-  console.log('all >',allWrappers)
-  console.log('1 >',allWrappers[0])
-  console.log('2 >',allWrappers[1])
-  console.log('3 >',allWrappers[2])
+
   let allOptions = document.querySelectorAll('.options')
   console.log('before',allOptions)
 
@@ -113,9 +110,10 @@ export async function projectTwo(ctx) {
     btn.classList.remove('clicked')
    
   })
-  console.log('after',allOptions)
+// allWrappers[1] current project menu option.
+
   let currentClicked = allOptions[1];
-  // currentClicked.classList.add('clicked')
+  currentClicked.classList.add('clicked')
 
 
   let btn = document.querySelector('.validate-task-btn')
