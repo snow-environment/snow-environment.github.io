@@ -24,6 +24,7 @@ working only as CLI client in your terminal.
 
 <> Go back in your ServiceNow Instance and create a new mid user
 	- Create a new user with UserID="snow_mid_user".
+	- First name="Raymond", Last Name="Denton"
 	- Scroll Down to the "Related Links" section and open Roles. 
 	- Click on Edit... and assign "mid_server" role to the user.
 	- Check "Password needs reset" and press "Submit" button.
