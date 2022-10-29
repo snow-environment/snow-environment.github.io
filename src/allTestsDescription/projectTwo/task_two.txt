@@ -6,14 +6,18 @@
 	- https://developer.hashicorp.com/vagrant/downloads
 
 <> Create a new folder on your PC called "Vagrant Ubuntu Server". Open an Terminal/PowerShell inside the folder:
-	- Type "vagrant init karastoyanov/doitwise --box-version 1.0"
-	- After the init process is done and the VB is downloaded, type "vagrant up"
-	- If you are getting "default: Warning: Authentication failure. Retrying..." error that's fine. You can close now the terminal
-	- Open PuTTY SSH client and connect with the newly created virtual box inside your Oracle Virtual Box. 
-	  If don't have PuTTY on your PC, you can download it
-	  from https://www.putty.org/
-	- For HostName(or IP address) type "127.0.0.1", for Port "2222" and press "Open".
-	- In the PuTTY terminal use "vagrant" as both user and password credentials.
+	- Type "vagrant box add --insecure karastoyanov/doitwise" and wait until the download process is finished
+	- Type "vagrant init karastoyanov/doitwise --box-version 1.0". New file "Vagrantfile" has been created. Open the file with Notepad or any other
+        text-editor and replace it's contents with the file from the LINK
+	- Type "vagrant up" and wait for vagrant to start the virtual machine.
+	- If you are getting "default: Warning: Authentication failure. Retrying..." error that's fine. Press Ctrl+C to cancel
+	- Type "vagrant ssh", you will be asked asked to enter the password, use vagrant.
+	- You new VM is created:
+	- username: "vagrant"
+	- password: "vagrant"
+	- hostname: "doitwise"
+	- Host Ports "20022" and "2222" on Host IP "127.0.0.1" are open to Guest Port "22". You can use any other SSH client to open a session to the VM.
+
 
 <> Download MID server on our virtual machine:
 	- Go to ServiceNow Instance and navigate to "Applications --> MID Server --> Downloads"
