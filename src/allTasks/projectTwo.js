@@ -140,7 +140,7 @@ export async function projectTwo(ctx) {
 
       let response = ''
       if (eTarget.classList.contains('one')) {
-        response = await twoTwo()
+        response = await twoOne()
         console.log('BTN e 1')
   
       }
