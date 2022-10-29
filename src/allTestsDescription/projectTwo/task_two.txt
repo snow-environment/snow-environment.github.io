@@ -1,20 +1,21 @@
-<> Download and Install Oracle VirtualBox for your host machine
+<> Download and Install Oracle VirtualBox for your host machine:
 	- https://www.virtualbox.org/wiki/Downloads
 
 <> Download and Install Vagrant. Restart will be required to finish the installation. Keep in mind that Vagrant doesn't have any GUI and it's
-working only as CLI client in your terminal.
+   working only as CLI client in your terminal.
 	- https://developer.hashicorp.com/vagrant/downloads
 
 <> Create a new folder on your PC called "Vagrant Ubuntu Server". Open an Terminal/PowerShell inside the folder:
 	- Type "vagrant init karastoyanov/doitwise --box-version 1.0"
 	- After the init process is done and the VB is downloaded, type "vagrant up"
 	- If you are getting "default: Warning: Authentication failure. Retrying..." error that's fine. You can close now the terminal
-	- Open PuTTY SSH client and connect with the newly created virtual box inside your Oracle Virtual Box. If don't have PuTTY on your PC, you can download it
+	- Open PuTTY SSH client and connect with the newly created virtual box inside your Oracle Virtual Box. 
+	  If don't have PuTTY on your PC, you can download it
 	  from https://www.putty.org/
 	- For HostName(or IP address) type "127.0.0.1", for Port "2222" and press "Open".
 	- In the PuTTY terminal use "vagrant" as both user and password credentials.
 
-<> Download MID server on our virtual machine
+<> Download MID server on our virtual machine:
 	- Go to ServiceNow Instance and navigate to "Applications --> MID Server --> Downloads"
 	- Check "Download MID Server as ZIP archive" to be able to see the download links for zip file.
 	- Copy the link for Linux(ZIP)
@@ -24,3 +25,5 @@ working only as CLI client in your terminal.
 	- If you don't have unzip installed, type in "sudo apt install -y unzip" and try again the above step
 	- If you've done everything succesfully you should be able to have a new folder called "agent" inside your VM.
 	"Paste Print Screen Here"
+
+<> Install and Configure MID Server on your VM:
