@@ -27,6 +27,8 @@ Following technologies were used in the project:
  * [ServiceNow Developer Portal](https://developer.servicenow.com/dev.do#!/)
  * [ServiceNow REST API](https://www.npmjs.com/package/servicenow-rest-api?activeTab=readme)
  * [Obsidian](https://obsidian.md/) 
+ * [Oracle VM Virtual Box](https://www.virtualbox.org/)
+ * [Vagrant](https://www.vagrantup.com/)
 
 
 ### Usage :question:
