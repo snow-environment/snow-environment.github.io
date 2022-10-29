@@ -14,12 +14,16 @@ const projectTwoTemplate = () => html`
 <div class="task-wrapper">
   <h2>Task 1</h2>
   <div class="short-description">
-    <p class="task-info">1. Coming soon..</p>
+    <p class="task-info">1. Open your ServiceNow Instance and create a new mid user</p>
 <ul class="requirements">
-   <li class="req-for-task">..</li>
-   <li class="req-for-task">..</li>
-   <li class="req-for-task">..</li>
-   <li class="req-for-task">..</li>
+   <li class="req-for-task">Create a new user with UserID="snow_mid_user"</li>
+   <li class="req-for-task">First name="Raymond", Last Name="Denton"</li>
+   <li class="req-for-task">Scroll Down to the "Related Links" section and open "Roles"</li>
+   <li class="req-for-task">Click on "Edit..." and assign "mid_server" role to the user</li>
+   <li class="req-for-task">Check "Password needs reset" and press "Submit" button</li>
+   <li class="req-for-task">Open the "snow_mid_user" record and set password for him. Save the password in a plain text in a separate file. Finally Press "Update"</li>
+   <li class="req-for-task">Log out as admin and login with the new user - "snow_mid_user"</li>
+   <li class="req-for-task">Promp window will apear to change the password for the "snow_mid_user". In the Current Password field paste the password you have copied from the previous step</br>and then set a new more convinient password the the user by your choice. Remember the new password, you will need it in the further setup</li>
 </ul>
   </div>
   <!--  -->

@@ -91,7 +91,7 @@ const projectOneTemplate = () => html`
         </div>
         <p class="task-info">3. After you finish with the above assignment press "Verify" button and check the result</p>
         <span class="optional">OPTIONAL. Below's tasks will not affect the final result!!</span>
-        <p class="task-info">Impersonate user "John Doe"</p>
+        <p class="task-info">4. Impersonate user "John Doe"</p>
         <ul class="requirements">
           <li class="req-for-task">Navigate to "Incidents", find and open the newly created Incident by ITIL User (use the filter to find the incident)</li>
           <li class="req-for-task">Optionally you can right click on the Navigation bar, click View and choose Default View to show all the fields</li>

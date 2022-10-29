@@ -1,42 +1,11 @@
-<> Download and Install Oracle VirtualBox for your host machine
-
-<> Download and Install Vagrant. Restart will be required to finish the installation. Keep in mind that Vagrant doesn't have any GUI and it's
-working only as CLI client in your terminal.
-
-<> Create a new folder on your PC called "Vagrant Ubuntu Server". Open an Terminal inside the folder and type the following commands:
-	-vagrant init karastoyanov/doitwise --box-version 1.0
-	-vagrant up
-	-If you are getting "default: Warning: Authentication failure. Retrying..." that's fine. You can close now the terminal
-	-Open PuTTY SSH client and connect with the newly created virtual box inside your Oracle Virtual Box
-	-For HostName(or IP address) type "127.0.0.1" and for Port "2222" and press "Open".
-	-In the PuTTY terminal use "vagrant" as both user and password credentials.
-
-<> Next step is to download MID server on our virtual machine
-	- Go to ServiceNow Instance and navigate to "Applications --> MID Server --> Downloads"
-	- Check "Download MID Server as ZIP archive" to be able to see the download links for zip file.
-	- Copy the link for Linux(ZIP)
-	- Go back in your PuTTY terminal where you have the virtual machine session opened and type the following command in the terminal
-	- wget <paste the link, you can use the right-click on your mouse>
-	- After the downloading process is finished, type "unzip <name-of-the-zip-file>"
-	- If you don't have unzip installed, type in "sudo apt install -y unzip" and try again the above step
-	- If you've done everything succesfully you should be able to have a new folder called "agent" inside your VM.
-	"Paste Print Screen Here"
-
-<> Go back in your ServiceNow Instance and create a new mid user
-	- Create a new user with UserID="snow_mid_user".
+<> Open your ServiceNow Instance and create a new mid user
+	- Create a new user with UserID="snow_mid_user"
 	- First name="Raymond", Last Name="Denton"
-	- Scroll Down to the "Related Links" section and open Roles. 
-	- Click on Edit... and assign "mid_server" role to the user.
-	- Check "Password needs reset" and press "Submit" button.
-	- Open the snow_mid_user record and set password for him. Save the password in a plain text in a separate file. Finally Press "Update".
-	- Log out as admin and login with the new user.
-	- Promp window will apear to change the password for the snow_mid_user. In the Current Password paste the password you have copied from the previous step
-and then set a new more convinient password the the user by your choice. Remember the new password, you will need it in the further setup.
-	- You can now login again as admin user.
-
-<> Press Validate button to check your assignment
-
-
-snow_mid_user
-BR+o0KR&E6bZl!6*,Q,,[FDtKT[awa=w3MN,yV2W*rIENQM0{;23Z;ei*p=_o!O];x(n8^PzePzaR[MXTO1@sp{;<w!PkIX5yE
-Password1!!
+	- Scroll Down to the "Related Links" section and open "Roles"
+	- Click on "Edit..." and assign "mid_server" role to the user
+	- Check "Password needs reset" and press "Submit" button
+	- Open the "snow_mid_user" record and set password for him. Save the password in a plain text in a separate file. Finally Press "Update"
+	- Log out as admin and login with the new user - "snow_mid_user"
+	- Promp window will apear to change the password for the "snow_mid_user". In the Current Password field paste the password you have copied from the previous step
+        and then set a new more convinient password the the user by your choice. Remember the new password, you will need it in the further setup
+	- You can now login again as "admin" user
