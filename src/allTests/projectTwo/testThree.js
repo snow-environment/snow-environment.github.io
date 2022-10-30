@@ -24,7 +24,7 @@ export async function twoThree() {
         isCredentialsFound = true;
     }
 
-    // Check for Linux Serve CI
+    // Check for Linux Server CI
     let isLinuxVMFound = false; // cmdb_ci_hardware
     const fieldsVMFound = [
         'name',
