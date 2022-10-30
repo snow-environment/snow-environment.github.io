@@ -19,15 +19,32 @@
 	- Host Ports "20022" and "2222" on Host IP "127.0.0.1" are open to Guest Port "22". You can use any other SSH client to open a session to the VM.
 
 
-<> Download MID server on our virtual machine:
+<> Download MID server on your virtual machine:
 	- Go to ServiceNow Instance and navigate to "Applications --> MID Server --> Downloads"
 	- Check "Download MID Server as ZIP archive" to be able to see the download links for zip file.
 	- Copy the link for Linux(ZIP)
-	- Go back in your PuTTY terminal where you have the virtual machine session opened and type the following command in the terminal
-	- wget <paste the link, you can use the right-click on your mouse>
+	- Go back in your virtual machine session and type "wget <paste the link, you can use the right-click on your mouse>"
 	- After the downloading process is finished, type "unzip <name-of-the-zip-file>"
 	- If you don't have unzip installed, type in "sudo apt install -y unzip" and try again the above step
 	- If you've done everything succesfully you should be able to have a new folder called "agent" inside your VM.
 	"Paste Print Screen Here"
 
 <> Install and Configure MID Server on your VM:
+	- Open the "agent" folder with "cd agent" and type "ls -al" to list the contents of the folder
+	- You should be able to see "configure.sh" shell script. Run the script by typing "sudo ./configure.sh"
+	- MID Server Installation will begin, just follow the steps:
+		- Enter the ServiceNow Instance URL [https://YOUR_INSTANCE.service-now.com/] : Enter your ServiceNow Instance URL address
+		- Do you want to use proxy? [Enter Y or N] : Choose "N"
+		- Do you want to use Mutual Authentication? [Enter Y or N] : Choose "N"
+		- Enter the username for mid user : Choose your mid user --> "snow_mid_user"
+		- Enter the password for mid user: Type in the password you've set in Task 1
+		- Enter the Mid Server Name [My_Linux_Mid_Server] : Type "SNOW_MID"
+		- Enter the unique name for the service to be created [mid] : Type "snow"
+		- Enter the Non-Root User Name to run this service : "vagrant"
+
+<> Go back to your ServiceNow Instance and Validate the MID Server
+	- Navigate to "Applications - Discovery - MID Servers"
+	- Find "SNOW_MID" in the list and open the record
+	- Scroll down to "Related Links" and press "Validate"
+	- Wait until the MID server is being validated
+	- If the MID server is not validating, go back in your VM, restart the MID server service and try again
