@@ -112,12 +112,27 @@ const projectTwoTemplate = () => html`
 <div class="task-wrapper">
 <h2>Task 3</h2>
 <div class="short-description">
-<p class="task-info">1. Coming soon..</p>
+<p class="task-info">1. Create Linux/UNIX credentials:</p>
 <ul class="requirements">
-<li class="req-for-task">..</li>
-<li class="req-for-task">..</li>
-<li class="req-for-task">..</li>
-<li class="req-for-task">..</li>
+<li class="req-for-task">In your ServiceNow instance navigate to "All Aplications --> Discovery --> Credentials"</li>
+<li class="req-for-task">Create new credetials using "SSH Credentials" type</li>
+<li class="req-for-task">Name="SNOW_Linux_Credentials"</li>
+<li class="req-for-task">Username="vagrant" / Password="vagrant", the login credentials for the VM user</li>
+<li class="req-for-task">Test the credentials against the MID server you have created in Task 2. You can find it's IP address opening it's record</li>
+</ul>
+<p class="task-info">2. Perform a Quick Discovery:</p>
+<ul class="requirements">
+<li class="req-for-task">Navigate to "All Application --> Discovery --> Discovery Schedules"</li>
+<li class="req-for-task">Click on "Quick Discovery"</li>
+<li class="req-for-task">Choose the "SNOW_MID" server and type in the IP address of the server</li>
+<li class="req-for-task">Press "OK" to start Quick Discovery</li>
+<li class="req-for-task">Wait until the discovery is finished and take a look on the Discovery Log and ECC Queue</li>
+</ul>
+<p class="task-info">3. Check your VM:</p>
+<ul class="requirements">
+<li class="req-for-task">Navigate to "All Applications --> Disovery --> Dashboard"</li>
+<li class="req-for-task">Under "Newly discovered devices" you can see that you have one new Linux Server discovered</li>
+<li class="req-for-task">Open the record and preview the details</li>
 </ul>
 </div>
 <!--  -->
