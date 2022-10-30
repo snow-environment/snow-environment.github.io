@@ -1,0 +1,18 @@
+<> Create Linux/UNIX credentials
+	- In your ServiceNow instance navigate to "All Aplications --> Discovery --> Credentials"
+	- Create new credetials using "SSH Credentials" type
+	- Name="SNOW_Linux_Credentials"
+	- Username="vagrant" / Password="vagrant", the login credentials for the VM user
+	- Test the credentials against the MID server you have created in Task 2. You can find it's IP address opening it's record.
+
+<> Perform a Quick Discovery
+	- Navigate to "All Application --> Discovery --> Discovery Schedules"
+	- Click on "Quick Discovery"
+	- Choose the "SNOW_MID" server and type in the IP address of the server
+	- Press "OK" to start Quick Discovery
+	- Wait until the discovery is finished and take a look on the Discovery Log and ECC Queue
+
+<> Check your VM
+	- Navigate to "All Applications --> Disovery --> Dashboard"
+	- Under "Newly discovered devices" you can see that you have one new Linux Server discovered
+	- Open the record and preview the details
