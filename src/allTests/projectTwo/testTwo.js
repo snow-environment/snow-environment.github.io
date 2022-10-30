@@ -7,7 +7,6 @@ export async function twoTwo() {
     connector.Authenticate();
     console.log(connector);
 
-    let isMidFound = false;
     const fieldsMidFound = [
         'name',
         'status',

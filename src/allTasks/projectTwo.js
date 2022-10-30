@@ -47,12 +47,50 @@ const projectTwoTemplate = () => html`
 <div class="task-wrapper">
 <h2>Task 2</h2>
 <div class="short-description">
-<p class="task-info">1. Coming soon..</p>
+<p class="task-info">1. Download and Install <a href="https://www.virtualbox.org/">Oracle VirtualBox</a> for your host machine</p>
+<p class="task-info">2. Download and Install <a href="https://www.vagrantup.com/">Vagrant</a>. Restart will be required to finish the installation.</br>Keep in mind that Vagrant doesn't have any GUI and it's working only as CLI client in your terminal</p>
+<p class="task-info">3. Create a new folder on your PC called "Vagrant Ubuntu Server". Open an Terminal/PowerShell inside the folder for your host machine</p>
 <ul class="requirements">
-<li class="req-for-task">..</li>
-<li class="req-for-task">..</li>
-<li class="req-for-task">..</li>
-<li class="req-for-task">..</li>
+<li class="req-for-task">Type "vagrant box add --insecure karastoyanov/doitwise" and wait until the download process is finished</li>
+<li class="req-for-task">Type "vagrant init karastoyanov/doitwise --box-version 1.0". New file "Vagrantfile" has been created. Open the file with Notepad or any other</br>text-editor and replace it's contents with the file from the <a href="https://github.com/snow-environment/snow-environment.github.io/blob/main/vagrant/Vagrantfile.rb">LINK</a></li>
+<li class="req-for-task">Type "vagrant up" and wait for vagrant to start the virtual machine</li>
+<li class="req-for-task">If you are getting "default: Warning: Authentication failure. Retrying..." error that's fine. Press Ctrl+C to cancel</li>
+<li class="req-for-task">Type "vagrant ssh", you will be asked asked to enter the password, use vagrant</li>
+<li class="req-for-task">You new VM is created. username: "vagrant" password: "vagrant" hostname "doitwise"</li>
+<li class="req-for-task">Host Ports "20022" and "2222" on Host IP "127.0.0.1" are open to Guest Port "22". You can use any other SSH client to open a session to the VM</li>
+</ul>
+<p class="task-info">4. Download MID server on your virtual machine</p>
+<ul class="requirements">
+<li class="req-for-task">Go to ServiceNow Instance and navigate to "Applications --> MID Server --> Downloads"</li>
+<li class="req-for-task">Check "Download MID Server as ZIP archive" to be able to see the download links for zip file</li>
+<li class="req-for-task">Copy the link for Linux(ZIP)</li>
+<li class="req-for-task">Go back in your virtual machine session and type "wget paste the link, you can use the right-click on your mouse"</li>
+<li class="req-for-task">After the downloading process is finished, type "unzip name-of-the-zip-file"</li>
+<li class="req-for-task">If you don't have unzip installed, type in "sudo apt install -y unzip" and try again the above step</li>
+<li class="req-for-task">If you've done everything succesfully you should be able to have a new folder called "agent" inside your VM</li>
+</ul>
+<img src="https://github.com/snow-environment/snow-environment.github.io/blob/main/img/how-to/mid-server-ubuntu.jpg?raw=true" alt="Agent Folder" style="width:600px;height:300px;">
+<img src="https://github.com/snow-environment/snow-environment.github.io/blob/main/img/how-to/mid-server-unziped.jpg?raw=true" alt="MID Server Contents" style="width:600px;height:300px;">
+<p class="task-info">5. Install and Configure MID Server on your VM</p>
+<ul class="requirmenrs">
+<li class="req-for-task">Open the "agent" folder with "cd agent" and type "ls -al" to list the contents of the folder</li>
+<li class="req-for-task">You should be able to see "configure.sh" shell script. Run the script by typing "sudo ./configure.sh"</li>
+<li class="req-for-task">Follow the steps to complete the MID Server installation</li>
+<li class="req-for-task">Enter the ServiceNow Instance URL [https://YOUR_INSTANCE.service-now.com/] : Enter your ServiceNow Instance URL address</li>
+<li class="req-for-task">Do you want to use proxy? [Enter Y or N] : Choose "N"</li>
+<li class="req-for-task">Do you want to use Mutual Authentication? [Enter Y or N] : Choose "N"</li>
+<li class="req-for-task">Enter the username for mid user : Choose your mid user --> "snow_mid_user"</li>
+<li class="req-for-task">Enter the password for mid user: Type in the password you've set in Task 1</li>
+<li class="req-for-task">Enter the Mid Server Name [My_Linux_Mid_Server] : Type "SNOW_MID"</li>
+<li class="req-for-task">Enter the unique name for the service to be created [mid] : Type "snow"</li>
+<li class="req-for-task">Enter the Non-Root User Name to run this service : "vagrant"</li>
+</ul>
+<p class="task-info">6. Go back to your ServiceNow Instance and Validate the MID Server</p>
+<ul class="requirmenrs">
+<li class="req-for-task">Navigate to "Applications - Discovery - MID Servers"</li>
+<li class="req-for-task">Find "SNOW_MID" in the list and open the record</li>
+<li class="req-for-task">Scroll down to "Related Links" and press "Validate"</li>
+<li class="req-for-task">Wait until the MID server is being validated(if the process takes too long, go back in your VM, restart the MID server service and try again)</li>
 </ul>
 </div>
 <!--  -->

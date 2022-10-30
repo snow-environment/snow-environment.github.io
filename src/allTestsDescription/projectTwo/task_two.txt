@@ -9,9 +9,9 @@
 	- Type "vagrant box add --insecure karastoyanov/doitwise" and wait until the download process is finished
 	- Type "vagrant init karastoyanov/doitwise --box-version 1.0". New file "Vagrantfile" has been created. Open the file with Notepad or any other
         text-editor and replace it's contents with the file from the LINK
-	- Type "vagrant up" and wait for vagrant to start the virtual machine.
+	- Type "vagrant up" and wait for vagrant to start the virtual machine
 	- If you are getting "default: Warning: Authentication failure. Retrying..." error that's fine. Press Ctrl+C to cancel
-	- Type "vagrant ssh", you will be asked asked to enter the password, use vagrant.
+	- Type "vagrant ssh", you will be asked asked to enter the password, use vagrant
 	- You new VM is created:
 	- username: "vagrant"
 	- password: "vagrant"
@@ -27,12 +27,12 @@
 	- After the downloading process is finished, type "unzip <name-of-the-zip-file>"
 	- If you don't have unzip installed, type in "sudo apt install -y unzip" and try again the above step
 	- If you've done everything succesfully you should be able to have a new folder called "agent" inside your VM.
-	"Paste Print Screen Here"
+
 
 <> Install and Configure MID Server on your VM:
 	- Open the "agent" folder with "cd agent" and type "ls -al" to list the contents of the folder
 	- You should be able to see "configure.sh" shell script. Run the script by typing "sudo ./configure.sh"
-	- MID Server Installation will begin, just follow the steps:
+	- Follow the steps to complete the MID Server installation:
 		- Enter the ServiceNow Instance URL [https://YOUR_INSTANCE.service-now.com/] : Enter your ServiceNow Instance URL address
 		- Do you want to use proxy? [Enter Y or N] : Choose "N"
 		- Do you want to use Mutual Authentication? [Enter Y or N] : Choose "N"
