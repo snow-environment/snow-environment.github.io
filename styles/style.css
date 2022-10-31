@@ -389,6 +389,40 @@ section.projectOne {
   border: 3px solid black;
 }
 
+.additional-info {
+  color: #429553;
+}
+
+.redirections {
+  color: #1e8f36;
+  padding: 0px 9px 0px 9px;
+  background: #80808040;
+  border-radius: 22px;
+  border: 1px solid #80808040;
+  -webkit-transition: all 0.4s  ease-in-out;
+  transition: all 0.4s  ease-in-out;
+}
+
+.redirections:hover {
+  border: 1px solid #5de55d;
+  color: white;
+  background: #68a56f;
+}
+
+a {
+  text-decoration: none;
+}
+
+.currentInstance {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.color-instance {
+  color: #83c661;
+}
+
 @media (min-width: 700px) and (max-width: 1550px) {
   .login {
     width: 456px;

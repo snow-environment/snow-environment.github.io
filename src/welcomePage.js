@@ -1,4 +1,5 @@
 
+import { credentials } from './app.js'
 import {render, html} from './lib.js'
 const welcomePageTemplate = () => html`
 <section class="taskOne">
@@ -22,7 +23,7 @@ mainContentEl.classList.remove('login-view')
   ctx.render(welcomePageTemplate());
   let contentEl = document.querySelector('.content')
   let menu = document.querySelector('.menu')
-
+let currentInstance = document.querySelector('.currentInstance').innerHTML =`Current instance: <span class="color-instance">${credentials.instName}</span>`
   contentEl.style.background ='white';
   contentEl.style.width ='100%';
   contentEl.style.height ='100%';

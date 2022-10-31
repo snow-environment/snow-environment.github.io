@@ -15,16 +15,16 @@ const projectOneTemplate = () => html`
   <div class="task-wrapper">
       <h2>Task 1</h2>
       <div class="short-description">
-        <p class="task-info">1. Create a new user:</p>
+        <p class="task-info">1. Create a new user:</p
    <ul class="requirements">
-       <li class="req-for-task">First Name: "John"</li>
-       <li class="req-for-task">Last Name: "Doe"</li>
-       <li class="req-for-task">Email: "john.doe@example.com"</li>
+       <li class="req-for-task">First Name: <span class="additional-info">John</span></li>
+       <li class="req-for-task">Last Name:<span class="additional-info">Doe</span> </li>
+       <li class="req-for-task">Email: <span class="additional-info">john.doe@example.com</span></li>
        <li class="req-for-task">Leave all the rest fields by default</li>
    </ul>
       </div>
       <!--  -->
-
+      
   
         <div class="button-wrapper">
         <button  class="validate-task-btn one">
@@ -40,15 +40,16 @@ const projectOneTemplate = () => html`
     <h2>Task 2</h2>
     <div class="short-description">
       <p class="task-info">1. Create a new group:</p>
+      
  <ul class="requirements">
-     <li class="req-for-task">Name = "ServiceNow MiniProject One"</li>
-     <li class="req-for-task">Manager = "Abel Hunter"</li>
-     <li class="req-for-task">Group Email = "snow.web.app@example.com"</li>
-     <li class="req-for-task">Description = "This is a test group for ServiceNow Task Verifier Web Application."</li>
+     <li class="req-for-task">Name = <span class="additional-info">ServiceNow MiniProject One</span></li>
+     <li class="req-for-task">Manager = <span class="additional-info">Abel Hunter</span></li>
+     <li class="req-for-task">Group Email = <span class="additional-info">snow.web.app@example.com</span></li>
+     <li class="req-for-task">Description = <span class="additional-info">This is a test group for ServiceNow Task Verifier Web Application.</span></li>
 </ul>
 
-<p class="task-info">2. Assign the user "John Doe" to the "ServiceNow MiniProject One" and "Service Desk" group</p>
-<p class="task-info">3. Grant the user "John Doe" "itil" role.</p>
+<p class="task-info">2. Assign the user <span class="additional-info">John Doe</span> to the <span class="additional-info">ServiceNow MiniProject One</span> and <span class="additional-info">Service Desk</span> group</p>
+<p class="task-info">3. Grant the user <span class="additional-info">John Doe itil</span> role.</p>
 
     </div>
     <!--  -->
@@ -66,38 +67,38 @@ const projectOneTemplate = () => html`
   <div class="task-wrapper">
       <h2>Task 3</h2>
       <div class="short-description">
-        <p class="task-info">1. Impersonate "ITIL User"</p>
+        <p class="task-info">1. Impersonate <span class="additional-info">ITIL User</span></p>
 
       </div>
       <!--  -->
       <div class="short-description">
-          <p class="task-info">2. Navigate to "Application" --> "Incident" --> "Create New" and create new record with the following data:</p>
+          <p class="task-info">2. Navigate to <span class="additional-info">Application</span> --> <span class="additional-info">Incident</span> --> <span class="additional-info">Create New</span> and create new record with the following data:</p>
           <ul class="requirements">
-            <li class="req-for-task">Caller = "ITIL User"</li>
-            <li class="req-for-task">Category = "Software"</li>
-            <li class="req-for-task">Subcategory = "Operating System"</li>
-            <li class="req-for-task">Configuration item = "container-storage-setup" (find the CI in the search menu)</li>
-            <li class="req-for-task">Short Description = "Network Connectivity Problem"</li>
-            <li class="req-for-task">Description = "Check Network Adapter Config Settings. Network is down since last update."</li>
-            <li class="req-for-task">Channel = "Email"</li>
-            <li class="req-for-task">State = "New"</li>
-            <li class="req-for-task">Impact = "High"</li>
-            <li class="req-for-task">Urgency = "1 - High"</li>
-            <li class="req-for-task">Priority = "1 - Critical"</li>
-            <li class="req-for-task">Assignment Group = "ServiceNow MiniProject One"</li>
-            <li class="req-for-task">Assigned to = "John Doe"</li>
+            <li class="req-for-task">Caller = <span class="additional-info">ITIL User</span></li>
+            <li class="req-for-task">Category = <span class="additional-info">Software</span></li>
+            <li class="req-for-task">Subcategory = <span class="additional-info">Operating System </span></li>
+            <li class="req-for-task">Configuration item = <span class="additional-info">container-storage-setup</span>  (find the CI in the search menu)</li>
+            <li class="req-for-task">Short Description = <span class="additional-info">Network Connectivity Problem</span></li>
+            <li class="req-for-task">Description = <span class="additional-info">Check Network Adapter Config Settings. Network is down since last update.</span></li>
+            <li class="req-for-task">Channel = <span class="additional-info">Email</span></li>
+            <li class="req-for-task">State = <span class="additional-info"> New</span></li>
+            <li class="req-for-task">Impact = <span class="additional-info">High</span></li>
+            <li class="req-for-task">Urgency = <span class="additional-info">1 - High</span></li>
+            <li class="req-for-task">Priority = <span class="additional-info">1 - Critical</span></li>
+            <li class="req-for-task">Assignment Group = <span class="additional-info">ServiceNow MiniProject One</span> </li>
+            <li class="req-for-task">Assigned to = <span class="additional-info">John Doe</span></li>
           
         </ul>
         </div>
-        <p class="task-info">3. After you finish with the above assignment press "Verify" button and check the result</p>
-        <span class="optional">OPTIONAL. Below's tasks will not affect the final result!!</span>
-        <p class="task-info">4. Impersonate user "John Doe"</p>
+        <p class="task-info">After you finish with the above assignment press <span class="additional-info">Validate</span> button and check the result</p>
+        <p class="task-info"> <span class="optional">!!OPTIONAL. Below's tasks will not affect the final result!!</span></p>
+        <p class="task-info">3. Impersonate user <span class="additional-info">John Doe</span></p>
         <ul class="requirements">
-          <li class="req-for-task">Navigate to "Incidents", find and open the newly created Incident by ITIL User (use the filter to find the incident)</li>
+          <li class="req-for-task">Navigate to <span class="additional-info">Incidents</span>, find and open the newly created Incident by ITIL User (use the filter to find the incident)</li>
           <li class="req-for-task">Optionally you can right click on the Navigation bar, click View and choose Default View to show all the fields</li>
-          <li class="req-for-task">Go to "Resolution Information" tab, on Resolition code choose "Solution provided" and insert "ONBOOT=yes set for eth0 network adapter" in the Resolution notes field</li>
-          <li class="req-for-task">Change the State on the incident to "Resolved"</li>
-          <li class="req-for-task">Click "Update" and End Impersonation</li>
+          <li class="req-for-task">Go to <span class="additional-info">Resolution Information</span> tab, on Resolition code choose <span class="additional-info">Solution provided</span> and insert <span class="additional-info">ONBOOT=yes set for eth0 network adapter</span> in the Resolution notes field</li>
+          <li class="req-for-task">Change the State on the incident to <span class="additional-info">Resolved</span></li>
+          <li class="req-for-task">Click <span class="additional-info">Update</span> and End Impersonation</li>
         
       </ul>
 
