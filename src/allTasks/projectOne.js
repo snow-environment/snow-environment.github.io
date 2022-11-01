@@ -18,7 +18,7 @@ const projectOneTemplate = () => html`
         <p class="task-info">1. Create a new user:</p
    <ul class="requirements">
        <li class="req-for-task">First Name: <span class="additional-info">John</span></li>
-       <li class="req-for-task">Last Name:<span class="additional-info">Doe</span> </li>
+       <li class="req-for-task">Last Name: <span class="additional-info">Doe</span> </li>
        <li class="req-for-task">Email: <span class="additional-info">john.doe@example.com</span></li>
        <li class="req-for-task">Leave all the rest fields by default</li>
    </ul>

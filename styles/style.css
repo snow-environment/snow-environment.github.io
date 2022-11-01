@@ -417,6 +417,9 @@ a {
   color: white;
   font-weight: bold;
   font-size: 20px;
+  padding: 1px 14px 1px 14px;
+  border: 1px dotted #83c661;
+  border-radius: 6px;
 }
 
 .color-instance {
