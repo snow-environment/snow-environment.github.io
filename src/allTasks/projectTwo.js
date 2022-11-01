@@ -11,6 +11,7 @@ const projectTwoTemplate = () => html`
 
 <section class="projectOne">
 <h1 class="project-heading">Mini Project #2</h1>
+<p class="project-agenda">In this project you will find hands on tasks for Discovery.</p>
 
 <!-- // t1-->
 <div class="task-wrapper">

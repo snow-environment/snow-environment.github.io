@@ -358,13 +358,26 @@ a{
     color: white;
     font-weight: bold;
     font-size: 20px;
-    padding: 1px 14px 1px 14px;
-    border: 1px dotted #83c661;
-    border-radius: 6px;
+    // padding: 1px 14px 1px 14px;
+    // border: 1px dotted #83c661;
+    // border-radius: 6px;
 }
 .color-instance{
     color: #83c661;
 
+}
+.project-agenda{
+    margin-left: 40px;
+    font-size: 20px;
+    /* border-bottom: 1px solid green; */
+    color: #429553;
+    font-weight: bold;
+    /* border-top: 2px solid #429553; */
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #429553;
+    width: fit-content;
+    padding-right: 3px;
 }
 // @media all and (max-width:1920px){
    
