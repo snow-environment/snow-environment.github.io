@@ -193,6 +193,7 @@ export async function projectOne(ctx) {
     eTarget.disabled = true;
     eTarget.classList.add('no-hover')
     eTarget.classList.add('grey-me')
+eTarget.textContent = 'Processing..'
 
     let response = ''
     if (eTarget.classList.contains('one')) {

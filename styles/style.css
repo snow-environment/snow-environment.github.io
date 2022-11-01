@@ -460,5 +460,17 @@ a {
     padding-top: 7px;
     font-size: 18px;
   }
+  .options {
+    font-size: 1rem;
+  }
+  .validate-task-btn {
+    font-size: 1rem;
+  }
+  .req-for-task {
+    font-size: 15px;
+  }
+  .task-info {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

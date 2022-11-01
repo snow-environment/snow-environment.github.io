@@ -42,7 +42,7 @@ const loginPageTemplate = (onSubmit) => html`
 `
 export async function loginPage(ctx) {
 
-  console.log(ctx)
+ 
   ctx.render(loginPageTemplate(onSubmit));
   let mainContentEl = document.querySelector('.main-content')
   mainContentEl.style.background ='#546666'

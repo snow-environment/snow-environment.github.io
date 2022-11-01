@@ -13,8 +13,8 @@ saveMe(btn,currentProject);
     btn.disabled = false;
     btn.classList.remove('no-hover')
     btn.classList.remove('grey-me')
-
     notValidated.style.display = 'block'
+    btn.textContent = 'Validate'
 
 
   }
