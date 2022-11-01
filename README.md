@@ -23,7 +23,7 @@ The Web Application is running JS scripts to check for the specific tables or re
 
 ### Build with :wrench:
 Following technologies were used in the project:
- * HTML/CSS/Javascript/TypeScript
+ * HTML/CSS/Javascript/Ruby
  * [ServiceNow Developer Portal](https://developer.servicenow.com/dev.do#!/)
  * [ServiceNow REST API](https://www.npmjs.com/package/servicenow-rest-api?activeTab=readme)
  * [Obsidian](https://obsidian.md/) 
