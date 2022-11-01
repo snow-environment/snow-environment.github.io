@@ -8,38 +8,23 @@ export async function oneTwo() {
     console.log(connector);
 
 
-    // Check if the Group is Created, a.k.a. Test One
+    // Get data/specific record ServiceNow MiniProject One group from table
     let isGroupFound = false;
     const fieldsFindGroup = [
         'name',
         'email',
         'description',
-        'manager',
-
+        'manager.name',
     ];
-    const filtersFindGroup = [
-        'name=ServiceNow MiniProject One'
+    const filtersFindGroup = [,
+        'name=ServiceNow MiniProject One',
+        'email=snow.web.app@example.com',
+        'description=This is a test group for ServiceNow Task Verifier Web Application.',
+        'manager.name=Abel Tuter'
     ];
     const findGroup = await connector.getTableData(fieldsFindGroup, filtersFindGroup, 'sys_user_group', function (res) {console.log(res)});
     if (findGroup.data.result.length > 0) {
-        for (const key in findGroup) {
-            if (key == "data") {
-                let resultQuery = findGroup[key].result[0];
-                if (resultQuery["name"] == "ServiceNow MiniProject One") {
-                    if (resultQuery["email"] == "snow.web.app@example.com") {
-                        if (resultQuery["description"] == "This is a test group for ServiceNow Task Verifier Web Application.") {
-                            let managerName = resultQuery["manager"];
-                            for (const k in managerName) {
-                                if (managerName["display_value"] == "Abel Tuter") {
-                                    isGroupFound = true;
-                                    console.log("Group `ServiceNow MiniProject One` is found.")
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        isGroupFound = true;
     }
 
 
@@ -50,9 +35,10 @@ export async function oneTwo() {
         "user",
     ];
     const filtersFindGroupAssigned = [
-        // Leave empty, XML file for the table sys_user_grmember in ServiceNow returns only SysIDs and not the values of the records
+        '[user][display_value]=John Doe',
     ];
     const findGroupAssigned = await connector.getTableData(fieldsFindGroupAssigned, filtersFindGroupAssigned, 'sys_user_grmember', function (res) {console.log(res)});
+    console.log(findGroupAssigned)
     let firstGroupFound = false;
     let secondGroupFound = false;
     for (let i = 0; i < findGroupAssigned.data.result.length; i++) {
