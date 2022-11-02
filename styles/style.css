@@ -272,6 +272,7 @@ label[for="instanceName"] {
 section.projectOne {
   margin-left: 30px;
   font-family: 'Work Sans', sans-serif;
+  padding-bottom: 50px;
 }
 
 .logout {
