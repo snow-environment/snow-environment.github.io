@@ -6,7 +6,7 @@ export async function oneThree() {
     const sn = ServiceNow;
     const connector = new sn(credentials.instName, credentials.instUserName, credentials.instPassword, true);
     connector.Authenticate();
-    console.log(connector);
+
 
     // Check if Incident was created
     let isIncidentFound = false;

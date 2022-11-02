@@ -5,7 +5,7 @@ export async function oneTwo() {
     const sn = ServiceNow;
     const connector = new sn(credentials.instName, credentials.instUserName, credentials.instPassword, true);
     connector.Authenticate();
-    console.log(connector);
+
 
 
     // Get data/specific record ServiceNow MiniProject One group from table

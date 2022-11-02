@@ -54,7 +54,6 @@ mainContentEl.classList.add('login-view')
   // console.log(mainContentEl)
   async function onSubmit(e) {
     e.preventDefault()
-    console.log(credentials)
 
     console.log('click')
     let instanceName = document.querySelector('#instanceName').value.trim()
