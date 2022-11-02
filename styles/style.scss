@@ -330,10 +330,11 @@ transform:scaleX(1.1);
 }
 .step-img{
     width: 92%;
-    height: 320px;
+    height: 420px;
     padding: 3px;
     border-radius: 4px;
     border: 3px solid black;
+    
 }
 .additional-info{
     color: #429553;
@@ -371,12 +372,13 @@ a{
     margin-left: 40px;
     font-size: 20px;
     /* border-bottom: 1px solid green; */
-    color: #429553;
+    color: #0d8124;
     font-weight: bold;
     /* border-top: 2px solid #429553; */
     padding-top: 7px;
     padding-bottom: 7px;
-    border-bottom: 1px solid #429553;
+    border-bottom: 2px solid #429553;
+    border-top: 2px solid green;
     width: fit-content;
     padding-right: 3px;
 }
@@ -387,7 +389,7 @@ a{
 //     }
   
 // }
-@media (min-width:700px) and (max-width:1550px){
+@media (min-width:1320px) and (max-width:1550px){
    .login{
         //    margin-top: 35px;
            width: 456px;
@@ -425,14 +427,38 @@ a{
     font-size: 1rem;
 }
 }
-// @media all and (max-width:1440){
+@media all and (max-width:1319px){
    
-//     .diw-logo{
-//         left: 632px;
-//     }
+  .options{
+//  color: grey;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    // padding: 9px;
+  }
 
-// }
-
+}
+@media all and (max-width:1080px){
+   
+    .options{
+  //  color: grey;
+  font-size: 0.7rem;
+      letter-spacing: 2px;
+      padding: 17px;
+      // padding: 9px;
+    }
+  
+  }
+  @media all and (max-width:830px){
+   
+    .options{
+  //  color: grey;
+  font-size: 0.7rem;
+      letter-spacing: 1px;
+      padding: 15px 0px 15px 0px;
+      // padding: 9px;
+    }
+  
+  }
 
 // @media (min-width:1346px) and (max-width:1366px){
    

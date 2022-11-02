@@ -9,7 +9,7 @@ import { validation } from '../util/validate.js';
 const projectOneTemplate = () => html`
 <section class="projectOne">
 
-  <h1 class="project-heading">Mini Project #1</h1>
+  <h1 class="project-heading">Mini Project 1</h1>
   <p class="project-agenda">In this project you will find hands on tasks for Certified System Administrator.</p>
 
   
