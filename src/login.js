@@ -70,7 +70,6 @@ mainContentEl.classList.add('login-view')
       credentials.instName = instanceName;
       credentials.instUserName = instanceUserName;
       credentials.instPassword = instancePassword;
-      console.log(credentials)
       let btnSubmit = document.querySelector('.submit')
       console.log(btnSubmit)
       btnSubmit.disabled = true;
