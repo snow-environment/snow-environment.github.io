@@ -1,16 +1,13 @@
 import {render, html} from '../lib.js'
 const projectFourTemplate = () => html`
 
-<section class="taskOne">
-  <h2>Project 4</h2>
-  <div class="short-description">
-    <p>Coming soon..
-      </p>
-  </div>
+<section class="projectOne">
 
-
+<h1 class="project-heading">Mini Project 4</h1>
+<p class="project-agenda">Project coming soon</p>
 </section>
 `
+
 
 
 export async function projectFour(ctx) {

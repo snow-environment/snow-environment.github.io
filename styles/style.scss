@@ -1,15 +1,15 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap');
 
-body{
+body {
     margin: 0px;
 }
-.diw-logo{
+
+.diw-logo {
     width: 160px;
     height: 160px;
     margin-right: 10px;
-  
- 
+
+
     border: 6px solid red;
     border-radius: 95px;
     box-shadow: 0px 0px 30px 0px #ff0000;
@@ -22,7 +22,8 @@ body{
     left: 194px;
 
 }
-.login{
+
+.login {
     border: 5px solid #ffffff;
     box-shadow: 0px 0px 30px 0px #92cc8391;
     background: #293e40;
@@ -32,17 +33,19 @@ body{
     // margin: auto;
     border-top-left-radius: 60px;
     // margin-top: 115px;
-  
+
     border-top-right-radius: 60px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     overflow-x: hidden;
-    
+
 }
-html{
+
+html {
     background: #546666;
     overflow: hidden;
 }
+
 // .diw-logo {
 //     height: 250px;
 //     width: 250px;
@@ -81,52 +84,64 @@ label:nth-of-type(2) {
 
 input::placeholder {
     color: rgba(184, 179, 179, 0.678);
-};
-.submit{
-    padding-top: 15px; 
- 
+}
+
+;
+
+.submit {
+    padding-top: 15px;
+
     background: #abd7abb3;
     margin-top: 30px;
     font-size: 20px;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
 }
-.container input.submit:hover{
+
+.container input.submit:hover {
     transition: 1.25s;
     cursor: pointer;
     background: #66df66;
     box-shadow: 0px 0px 30px 0px #66df66;
 
 }
-.container{
+
+.container {
     padding-bottom: 60px;
 }
-.light-me-up{
+
+.light-me-up {
     font-size: 15px;
     padding-left: 20px;
 }
-.light-me-up:hover{
+
+.light-me-up:hover {
     transition: 0.5s;
     box-shadow: 0px 0px 30px 0px #fffffe85;
 }
-.logo{
+
+.logo {
     padding-top: 30px;
     position: relative;
 }
-.error{
+
+.error {
     border: 2px solid #ff000087;
     box-shadow: 0px 0px 30px 0px #ff0000b5;
 }
-.color-spliter{
+
+.color-spliter {
     width: 100%;
     background: #377669;
     height: 106px;
 }
+
 label[for="instanceName"] {
-// padding-top:50px;
-margin-top: 0px;
+    // padding-top:50px;
+    margin-top: 0px;
 }
-.visual-nav{
+
+.visual-nav {
     height: 60px;
     width: 100%;
     background: #293e40;
@@ -135,7 +150,8 @@ margin-top: 0px;
     align-items: center;
     // margin-bottom: 150px;
 }
-.snLogo{
+
+.snLogo {
     width: 200px;
 }
 
@@ -150,17 +166,19 @@ margin-top: 0px;
     color: white;
     border-bottom: 1px solid white;
     // text-align: center;
-    transition: all 0.6s  ease-in-out;
-    transition: all 0.2s  ease-out;
+    transition: all 0.6s ease-in-out;
+    transition: all 0.2s ease-out;
     // transition-duration: 0.5;
     text-align: center;
 
 
 }
-.options:hover{
+
+.options:hover {
     transform: scaleX(1.1);
     background: #429553;
 }
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -172,29 +190,33 @@ margin-top: 0px;
     // overflow-x: hidden;
     display: none;
 }
+
 .content {
     background: white;
     width: 100%;
-   
+
     display: flex;
     height: 95vh;
     overflow-x: hidden;
     font-family: 'Work Sans', sans-serif;
 }
+
 .main-content {
     // background: #e2eff2;
     overflow: auto;
     width: 100%;
 }
+
 .spacer {
     width: 100%;
-   
+
     height: 100%;
     background: #293e40;
 
 }
-.error-msg{
-  
+
+.error-msg {
+
     margin-top: 68px;
     margin-bottom: 0px;
     display: hidden;
@@ -205,26 +227,32 @@ margin-top: 0px;
     font-weight: bolder;
     letter-spacing: 0.5px;
 }
-.error-box{
+
+.error-box {
     box-shadow: 0px 0px 30px 0px #f30404fa;
 }
-.no-hover{
+
+.no-hover {
     pointer-events: none;
 
 }
-.task-wrapper{
+
+.task-wrapper {
     margin-left: 40px;
     margin-right: 40px;
     border-bottom: 1px solid green;
 }
-.project-heading{
+
+.project-heading {
     margin-left: 200px;
     font-size: 2rem;
 }
-.button-wrapper{
+
+.button-wrapper {
     margin: 30px;
 }
-.validate-task-btn{
+
+.validate-task-btn {
     transition: color .25s ease;
     background: #293e40;
     border: 0.2rem solid #293e40;
@@ -235,7 +263,8 @@ margin-top: 0px;
     font-size: 1.3rem;
     padding: 6px 20px 6px 20px;
 }
-.validate-task-btn:hover{
+
+.validate-task-btn:hover {
     cursor: pointer;
     background: #409151;
     transition: 0.5s;
@@ -243,37 +272,43 @@ margin-top: 0px;
     color: white;
     box-shadow: 0px 0px 30px 0px #92cc83e1;
 }
-section.projectOne{
+
+section.projectOne {
     margin-left: 30px;
     font-family: 'Work Sans', sans-serif;
     padding-bottom: 50px;
 }
-.logout{
+
+.logout {
     display: none;
     color: white;
     text-decoration: none;
     margin-right: 25px;
-    font-size: 20px;  
-    transition: 0.3s;
-
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
 }
-.logout:hover{
+
+.logout:hover {
     transform: scaleX(1.2);
     color: red;
 }
-.task-info{
+
+.task-info {
     font-weight: bold;
     font-size: 1.1rem;
 }
-.req-for-task{
+
+.req-for-task {
     font-size: 18px;
- 
+
     font-weight: bold;
 }
-.grey-me{
-    background: grey  
+
+.grey-me {
+    background: grey
 }
-.not-validated{
+
+.not-validated {
     display: none;
     background: #ff000038;
     width: fit-content;
@@ -282,7 +317,8 @@ section.projectOne{
     border: 1px solid red;
 
 }
-.validated{
+
+.validated {
     display: none;
     background: #0368038c;
     width: fit-content;
@@ -291,18 +327,19 @@ section.projectOne{
 }
 
 .clicked {
-background :#429553;
-transform:scaleX(1.1);
+    background: #429553;
+    transform: scaleX(1.1);
 }
 
-.login-view{
- 
+.login-view {
+
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-.optional{
+
+.optional {
     color: #dd2323;
     font-weight: bold;
     border-top: 2px solid red;
@@ -310,53 +347,63 @@ transform:scaleX(1.1);
     padding-bottom: 7px;
     border-bottom: 2px solid red;
 }
-.welcome-heading{
+
+.welcome-heading {
     font-size: 2rem;
     text-align: center;
 }
-.before-info{
+
+.before-info {
     font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
 }
-.steps{
+
+.steps {
     list-style-type: none;
     margin-bottom: 35px;
 }
-.all-steps{
+
+.all-steps {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
 }
-.step-img{
+
+.step-img {
     width: 92%;
     height: 420px;
     padding: 3px;
     border-radius: 4px;
     border: 3px solid black;
-    
+
 }
-.additional-info{
+
+.additional-info {
     color: #429553;
 }
-.redirections{
+
+.redirections {
     color: #1e8f36;
     padding: 0px 9px 0px 9px;
     background: #80808040;
     border-radius: 22px;
     border: 1px solid #80808040;
-    transition: all 0.4s  ease-in-out;
+    transition: all 0.4s ease-in-out;
     // transition: all 0.2s  ease-out;
 }
-.redirections:hover{
+
+.redirections:hover {
     border: 1px solid #5de55d;
     color: white;
-    background:#68a56f;
+    background: #68a56f;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.currentInstance{
+
+.currentInstance {
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -364,11 +411,13 @@ a{
     // border: 1px dotted #83c661;
     // border-radius: 6px;
 }
-.color-instance{
+
+.color-instance {
     color: #83c661;
 
 }
-.project-agenda{
+
+.project-agenda {
     margin-left: 40px;
     font-size: 20px;
     /* border-bottom: 1px solid green; */
@@ -382,114 +431,126 @@ a{
     width: fit-content;
     padding-right: 3px;
 }
+
 // @media all and (max-width:1920px){
-   
+
 //     .diw-logo{
 //         left: 880px;
 //     }
-  
+
 // }
-@media (min-width:1320px) and (max-width:1550px){
-   .login{
+@media (min-width:1320px) and (max-width:1550px) {
+    .login {
         //    margin-top: 35px;
-           width: 456px;
-        }
-      .diw-logo{
+        width: 456px;
+    }
+
+    .diw-logo {
         // left: 685px;
         // top: 120px;
         width: 130px;
         height: 130px;
         top: -70px;
-    left: 161px;
-      }
-      label, input {
-          padding: 7px;
-          font-size: 18px;
-      }
-      .container {
+        left: 161px;
+    }
+
+    label,
+    input {
+        padding: 7px;
+        font-size: 18px;
+    }
+
+    .container {
         padding-bottom: 30px
-      }
-      .submit {
+    }
+
+    .submit {
         padding-top: 7px;
         font-size: 18px;
-      }
-
- .options{
-     font-size: 1rem;
- }
- .validate-task-btn{
-    font-size: 1rem;
- }
- .req-for-task{
-    font-size: 15px;
- }
-.task-info{
-    font-size: 1rem;
-}
-}
-@media all and (max-width:1319px){
-   
-  .options{
-//  color: grey;
-    font-size: 0.9rem;
-    letter-spacing: 3px;
-    // padding: 9px;
-  }
-
-}
-@media all and (max-width:1080px){
-   
-    .options{
-  //  color: grey;
-  font-size: 0.7rem;
-      letter-spacing: 2px;
-      padding: 17px;
-      // padding: 9px;
     }
-  
-  }
-  @media all and (max-width:830px){
-   
-    .options{
-  //  color: grey;
-  font-size: 0.7rem;
-      letter-spacing: 1px;
-      padding: 15px 0px 15px 0px;
-      // padding: 9px;
+
+    .options {
+        font-size: 1rem;
     }
-  
-  }
+
+    .validate-task-btn {
+        font-size: 1rem;
+    }
+
+    .req-for-task {
+        font-size: 15px;
+    }
+
+    .task-info {
+        font-size: 1rem;
+    }
+}
+
+@media all and (max-width:1319px) {
+
+    .options {
+        //  color: grey;
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+        // padding: 9px;
+    }
+
+}
+
+@media all and (max-width:1080px) {
+
+    .options {
+        //  color: grey;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        padding: 17px;
+        // padding: 9px;
+    }
+
+}
+
+@media all and (max-width:830px) {
+
+    .options {
+        //  color: grey;
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        padding: 15px 0px 15px 0px;
+        // padding: 9px;
+    }
+
+}
 
 // @media (min-width:1346px) and (max-width:1366px){
-   
+
 //     .diw-logo{
 //         left: 605px;
 //     }
-  
+
 // }
 // @media (min-width:1280px) and (max-width:1300px){
-   
+
 //     .diw-logo{
 //         left: 560px;
 //     }
-  
+
 // }
 // @media (min-width:1000px) and (max-width:1024px){
-   
+
 //     .diw-logo{
 //         left: 430px;
 //     }
-  
+
 // }
 // @media all and (max-width:820px){
-   
+
 //     .diw-logo{
 //         left: 320px;
 //     }
 
 // }
 // @media all and (max-width:770px){
-   
+
 //     .diw-logo{
 //         left: 300px;
 //     }
