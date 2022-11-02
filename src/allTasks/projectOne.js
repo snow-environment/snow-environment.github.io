@@ -44,7 +44,7 @@ const projectOneTemplate = () => html`
       
  <ul class="requirements">
      <li class="req-for-task">Name = <span class="additional-info">ServiceNow MiniProject One</span></li>
-     <li class="req-for-task">Manager = <span class="additional-info">Abel Hunter</span></li>
+     <li class="req-for-task">Manager = <span class="additional-info">Abel Tuter</span></li>
      <li class="req-for-task">Group Email = <span class="additional-info">snow.web.app@example.com</span></li>
      <li class="req-for-task">Description = <span class="additional-info">This is a test group for ServiceNow Task Verifier Web Application.</span></li>
 </ul>
