@@ -5,7 +5,7 @@ export async function oneOne() {
   const sn = ServiceNow;
   const connector = new sn(credentials.instName, credentials.instUserName, credentials.instPassword, true);
   connector.Authenticate();
-  console.log(connector)
+
 
   // Get table 'sys_user'
   let isTableFound = false;

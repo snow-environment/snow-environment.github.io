@@ -54,7 +54,6 @@ mainContentEl.classList.add('login-view')
   // console.log(mainContentEl)
   async function onSubmit(e) {
     e.preventDefault()
-    console.log(credentials)
 
     console.log('click')
     let instanceName = document.querySelector('#instanceName').value.trim()
@@ -70,7 +69,6 @@ mainContentEl.classList.add('login-view')
       credentials.instName = instanceName;
       credentials.instUserName = instanceUserName;
       credentials.instPassword = instancePassword;
-      console.log(credentials)
       let btnSubmit = document.querySelector('.submit')
       console.log(btnSubmit)
       btnSubmit.disabled = true;

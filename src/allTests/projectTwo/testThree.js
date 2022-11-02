@@ -5,7 +5,7 @@ export async function twoThree() {
     const sn = ServiceNow;
     const connector = new sn(credentials.instName, credentials.instUserName, credentials.instPassword, true);
     connector.Authenticate();
-    console.log(connector);
+
 
     // Get credentials
     let isCredentialsFound = false;
