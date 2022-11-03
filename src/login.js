@@ -73,7 +73,7 @@ mainContentEl.classList.add('login-view')
       console.log(btnSubmit)
       btnSubmit.disabled = true;
       btnSubmit.classList.add('no-hover')
-      const myTimeout = setTimeout(warning, 3500);
+      const myTimeout = setTimeout(warning, 5500);
 
       function warning() {
 

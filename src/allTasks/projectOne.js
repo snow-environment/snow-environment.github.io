@@ -118,10 +118,9 @@ const projectOneTemplate = () => html`
 
 export async function projectOne(ctx) {
 
-  console.log('projectOne')
   ctx.render(projectOneTemplate());
 
-  console.log(localData.p1)
+
   let projectTasks = localData.p1
   let allWrappers = document.querySelectorAll('.task-wrapper')
 
@@ -177,17 +176,13 @@ export async function projectOne(ctx) {
   });
   let mainContentEl = document.querySelector('.main-content')
   mainContentEl.style.overflow = 'auto'
-  // validateBtn.addEventListener('click', onSubmit)
+
   async function onSubmit(e) {
     e.preventDefault()
     let eTarget = e.target;
-    console.log('V A L I D A T E')
 
-    console.log('e target > ', eTarget)
-    console.log('parent', eTarget.parentNode)
     let eParent = eTarget.parentNode;
     let notValidated = eParent.querySelector('.not-validated')
-    console.log('Not validated', notValidated.parentNode);
 
     notValidated.style.display = 'none'
     eTarget.disabled = true;
@@ -198,20 +193,20 @@ eTarget.textContent = 'Processing..'
     let response = ''
     if (eTarget.classList.contains('one')) {
       response = await oneOne()
-      console.log('BTN e 1')
+ 
 
     }
     if (eTarget.classList.contains('two')) {
       response = await oneTwo()
 
-      console.log('BTN e 2')
+
 
     }
 
-    // -----Activate when oneThree logic is ready!!!!------
+  
     if (eTarget.classList.contains('three')) {
       response = await oneThree()
-      console.log('BTN e 3')
+
 
     }
 
@@ -224,24 +219,3 @@ eTarget.textContent = 'Processing..'
 
   }
 }
-// function validation(response,btn,notValidated){
-
-//   if (response) {
-//     btn.style.display = 'none'
-//     document.querySelector('.validated').style.display = 'block'
-//   }
-//   else {
-//     btn.disabled = false;
-//     btn.classList.remove('no-hover')
-//     btn.classList.remove('grey-me')
-
-//     notValidated.style.display = 'block'
-
-
-//   }
-// }
-
-// export function selected(e){
-// console.log('in selected  > >>  >',e.target)
-// e.target.classList.add('clicked')
-// }

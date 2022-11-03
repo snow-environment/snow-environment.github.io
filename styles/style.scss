@@ -42,6 +42,7 @@ body {
 }
 
 html {
+    font-family: "Gilroy", arial;
     background: #546666;
     overflow: hidden;
 }
@@ -75,7 +76,7 @@ label {
     color: white;
     margin-top: 13px;
     // font-family: Georgia, 'Times New Roman', Times, serif;
-    font-family: 'Work Sans', sans-serif;
+    // font-family: 'Work Sans', sans-serif;
 }
 
 label:nth-of-type(2) {
@@ -198,7 +199,7 @@ label[for="instanceName"] {
     display: flex;
     height: 95vh;
     overflow-x: hidden;
-    font-family: 'Work Sans', sans-serif;
+    // font-family: 'Work Sans', sans-serif;
 }
 
 .main-content {
@@ -259,7 +260,7 @@ label[for="instanceName"] {
     color: white;
     cursor: pointer;
     display: inline-block;
-    font-family: "GilroySemiBold";
+    // font-family: "GilroySemiBold";
     font-size: 1.3rem;
     padding: 6px 20px 6px 20px;
 }
@@ -275,7 +276,7 @@ label[for="instanceName"] {
 
 section.projectOne {
     margin-left: 30px;
-    font-family: 'Work Sans', sans-serif;
+    // font-family: 'Work Sans', sans-serif;
     padding-bottom: 50px;
 }
 
@@ -484,6 +485,9 @@ a {
     .task-info {
         font-size: 1rem;
     }
+    .project-agenda{
+        font-size: 18px;
+    }
 }
 
 @media all and (max-width:1319px) {
@@ -494,7 +498,16 @@ a {
         letter-spacing: 3px;
         // padding: 9px;
     }
-
+    .validate-task-btn{
+        font-size: 1rem;
+        padding: 3px 12px 3px 12px;
+    }
+    .project-agenda{
+        font-size: 16px;
+    }
+.currentInstance{
+    font-size: 18px;
+}
 }
 
 @media all and (max-width:1080px) {
@@ -506,7 +519,9 @@ a {
         padding: 17px;
         // padding: 9px;
     }
-
+.snLogo{
+    width: 180px;
+}
 }
 
 @media all and (max-width:830px) {
