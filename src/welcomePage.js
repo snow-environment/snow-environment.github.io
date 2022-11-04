@@ -3,17 +3,16 @@ import { credentials } from './app.js'
 import { render, html } from './lib.js'
 const welcomePageTemplate = () => html`
 <section class="projectOne">
-<h1 class="welcome-heading">Welcome, Do it Wisers! :)</h1>
+<h1 class="welcome-heading">Welcome, Алекс! :)</h1>
 <div class="before-you-start">
 <p class="before-info">
-Before you try to validate tasks in some of projects, first you need to create Cors Rule in the instance you are connected.
+Петък е, <span class="additional-info">ден на майстора</span>, страницата е в ремонт :D
 </p>
 <div class="short-description">
 <ul class="all-steps">
-<li class="steps"><img src="./img/corsRule1.JPG" alt="" class="step-img"></li>
+<li class="steps"><img src="./img/comingSoon.png" alt="" class="step-img"></li>
 
-<li class="steps"><img src="./img/createNewCors.JPG" alt="" class="step-img"></li>
-<li class="steps"><img src="./img/newCorsRule.JPG" alt="" class="step-img"></li>
+
 </ul>
 </div>
 </div>

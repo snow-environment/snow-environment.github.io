@@ -295,7 +295,6 @@ section.projectOne {
 
 .req-for-task {
   font-size: 18px;
-  font-weight: bold;
 }
 
 .grey-me {
@@ -343,11 +342,10 @@ section.projectOne {
 
 .optional {
   color: #dd2323;
-  font-weight: bold;
-  border-top: 2px solid red;
+  border-top: 1px solid red;
   padding-top: 7px;
   padding-bottom: 7px;
-  border-bottom: 2px solid red;
+  border-bottom: 1px solid red;
 }
 
 .welcome-heading {
@@ -394,15 +392,16 @@ section.projectOne {
 .redirections {
   color: #1e8f36;
   padding: 0px 9px 0px 9px;
+  font-weight: bold;
   background: #80808040;
   border-radius: 22px;
-  border: 1px solid #80808040;
+  border: 1px solid #80808000;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 .redirections:hover {
-  border: 1px solid #5de55d;
+  border: 1px solid #68a56f;
   color: white;
   background: #68a56f;
 }
@@ -413,12 +412,12 @@ a {
 
 .currentInstance {
   color: white;
-  font-weight: bold;
   font-size: 20px;
 }
 
 .color-instance {
   color: #83c661;
+  font-weight: bold;
 }
 
 .project-agenda {
@@ -426,7 +425,6 @@ a {
   font-size: 20px;
   /* border-bottom: 1px solid green; */
   color: #0d8124;
-  font-weight: bold;
   /* border-top: 2px solid #429553; */
   padding-top: 7px;
   padding-bottom: 7px;
@@ -437,6 +435,8 @@ a {
   width: fit-content;
   padding-right: 3px;
 }
+
+
 
 @media (min-width: 1320px) and (max-width: 1550px) {
   .login {

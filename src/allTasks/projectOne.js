@@ -92,7 +92,7 @@ const projectOneTemplate = () => html`
         </ul>
         </div>
         <p class="task-info">After you finish with the above assignment press <span class="additional-info">Validate</span> button and check the result</p>
-        <p class="task-info"> <span class="optional">!!OPTIONAL. Below's tasks will not affect the final result!!</span></p>
+        <p > <span class="optional">!!OPTIONAL. Below's tasks will not affect the final result!!</span></p>
         <p class="task-info">3. Impersonate user <span class="additional-info">John Doe</span></p>
         <ul class="requirements">
           <li class="req-for-task">Navigate to <span class="additional-info">Incidents</span>, find and open the newly created Incident by ITIL User (use the filter to find the incident)</li>
