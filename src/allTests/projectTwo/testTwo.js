@@ -21,7 +21,6 @@ export async function twoTwo() {
     ];
     const tableData = await connector.getTableData(fieldsMidFound, filtersMidFound, 'ecc_agent', function (res) {console.log(res)});
     if (tableData.data.result.length > 0) {
-        console.log("MID Server is Found. Status is UP and the server is Validated.")
         return true;
     } else {
         return false;
