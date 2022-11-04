@@ -16,7 +16,7 @@ const projectOneTemplate = () => html`
   <div class="task-wrapper">
       <h2>Task 1</h2>
       <div class="short-description">
-        <p class="task-info">1. Create a new user:</p
+        <p class="task-info">1. Create a new user:</p>
    <ul class="requirements">
        <li class="req-for-task">First Name: <span class="additional-info">John</span></li>
        <li class="req-for-task">Last Name: <span class="additional-info">Doe</span> </li>
@@ -73,7 +73,7 @@ const projectOneTemplate = () => html`
       </div>
       <!--  -->
       <div class="short-description">
-          <p class="task-info">2. Navigate to <span class="additional-info">Application</span> --> <span class="additional-info">Incident</span> --> <span class="additional-info">Create New</span> and create new record with the following data:</p>
+          <p class="task-info">2. Navigate to <span class="additional-info">Application</span>  <span class="additional-info">Incident</span> <span class="arrow">&rarr;</span> <span class="additional-info">Create New</span> and create new record with the following data:</p>
           <ul class="requirements">
             <li class="req-for-task">Caller = <span class="additional-info">ITIL User</span></li>
             <li class="req-for-task">Category = <span class="additional-info">Software</span></li>
