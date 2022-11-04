@@ -16,13 +16,8 @@ Vagrant.configure("2") do |config|
         vb.memory = "2048"
         vb.cpus = "2"
         vb.name = "doitwise-ubuntu"
-      end
-      doitwise.vm.provision "shell", inline: <<-SHELL
-        apt-get update
-        apt-get upgrade
-        SHELL
     end
-  end
+end
   
     # The most common configuration options are documented and commented below.
     # For a complete reference, please see the online documentation at
