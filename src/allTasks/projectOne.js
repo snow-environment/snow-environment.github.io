@@ -10,7 +10,8 @@ const projectOneTemplate = () => html`
 <section class="projectOne">
 
   <h1 class="project-heading">Mini Project 1</h1>
-  <p class="project-agenda">In this project you will find hands on tasks for Certified System Administrator.</p>
+  <p class="project-agenda">In this project you will find tasks for <span class="bold-me">Certified System Administrator</span>.</p>
+ 
 
   
   <div class="task-wrapper">

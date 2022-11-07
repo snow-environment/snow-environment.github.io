@@ -3,7 +3,7 @@ import { credentials } from './app.js'
 import { render, html } from './lib.js'
 const welcomePageTemplate = () => html`
 <section class="welcome-page">
-  <h1 class="welcome-heading">Welcome, Do it Wisers! :)</h1>
+  <h1 class="welcome-heading">Welcome, Do it Wisers!<span class="smile" >&#9786;</span></h1>
   <div class="before-you-start">
   <div class="before-wrapper">
   <p class="before-info">
@@ -21,7 +21,7 @@ const welcomePageTemplate = () => html`
       <div class="tech-stack">
         <!-- <p class="all-tech">Technologies:</p> -->
         <div class="tech-wrapper">
-          <img class="tech-img border-me" src="./img/js.png" alt="" > <img class="tech-img border-me" src="./img/html.png" alt="" ><img class="tech-img border-me" src="./img/css.png" alt=""><img class="tech-img" src="./img/ruby.png" alt="" >
+          <img class="tech-img border-me" src="./img/js.png" alt="" > <img class="tech-img border-me plus-r" src="./img/html.png" alt="" ><img class="tech-img border-me plus" src="./img/css2.png" alt=""><img class="tech-img" src="./img/ruby.png" alt="" >
         </div>
       </div>
       <!-- <li class="technologies img-icons"> <img src="./img/js.png" alt="" width="30px" height="30px"> <img src="./img/html.png" alt="" width="30px" height="30px"><img src="./img/ruby.png" alt="" width="30px" height="30px" ><img src="./img/css.png" alt="" width="30px" height="30px"></li>
@@ -40,19 +40,21 @@ const welcomePageTemplate = () => html`
       <span class="additional-info"></span>
       <div class="short-description">
         <h3>Usage ❓</h3>
-        <p class="before-you-start">⚠️ Before logging in the platform you should create a CORS rule in your ServiceNow
-          Instance. Navigate to <span class="additional-info">Applications</span> <span class="arrow">&rarr;</span> <span
-            class="additional-info">System Web Services</span> <span class="arrow">&rarr;</span> <span class="additional-info">REST</span> <span class="arrow">&rarr;</span> <span
-            class="additional-info">CORS Rules</span>. Create a new rule with the following data:</p>
+        <ul class="usage-option"><p class="before-you-start">⚠️ Before validation of any tasks you should create a <span class="additional-info bold-me">CORS rule</span> in your ServiceNow
+          Instance.</p></ul>
+        <ul class="usage-option"><p> Navigate to <span class="additional-info bold-me">Applications</span> <span class="arrow">&rarr;</span> <span
+          class="additional-info bold-me">System Web Services</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">REST</span> <span class="arrow">&rarr;</span> <span
+          class="additional-info bold-me">CORS Rules</span>.</p></ul>
+        <ul class="usage-option"><p> Create a new rule with the following data:</p></ul>
         <li class="cors-instructions">Name <span class="arrow">&rarr;</span> Give it a name by your choose.</li>
-        <li class="cors-instructions">REST API <span class="arrow">&rarr;</span> Choose <span class="additional-info">Table API[now/table]</span> from
+        <li class="cors-instructions">REST API <span class="arrow">&rarr;</span> Choose <span class="additional-info bold-me">Table API[now/table]</span> from
           the dropdown menu.</li>
         <li class="cors-instructions">Domain <span class="arrow">&rarr;</span> Insert the domain of the Web App <span
-            class="additional-info">https://snow-environment.github.io</span></li>
-        <li class="cors-instructions">Max age <span class="arrow">&rarr;</span> Leave as <span class="additional-info">0</span></li>
-        <li class="cors-instructions">Application <span class="arrow">&rarr;</span> Global, by <span class="additional-info">default</span</li>
+            class="additional-info bold-me">https://snow-environment.github.io</span></li>
+        <li class="cors-instructions">Max age <span class="arrow">&rarr;</span> Leave as <span class="additional-info bold-me">0</span></li>
+        <li class="cors-instructions">Application <span class="arrow">&rarr;</span> Global, by <span class="additional-info bold-me">default</span</li>
         <li class="cors-instructions">HTTP Methods <span class="arrow">&rarr;</span> Leave GET and POST as set by <span
-            class="additional-info">default</span</li>
+            class="additional-info bold-me">default</span</li>
             <div class="steps-wrapper">
             <p class="cors-steps">Steps example:</p>
               <a class="cors-steps-img" href="/img/1.JPG" target="_blank">1</a>

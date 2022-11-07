@@ -11,7 +11,8 @@ const projectTwoTemplate = () => html`
 
 <section class="projectOne">
   <h1 class="project-heading">Mini Project 2</h1>
-  <p class="project-agenda">In this project you will find hands on tasks for Discovery.</p>
+  <p class="project-agenda">In this project you will find tasks for <span class="bold-me">Discovery</span>.</p>
+
   
   <!-- // t1-->
   <div class="task-wrapper">
@@ -65,7 +66,7 @@ const projectTwoTemplate = () => html`
   </ul>
   <p class="task-info">4. Download MID server on your virtual machine</p>
   <ul class="requirements">
-  <li class="req-for-task">Go to ServiceNow Instance and navigate to <span class="additional-info">Applications</span> <span class="arrow">&rarr;</span> <span class="additional-info">MID Server</span> <span class="arrow">&rarr;</span> <span class="additional-info">Downloads</span></li>
+  <li class="req-for-task">Go to ServiceNow Instance and navigate to <span class="additional-info bold-me">Applications</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">MID Server</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">Downloads</span></li>
   <li class="req-for-task">Check <span class="additional-info">Download MID Server as ZIP archive</span> to be able to see the download links for zip file</li>
   <li class="req-for-task">Copy the link for Linux(ZIP)</li>
   <li class="req-for-task">Go back in your virtual machine session and type <span class="additional-info">wget paste the link, you can use the right-click on your mouse</span></li>
@@ -83,7 +84,7 @@ const projectTwoTemplate = () => html`
   <li class="req-for-task">Enter the ServiceNow Instance URL [https://YOUR_INSTANCE.service-now.com/] : Enter your ServiceNow Instance URL address</li>
   <li class="req-for-task">Do you want to use proxy? [Enter Y or N] : Choose <span class="additional-info">N</span></li>
   <li class="req-for-task">Do you want to use Mutual Authentication? [Enter Y or N] : Choose <span class="additional-info">N</span></li>
-  <li class="req-for-task">Enter the username for mid user : Choose your mid user <span class="arrow">&rarr;</span> <span class="additional-info">snow_mid_user</span></li>
+  <li class="req-for-task">Enter the username for mid user : Choose your mid user --> <span class="additional-info">snow_mid_user</span></li>
   <li class="req-for-task">Enter the password for mid user: Type in the password you've set in Task 1</li>
   <li class="req-for-task">Enter the Mid Server Name [My_Linux_Mid_Server] : Type <span class="additional-info">SNOW_MID</span></li>
   <li class="req-for-task">Enter the unique name for the service to be created [mid] : Type <span class="additional-info">snow</span></li>
@@ -91,7 +92,7 @@ const projectTwoTemplate = () => html`
   </ul>
   <p class="task-info">6. Go back to your ServiceNow Instance and Validate the MID Server</p>
   <ul class="requirmenrs">
-  <li class="req-for-task">Navigate to <span class="additional-info">Applications - Discovery - MID Servers</span></li>
+  <li class="req-for-task">Navigate to <span class="additional-info bold-me">Applications</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">Discovery</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">MID Servers</span></li>
   <li class="req-for-task">Find <span class="additional-info">SNOW_MID</span> in the list and open the record</li>
   <li class="req-for-task">Scroll down to <span class="additional-info">Related Links</span> and press <span class="additional-info">Validate</span></li>
   <li class="req-for-task">Wait until the MID server is being validated(if the process takes too long, go back in your VM, restart the MID server service and try again)</li>
@@ -118,7 +119,7 @@ const projectTwoTemplate = () => html`
   <div class="short-description">
   <p class="task-info">1. Create Linux/UNIX credentials:</p>
   <ul class="requirements">
-  <li class="req-for-task">In your ServiceNow instance navigate to <span class="additional-info">All Aplications</span> <span class="arrow">&rarr;</span> <span class="additional-info">Discovery</span> <span class="arrow">&rarr;</span> <span class="additional-info">Credentials</span></li>
+  <li class="req-for-task">In your ServiceNow instance navigate to <span class="additional-info bold-me">All Aplications</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">Discovery</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">Credentials</span></li>
   <li class="req-for-task">Create new credetials using <span class="additional-info">SSH Credentials</span> type</li>
   <li class="req-for-task">Name = <span class="additional-info">SNOW_Linux_Credentials</span></li>
   <li class="req-for-task">Username = <span class="additional-info">vagrant</span> / Password = <span class="additional-info">vagrant</span>, the login credentials for the VM user</li>
@@ -126,7 +127,7 @@ const projectTwoTemplate = () => html`
   </ul>
   <p class="task-info">2. Perform a Quick Discovery:</p>
   <ul class="requirements">
-  <li class="req-for-task">Navigate to <span class="additional-info">All Application</span> <span class="arrow">&rarr;</span> <span class="additional-info">Discovery</span> <span class="arrow">&rarr;</span> <span class="additional-info">Discovery Schedules</span></li>
+  <li class="req-for-task">Navigate to <span class="additional-info bold-me">All Application</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">Discovery</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">Discovery Schedules</span></li>
   <li class="req-for-task">Click on <span class="additional-info">Quick Discovery</span></li>
   <li class="req-for-task">Choose the <span class="additional-info">SNOW_MID</span> server and type in the IP address of the server</li>
   <li class="req-for-task">Press <span class="additional-info">OK</span> to start Quick Discovery</li>
@@ -134,7 +135,7 @@ const projectTwoTemplate = () => html`
   </ul>
   <p class="task-info">3. Check your VM:</p>
   <ul class="requirements">
-  <li class="req-for-task">Navigate to <span class="additional-info">All Applications</span> <span class="arrow">&rarr;</span> <span class="additional-info">Disovery</span> <span class="arrow">&rarr;</span> <span class="additional-info">Dashboard</span></li>
+  <li class="req-for-task">Navigate to <span class="additional-info bold-me">All Applications</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">Disovery</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">Dashboard</span></li>
   <li class="req-for-task">Under <span class="additional-info">Newly discovered devices</span> you can see that you have one new Linux Server discovered</li>
   <li class="req-for-task">Open the record and preview the details</li>
   </ul>

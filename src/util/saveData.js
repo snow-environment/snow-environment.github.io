@@ -3,22 +3,42 @@ import { localData } from "../app.js"
 
 export function saveMe(btn, currentProject) {
     if (currentProject == 'p1') {
-        console.log('saveMe p 1')
+     
         checkBtn(btn, currentProject)
     }
     if (currentProject == 'p2') {
         checkBtn(btn, currentProject)
     }
     if (currentProject == 'p3') {
+        checkBtn(btn, currentProject)
 
     }
     if (currentProject == 'p4') {
+        checkBtn(btn, currentProject)
         
     }
     if (currentProject == 'p5') {
+        checkBtn(btn, currentProject)
 
     }
     if (currentProject == 'p6') {
+        checkBtn(btn, currentProject)
+
+    }
+    if (currentProject == 'p7') {
+        checkBtn(btn, currentProject)
+
+    }
+    if (currentProject == 'p8') {
+        checkBtn(btn, currentProject)
+
+    }
+    if (currentProject == 'p9') {
+        checkBtn(btn, currentProject)
+
+    }
+    if (currentProject == 'p10') {
+        checkBtn(btn, currentProject)
 
     }
 }
