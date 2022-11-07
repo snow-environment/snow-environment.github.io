@@ -25,7 +25,7 @@ export async function twoThree() {
     }
 
     // Check for Linux Server CI
-    let isLinuxVMFound = false; // cmdb_ci_hardware
+    let isLinuxVMFound = false; 
     const fieldsVMFound = [
         'name',
         'sys_class_name',

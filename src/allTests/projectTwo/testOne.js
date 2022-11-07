@@ -7,7 +7,7 @@ export async function twoOne() {
     connector.Authenticate();
 
 
-    // Check if user exists
+    // Check if user snow_mid_user exists
     let isUserFound = false; 
     const fieldsUserFound =[
         "user_name"
@@ -18,31 +18,26 @@ export async function twoOne() {
     ];
     const tableData = await connector.getTableData(fieldsUserFound, filtersUserFound, 'sys_user', function (res) { console.log(res) });
     if (tableData.data.result.length > 0) {
-        console.log("Mid user found.")
         isUserFound = true;
     }
 
 
-    // Check if user has the role
+    // Check if user has the role mid_server
     let isRoleAssigned = false;
     const fieldsRoleAssigned = [
         'user',
-        'role',
+        'role'
     ];
     const filtersRoleAssigned = [
-        // Leave empty, XML file for the table sys_user_has_role in ServiceNow returns only SysIDs and not the values of the records
+        'user.first_name=Raymond',
+        'user.last_name=Denton',
+        'role.name=mid_server',
 
     ];
     const roleAssigned = await connector.getTableData(fieldsRoleAssigned, filtersRoleAssigned, 'sys_user_has_role', function (res) {console.log(res)}); 
-    for (let i = 0; i < roleAssigned.data.result.length; i++) {
-        let currentUser = roleAssigned.data.result[i]['user']['display_value'];
-        let currentRole = roleAssigned.data.result[i]['role']['display_value'];
-        if (currentRole == "mid_server" && currentUser == "Raymond Denton") {
-            isRoleAssigned = true;
-            break;
-        }
+    if (roleAssigned.data.result.length > 0) {
+        isRoleAssigned = true;
     }
-
 
     if (isUserFound && isRoleAssigned) {
         return true;
