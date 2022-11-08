@@ -20,7 +20,7 @@ export async function projectThree(ctx) {
 
   allOptions.forEach((btn) =>
   {
-    console.log(btn)
+ 
     btn.classList.remove('clicked')
    
   })
