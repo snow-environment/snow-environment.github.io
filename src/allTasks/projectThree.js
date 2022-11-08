@@ -24,7 +24,7 @@ export async function projectThree(ctx) {
     btn.classList.remove('clicked')
    
   })
-// allWrappers[2] current project menu option.
+
 
   let currentClicked = allOptions[2];
   currentClicked.classList.add('clicked')

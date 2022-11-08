@@ -78,7 +78,7 @@ const welcomePageTemplate = () => html`
         any of the technologies or if you are good at writing documentation, you can check the project page on GitHub or
         get in contact with us:
       </p>
-     </br>
+     
       <li class="technologies"><a class="redirections" href="mailto: aleksander.karastoyanov@doitwise.com" target="_blank">Aleksander Karastoyanov</a></li>
     
       <li class="technologies"><a class="redirections" href="mailto: georgi.balabanov@doitwise.com" target="_blank">Georgi Balabanov</a></li>
