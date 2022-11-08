@@ -12,13 +12,11 @@ const projectThreeTemplate = () => html`
 
 export async function projectThree(ctx) {
 
-    console.log('projectThree')
   ctx.render(projectThreeTemplate());
 
   let allWrappers = document.querySelectorAll('.task-wrapper')
 
   let allOptions = document.querySelectorAll('.options')
-  console.log('before',allOptions)
 
   allOptions.forEach((btn) =>
   {

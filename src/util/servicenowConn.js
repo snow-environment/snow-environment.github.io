@@ -4,7 +4,7 @@ export async function snowConnection(par, par2, par3) {
 
   const sN = new sn(par, par2, par3, true);
   const auth = await sN.Authenticate();
-  console.log('auth file', auth)
+ 
   if (auth.status == 200) {
     return true;
   }

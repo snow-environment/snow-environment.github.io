@@ -161,10 +161,10 @@ const projectTwoTemplate = () => html`
 
 export async function projectTwo(ctx) {
 
-    console.log('projectTwo')
+
   ctx.render(projectTwoTemplate());
   let projectTasks = localData.p2
-  console.log(projectTasks);
+
   let allWrappers = document.querySelectorAll('.task-wrapper')
 
   let allOptions = document.querySelectorAll('.options')
@@ -172,11 +172,10 @@ export async function projectTwo(ctx) {
 
   allOptions.forEach((btn) =>
   {
-    console.log(btn)
+
     btn.classList.remove('clicked')
    
   })
-// allWrappers[1] current project menu option.
 
   let currentClicked = allOptions[1];
   currentClicked.classList.add('clicked')
@@ -184,7 +183,7 @@ export async function projectTwo(ctx) {
   mainContentEl.style.overflow = 'auto'
 
   if (projectTasks.taskOne == true) {
-    console.log('TASK 1 COMPLATED')
+ 
     let completeSection = allWrappers[0];
     let removeBtn = completeSection.getElementsByTagName('button')[0]
 
@@ -193,7 +192,6 @@ export async function projectTwo(ctx) {
     completeSection.querySelector('.validated').style.display = 'block'
   }
   if (projectTasks.taskTwo == true) {
-    console.log('TASK 2 COMPLATED')
     let completeSection = allWrappers[1];
     let removeBtn = completeSection.getElementsByTagName('button')[0]
 
@@ -202,7 +200,6 @@ export async function projectTwo(ctx) {
     completeSection.querySelector('.validated').style.display = 'block'
   }
   if (projectTasks.taskThree == true) {
-    console.log('TASK 3 COMPLATED')
     let completeSection = allWrappers[2];
     let removeBtn = completeSection.getElementsByTagName('button')[0]
 
@@ -215,18 +212,13 @@ export async function projectTwo(ctx) {
     btn.addEventListener('click', onSubmit)
   });
   
-    // validateBtn.addEventListener('click', onSubmit)
+ 
     async function onSubmit(e) {
       e.preventDefault()
       let eTarget = e.target;
-      console.log('V A L I D A T E')
-      //change logic with e target
-      console.log('e target > ',eTarget)
-      console.log('parent',eTarget.parentNode)
+    
       let eParent = eTarget.parentNode;
       let notValidated = eParent.querySelector('.not-validated')
-      console.log('Not validated',notValidated.parentNode);
-      // let notValidated = document.querySelector('.not-validated')
       notValidated.style.display = 'none'
       eTarget.disabled = true;
       eTarget.classList.add('no-hover')
@@ -236,20 +228,16 @@ export async function projectTwo(ctx) {
       let response = ''
       if (eTarget.classList.contains('one')) {
         response = await twoOne()
-        console.log('BTN e 1')
   
       }
       if (eTarget.classList.contains('two')) {
         response = await twoTwo()
-        console.log(response)
-        console.log('BTN e 2')
   
       }
   
-      // -----Activate when oneThree logic is ready!!!!------
+   
       if (eTarget.classList.contains('three')) {
         response = await twoThree()
-        console.log('BTN e 3')
   
       }
   

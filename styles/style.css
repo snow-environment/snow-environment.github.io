@@ -487,9 +487,8 @@ a {
 }
 
 .tech-img {
-  width: 40px;
-  height: 40px;
-  margin: -3px;
+  width: 65px;
+  height: 65px;
 }
 
 .welcome-page {
@@ -516,7 +515,21 @@ a {
 
 .smile {
   font-size: 45px;
-  color: green;
+}
+
+.usage-option {
+  padding-left: 0px;
+}
+
+.v-style {
+  width: 52px;
+  height: 65px;
+}
+
+.github {
+  width: 50px;
+  height: 50px;
+  margin-left: 12px;
 }
 
 @media (min-width: 1320px) and (max-width: 1550px) {

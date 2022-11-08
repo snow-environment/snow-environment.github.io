@@ -42,35 +42,31 @@ const loginPageTemplate = (onSubmit) => html`
 `
 export async function loginPage(ctx) {
 
- 
+
   ctx.render(loginPageTemplate(onSubmit));
   let mainContentEl = document.querySelector('.main-content')
-  mainContentEl.style.background ='#546666'
-  mainContentEl.style.overflow ='hidden'
-mainContentEl.classList.add('login-view')
-  // mainContentEl.style.display.justify-content ='center'
-  
-  // align-items: center;
-  // console.log(mainContentEl)
+  mainContentEl.style.background = '#546666'
+  mainContentEl.style.overflow = 'hidden'
+  mainContentEl.classList.add('login-view')
+
   async function onSubmit(e) {
     e.preventDefault()
 
-    console.log('click')
     let instanceName = document.querySelector('#instanceName').value.trim()
     let instanceUserName = document.querySelector('#instanceUserName').value.trim()
     let instancePassword = document.querySelector('#instance-password').value.trim()
 
-    // Check for empty fields.
+
     if (instanceName.length == 0 || instanceUserName.length == 0 || instancePassword.length == 0) {
       alert('All fields are required!')
     }
-    // All fields are filled up!
+
     else {
       credentials.instName = instanceName;
       credentials.instUserName = instanceUserName;
       credentials.instPassword = instancePassword;
       let btnSubmit = document.querySelector('.submit')
-      console.log(btnSubmit)
+
       btnSubmit.disabled = true;
       btnSubmit.classList.add('no-hover')
       const myTimeout = setTimeout(warning, 5500);
@@ -87,10 +83,10 @@ mainContentEl.classList.add('login-view')
         document.querySelector('#instance-password').value = ''
       }
       let login = await snowConnection(instanceName, instanceUserName, instancePassword);
-      // mainContentEl.style.background ='#e2eff2'
-      console.log(login)
+
+
       if (login) {
-        // mainContentEl.style.background ='rgb(226 239 242);'
+
         ctx.page.redirect('/projects')
       }
       else {

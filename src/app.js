@@ -47,5 +47,13 @@ export let localData = {
   p1:{taskOne:false,taskTwo:false,taskThree:false
   },
   p2:{taskOne:false,taskTwo:false,taskThree:false
+  },
+  p3:{taskOne:false,taskTwo:false,taskThree:false
+  },
+  p4:{taskOne:false,taskTwo:false,taskThree:false
+  },
+  p5:{taskOne:false,taskTwo:false,taskThree:false
+  },
+  p6:{taskOne:false,taskTwo:false,taskThree:false
   }
 }

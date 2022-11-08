@@ -134,7 +134,7 @@ export async function projectOne(ctx) {
     btn.classList.remove('clicked')
 
   })
-// allWrappers[0] current project menu option.
+
 
   let currentClicked = allOptions[0];
   currentClicked.classList.add('clicked')
@@ -143,7 +143,6 @@ export async function projectOne(ctx) {
 
 
   if (projectTasks.taskOne == true) {
-    console.log('TASK 1 COMPLATED')
     let completeSection = allWrappers[0];
     let removeBtn = completeSection.getElementsByTagName('button')[0]
 
@@ -152,7 +151,7 @@ export async function projectOne(ctx) {
     completeSection.querySelector('.validated').style.display = 'block'
   }
   if (projectTasks.taskTwo == true) {
-    console.log('TASK 2 COMPLATED')
+
     let completeSection = allWrappers[1];
     let removeBtn = completeSection.getElementsByTagName('button')[0]
 
@@ -161,7 +160,7 @@ export async function projectOne(ctx) {
     completeSection.querySelector('.validated').style.display = 'block'
   }
   if (projectTasks.taskThree == true) {
-    console.log('TASK 3 COMPLATED')
+
     let completeSection = allWrappers[2];
     let removeBtn = completeSection.getElementsByTagName('button')[0]
 

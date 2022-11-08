@@ -4,6 +4,7 @@ import { render, html } from './lib.js'
 const welcomePageTemplate = () => html`
 <section class="welcome-page">
   <h1 class="welcome-heading">Welcome, Do it Wisers!<span class="smile" >&#9786;</span></h1>
+
   <div class="before-you-start">
   <div class="before-wrapper">
   <p class="before-info">
@@ -16,16 +17,47 @@ const welcomePageTemplate = () => html`
     queries to the CMDB are used to extract the values from the tables/records.
   </p>
 </div>
+<div class="short-description">
+  <h3>How to use app❓</h3>
+  <ul class="usage-option"><p class="before-you-start">⚠️ Before validation of any tasks you should create a <span class="additional-info bold-me">CORS rule</span> in your ServiceNow
+    Instance.</p></ul>
+  <ul class="usage-option"><p> Navigate to <span class="additional-info bold-me">Applications</span> <span class="arrow">&rarr;</span> <span
+    class="additional-info bold-me">System Web Services</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">REST</span> <span class="arrow">&rarr;</span> <span
+    class="additional-info bold-me">CORS Rules</span>.</p></ul>
+  <ul class="usage-option"><p> Create a new rule with the following data:</p></ul>
+  
+  <li class="cors-instructions">Name <span class="arrow">&rarr;</span> Give it a name by your choose.</li>
+  <li class="cors-instructions">REST API <span class="arrow">&rarr;</span> Choose <span class="additional-info bold-me">Table API[now/table]</span> from
+    the dropdown menu.</li>
+  <li class="cors-instructions">Domain <span class="arrow">&rarr;</span> Insert the domain of the Web App <span
+      class="additional-info bold-me">https://snow-environment.github.io</span></li>
+  <li class="cors-instructions">Max age <span class="arrow">&rarr;</span> Leave as <span class="additional-info bold-me">0</span></li>
+  <li class="cors-instructions">Application <span class="arrow">&rarr;</span> Global, by <span class="additional-info bold-me">default</span</li>
+  <li class="cors-instructions">HTTP Methods <span class="arrow">&rarr;</span> Leave GET and POST as set by <span
+      class="additional-info bold-me">default</span</li>
+      <div class="steps-wrapper">
+      <p class="cors-steps">Steps example:</p>
+        <a class="cors-steps-img" href="/img/1.JPG" target="_blank">1</a>
+        <a class="cors-steps-img" href="/img/2.JPG" target="_blank">2</a>
+        <a class="cors-steps-img" href="/img/3.JPG" target="_blank">3</a>
+      </div>
+</div>
     <div class="short-description">
       <h3>Build with 🔧</h3>
       <div class="tech-stack">
         <!-- <p class="all-tech">Technologies:</p> -->
         <div class="tech-wrapper">
-          <img class="tech-img border-me" src="./img/js.png" alt="" > <img class="tech-img border-me plus-r" src="./img/html.png" alt="" ><img class="tech-img border-me plus" src="./img/css2.png" alt=""><img class="tech-img" src="./img/ruby.png" alt="" >
+          <img class="tech-img border-me" src="./img/icons/javascript.svg" alt="JavaScript" title="JavaScript">
+          <img class="tech-img border-me" src="./img/icons/html-5.svg" alt="HTML5" title="HTML5"> 
+          <img class="tech-img border-me" src="./img/icons/css3.svg" alt="CSS3" title="CSS3" >
+          <img class="tech-img border-me" src="./img/icons/icons8-ruby-programming-language.svg" alt="Ruby" title="Ruby">
+
+          <img class="tech-img border-me" src="./img/icons/virtualbox.svg" alt="Oracle VM VirtualBox" title="Oracle VM VirtualBox">
+          <img class="tech-img border-me" src="./img/icons/obsidian_alt_macos_bigsur_icon_189887.ico" alt="Obsidian" title="Obsidian">
+          <img class="tech-img border-me v-style" src="./img/icons/vagrant_original_logo_icon_146314.svg" alt="Vagrant" title="Vagrant">
         </div>
       </div>
-      <!-- <li class="technologies img-icons"> <img src="./img/js.png" alt="" width="30px" height="30px"> <img src="./img/html.png" alt="" width="30px" height="30px"><img src="./img/ruby.png" alt="" width="30px" height="30px" ><img src="./img/css.png" alt="" width="30px" height="30px"></li>
-        <li class="technologies"><a target="_blank" href="https://developer.servicenow.com/dev.do#!/">ServiceNow Developer Portal</a></li> -->
+
 
       <li class="technologies"><a class="redirections" href="https://developer.servicenow.com/dev.do#!/"
           target="_blank">ServiceNow Developer Portal</a></li>
@@ -38,31 +70,22 @@ const welcomePageTemplate = () => html`
       <li class="technologies"><a class="redirections" href="https://obsidian.md/" target="_blank">Obsidian</a></li>
       <li class="technologies"><a class="redirections" href="https://www.vagrantup.com" target="_blank">Vagrant</a></li>
       <span class="additional-info"></span>
-      <div class="short-description">
-        <h3>Usage ❓</h3>
-        <ul class="usage-option"><p class="before-you-start">⚠️ Before validation of any tasks you should create a <span class="additional-info bold-me">CORS rule</span> in your ServiceNow
-          Instance.</p></ul>
-        <ul class="usage-option"><p> Navigate to <span class="additional-info bold-me">Applications</span> <span class="arrow">&rarr;</span> <span
-          class="additional-info bold-me">System Web Services</span> <span class="arrow">&rarr;</span> <span class="additional-info bold-me">REST</span> <span class="arrow">&rarr;</span> <span
-          class="additional-info bold-me">CORS Rules</span>.</p></ul>
-        <ul class="usage-option"><p> Create a new rule with the following data:</p></ul>
-        <li class="cors-instructions">Name <span class="arrow">&rarr;</span> Give it a name by your choose.</li>
-        <li class="cors-instructions">REST API <span class="arrow">&rarr;</span> Choose <span class="additional-info bold-me">Table API[now/table]</span> from
-          the dropdown menu.</li>
-        <li class="cors-instructions">Domain <span class="arrow">&rarr;</span> Insert the domain of the Web App <span
-            class="additional-info bold-me">https://snow-environment.github.io</span></li>
-        <li class="cors-instructions">Max age <span class="arrow">&rarr;</span> Leave as <span class="additional-info bold-me">0</span></li>
-        <li class="cors-instructions">Application <span class="arrow">&rarr;</span> Global, by <span class="additional-info bold-me">default</span</li>
-        <li class="cors-instructions">HTTP Methods <span class="arrow">&rarr;</span> Leave GET and POST as set by <span
-            class="additional-info bold-me">default</span</li>
-            <div class="steps-wrapper">
-            <p class="cors-steps">Steps example:</p>
-              <a class="cors-steps-img" href="/img/1.JPG" target="_blank">1</a>
-              <a class="cors-steps-img" href="/img/2.JPG" target="_blank">2</a>
-              <a class="cors-steps-img" href="/img/3.JPG" target="_blank">3</a>
-            </div>
-      </div>
 
+      <div class="short-description">
+      <h3></br>Contribute to this project 💻</h3>
+      <p>
+        You can be part of the further development and improvement of this project as well. If you are familiar with 
+        any of the technologies or if you are good at writing documentation, you can check the project page on GitHub or
+        get in contact with us:
+      </p>
+     </br>
+      <li class="technologies"><a class="redirections" href="mailto: aleksander.karastoyanov@doitwise.com" target="_blank">Aleksander Karastoyanov</a></li>
+    
+      <li class="technologies"><a class="redirections" href="mailto: georgi.balabanov@doitwise.com" target="_blank">Georgi Balabanov</a></li>
+      
+      <a href="https://github.com/snow-environment/snow-environment.github.io"  target="_blank"><img class="github" alt="GitHub Repo" src="./img/icons/github_square_icon_195795.ico" ></a>
+    
+    </div>
 
     </div>
   </div>
@@ -77,7 +100,7 @@ export async function welcomePage(ctx) {
   mainContentEl.classList.remove('login-view')
   mainContentEl.style.overflow = 'auto';
 
-  console.log(mainContentEl)
+
   ctx.render(welcomePageTemplate());
   let contentEl = document.querySelector('.content')
   let menu = document.querySelector('.menu')
@@ -96,11 +119,8 @@ export async function welcomePage(ctx) {
 
   mainContentEl.style.display = 'block'
   let logOut = document.querySelector('.logout').style.display = 'block'
-  //  let allWrappers = document.querySelectorAll('.task-wrapper')
-  //  console.log('all >',allWrappers)
   let allOptions = document.querySelectorAll('.options')
   allOptions.forEach((btn) => {
-    // btn.addEventListener('click',selected)
     btn.classList.remove('clicked')
 
   })
