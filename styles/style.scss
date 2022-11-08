@@ -415,6 +415,10 @@ a {
     color: white;
     background: #74957b;
     margin-right: 10px;
+    transition: all 0.4s ease-in-out;
+}
+.cors-steps-img:hover{
+    background:#51955f;
 }
 
 .steps-wrapper {
