@@ -82,7 +82,6 @@ input::placeholder {
   background: #abd7abb3;
   margin-top: 30px;
   font-size: 20px;
-  font-family: 'Work Sans', sans-serif;
   font-weight: bold;
 }
 
@@ -183,7 +182,6 @@ label[for="instanceName"] {
           flex-direction: column;
   width: 20%;
   background-color: #74957b;
-  /* border-right: solid 2px black; */
   border-right: solid 2px white;
   display: none;
 }
@@ -422,9 +420,7 @@ a {
 .project-agenda {
   margin-left: 40px;
   font-size: 20px;
-  /* border-bottom: 1px solid green; */
   color: #0d8124;
-  /* border-top: 2px solid #429553; */
   padding-top: 7px;
   padding-bottom: 7px;
   border-bottom: 2px solid #429553;
@@ -436,7 +432,7 @@ a {
 }
 
 .cors-steps-img {
-  padding: 10px 14px 10px 14px;
+  padding: 10px 14px 8px 14px;
   border: 1px solid #d9c8c800;
   border-radius: 20px;
   color: white;
@@ -594,12 +590,12 @@ a {
     letter-spacing: 2px;
     padding: 17px;
   }
-  .snLogo {
+  .options .snLogo {
     width: 180px;
   }
 }
 
-@media all and (max-width: 830px) {
+@media all and (max-width: 1080px) and (max-width: 830px) {
   .options {
     font-size: 0.7rem;
     letter-spacing: 1px;
