@@ -82,5 +82,5 @@ npm install servicenow-rest-api
 
 
 ### Contact :mailbox: 
- * Aleksandar Karastoyanov - [LinkedIn](https://www.linkedin.com/in/aleksandar-karastoyanov/) - karastoqnov.alexandar@gmail.com
- * Georgi Balabanov - [LinkedIn](https://www.linkedin.com/in/georgi-balabanov-366501210/) - 
+ * Aleksandar Karastoyanov - [LinkedIn](https://www.linkedin.com/in/aleksandar-karastoyanov/) - aleksander.karastoyanov@doitwise.com
+ * Georgi Balabanov - [LinkedIn](https://www.linkedin.com/in/georgi-balabanov-366501210/) - georgi.balabanov@doitwise.com
