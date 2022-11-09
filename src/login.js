@@ -25,13 +25,13 @@ const loginPageTemplate = (onSubmit) => html`
 
                 
               <label for="instanceName">Instance Name:</label>
-              <input type="text" id="instanceName" name="instanceName" class="light-me-up" value="dev109438" placeholder="dev123456"/>
+              <input type="text" id="instanceName" name="instanceName" class="light-me-up" placeholder="dev123456"/>
 
               <label for="instanceUserName">Instance User Name:</label>
-              <input type="text" id="instanceUserName" name="instanceUserName" class="light-me-up" value="admin" placeholder="admin"/>
+              <input type="text" id="instanceUserName" name="instanceUserName" class="light-me-up" placeholder="admin"/>
 
               <label for="instance-pass">Instance Password:</label>
-              <input type="password" id="instance-password" name="instance-password" class="light-me-up" value="LrmsjVJB@8^3" placeholder="***********"/>
+              <input type="password" id="instance-password" name="instance-password" class="light-me-up" placeholder="***********"/>
               <input type="submit" class="btn submit" value="Sign In" />
          
             </div>

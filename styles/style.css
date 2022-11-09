@@ -214,7 +214,6 @@ label[for="instanceName"] {
   opacity: 0;
   font-size: 20px;
   color: red;
-  font-weight: bolder;
   letter-spacing: 0.5px;
 }
 
@@ -571,12 +570,18 @@ a {
   .project-agenda {
     font-size: 18px;
   }
+  .error-msg {
+    font-size: 18px;
+  }
 }
 
 @media all and (max-width: 1319px) {
   .options {
     font-size: 0.9rem;
     letter-spacing: 3px;
+  }
+  .logout {
+    font-size: 17px;
   }
   .validate-task-btn {
     font-size: 1rem;
@@ -586,7 +591,10 @@ a {
     font-size: 16px;
   }
   .currentInstance {
-    font-size: 18px;
+    font-size: 17px;
+  }
+  .error-msg {
+    font-size: 20px;
   }
 }
 
