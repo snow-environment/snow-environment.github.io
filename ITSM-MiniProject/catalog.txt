@@ -1,0 +1,22 @@
+1. Create new catalog
+    -Name: "ACME Award System"
+    -Manager: System Administrator
+    -Editors: Luke Wilson
+    -Description: ACME Award System Catalog
+2. Create the following categories:
+    -Electronics
+        -Smartwatches
+        -Smartphones
+        -Tech Accesories
+    -Home
+        -Lighting
+        -Kitchen
+        -Garden
+    -Sports
+        -Bicycle
+        -Running
+        -Winter sports
+    -Accesories
+        -Glasses
+        -Bags
+        -Watches
