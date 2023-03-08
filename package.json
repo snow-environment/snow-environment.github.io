@@ -21,6 +21,7 @@
   "dependencies": {
     "lit-html": "^2.4.0",
     "page": "^1.11.6",
+    "servicenow-rest-api": "^1.2.2",
     "servicenow-rest-api-with-promise": "^1.0.5"
   }
 }
