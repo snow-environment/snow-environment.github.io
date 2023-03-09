@@ -1,0 +1,7 @@
+New group created
+
+Name: Leasure Team
+Manager: John Doe
+Members: Abel Hunter
+Description: Approval Group for ACME Award System Catalog
+Email: leisure@example.com

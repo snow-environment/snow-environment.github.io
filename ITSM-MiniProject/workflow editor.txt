@@ -1,0 +1,5 @@
+Create New Workflow
+
+Name: ACME Award Workflow
+Table: Requested Item (sc_req_item)
+Description: Workflow to manage ACME Awards Catalog
