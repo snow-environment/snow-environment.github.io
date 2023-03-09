@@ -6,3 +6,8 @@ const ServiceNow = new client(
   "LrmsjVJB@8^3",
 );
 ServiceNow.Authenticate();
+
+// Verify for a specific Workflow if exists - wf_workflow_version table
+ServiceNow.getSampleData("wf_workflow_version", (res) => {
+  console.log(res);
+});
