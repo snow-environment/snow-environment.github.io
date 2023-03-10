@@ -8,6 +8,20 @@ const ServiceNow = new client(
 ServiceNow.Authenticate();
 
 // Verify for a specific Workflow if exists - wf_workflow_version table
-ServiceNow.getSampleData("wf_workflow_version", (res) => {
-  console.log(res);
-});
+const workflow_item_fields = [
+  "name",
+];
+
+const workflow_item_filters = [
+  "name=ACME Award Workflow",
+];
+
+const findWorkflowItem = ServiceNow.getTableData(
+  workflow_item_fields,
+  workflow_item_filters,
+  "wf_workflow_version",
+  function (res) {
+    console.log(res);
+  },
+);
+console.log(findWorkflowItem);
