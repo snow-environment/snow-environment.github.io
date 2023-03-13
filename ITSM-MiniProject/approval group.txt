@@ -1,5 +1,6 @@
 New group created
 
+
 Name: Leasure Team
 Manager: John Doe
 Members: Abel Hunter
