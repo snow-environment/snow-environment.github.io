@@ -23,7 +23,11 @@ const findWorkflowItem = ServiceNow.getTableData(
   workflow_item_filters,
   "wf_workflow_version",
   function (res) {
-    console.log(res);
+    // console.log(res);
+    console.log(res[0]);
+    for (const key in res[0]) { // Iterate inside the Object to extract key-value pairs data
+      console.log(`${key} : ${res[0]}`);
+    }
   },
 );
 console.log(findWorkflowItem);
