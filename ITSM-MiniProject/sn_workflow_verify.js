@@ -10,6 +10,8 @@ ServiceNow.Authenticate();
 // Verify for a specific Workflow if exists - wf_workflow_version table
 const workflow_item_fields = [
   "name",
+  "description",
+  "activity_stages",
 ];
 
 const workflow_item_filters = [
