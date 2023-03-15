@@ -124,5 +124,7 @@ export async function welcomePage(ctx) {
     btn.classList.remove('clicked')
 
   })
+//  let itomProject = document.querySelector('.itom-projects').addEventListener('click',)
+//  let itsmProject = document.querySelector('.itsm-projects').addEventListener('click',)
 
 }

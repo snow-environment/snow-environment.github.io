@@ -9,6 +9,8 @@ import { projectThree } from './allTasks/projectThree.js'
 import { projectFour } from './allTasks/projectFour.js'
 import { projectFive } from './allTasks/projectFive.js'
 import { projectSix } from './allTasks/projectSix.js'
+
+import { middleWarePage } from './middle-ware.js'
 const root = document.querySelector('.main-content')
  export const credentials ={
    instName:'',
@@ -22,6 +24,8 @@ page('/',loginPage)
 
 page('/login',loginPage)
 page('/projects',welcomePage)
+page('/middle-ware',middleWarePage)
+
 page('/projects/1',projectOne)
 page('/projects/2',projectTwo)
 page('/projects/3',projectThree)
@@ -29,6 +33,7 @@ page('/projects/4',projectFour)
 page('/projects/5',projectFive)
 page('/projects/6',projectSix)
 
+page('/projects/itsm',welcomePage)
 
 page.start()
 

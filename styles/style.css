@@ -616,4 +616,73 @@ a {
     padding: 15px 0px 15px 0px;
   }
 }
+
+.itom-projects-options {
+  display: none;
+}
+
+.itsm-project-options {
+  display: none;
+}
+
+.middle-ware {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #14131352;
+}
+
+.project-cards {
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.project-cards > div:hover {
+  -webkit-transition: 1.25s;
+  transition: 1.25s;
+  cursor: pointer;
+  background: #66df66c5;
+  -webkit-box-shadow: 0px 0px 30px 0px #66df66;
+          box-shadow: 0px 0px 30px 0px #66df66;
+  border: 7px solid #fafbfa88;
+}
+
+.project-cards > div {
+  width: 24%;
+  margin: 0 auto;
+  height: 160px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  padding: -4px;
+  background-color: #377669;
+  border: 7px solid #fafbfabf;
+}
+
+.cards-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  color: white;
+  width: 100%;
+  margin: 0px;
+  background: #293e408a;
+}
 /*# sourceMappingURL=style.css.map */

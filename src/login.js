@@ -25,10 +25,10 @@ const loginPageTemplate = (onSubmit) => html`
 
                 
               <label for="instanceName">Instance Name:</label>
-              <input type="text" id="instanceName" name="instanceName" class="light-me-up" placeholder="dev123456"/>
+              <input type="text" id="instanceName" name="instanceName" class="light-me-up" placeholder="dev123456" />
 
               <label for="instanceUserName">Instance User Name:</label>
-              <input type="text" id="instanceUserName" name="instanceUserName" class="light-me-up" placeholder="admin"/>
+              <input type="text" id="instanceUserName" name="instanceUserName" class="light-me-up" placeholder="admin" />
 
               <label for="instance-pass">Instance Password:</label>
               <input type="password" id="instance-password" name="instance-password" class="light-me-up" placeholder="***********"/>
@@ -87,7 +87,8 @@ export async function loginPage(ctx) {
 
       if (login) {
 
-        ctx.page.redirect('/projects')
+        // ctx.page.redirect('/projects')
+        ctx.page.redirect('/middle-ware')
       }
       else {
         warning();
