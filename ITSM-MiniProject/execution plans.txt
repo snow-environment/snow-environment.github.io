@@ -1,0 +1,37 @@
+All -> Catalog Administration -> Execution Plans > NEW
+Name: ACME Award System
+Description: Fulfillment Process for ACME Award System Catalog
+
+Create New Approval Steps:
+Step 1.
+Name: Submitted
+Order: 100
+Delivery time: 1 day
+Short description: Request is created
+Approval: Leisure Team
+
+Step 2.
+Name: Preparation
+Order: 200
+Delivery time: 1 day
+Short description: Set Assignee
+Approval: Leisure Team
+
+Step 3.
+Name: Shipped
+Order: 300
+Delivery time: 2 days
+Short description: The item is delivered
+Approval: Leisure Team
+
+Step 4.
+Name: Completed
+Order: 400
+Delivery time: 1 day
+Short description: The request is completed
+Approval: Dynamically Set as Script
+(function manager_as_approver () {
+	var request = current.request_item.request;
+	var rc = request.requested_for.manager;
+	return rc;
+})();
