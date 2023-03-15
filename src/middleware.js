@@ -36,5 +36,10 @@ export async function middleWarePage(ctx) {
   mainContentEl.style.overflow = 'hidden'
   mainContentEl.classList.add('login-view')
 
-
+  let itomCard = document.querySelector('.itom-card').addEventListener('click',()=>{
+    ctx.page.redirect('/itom')
+  })
+  let itsmCard = document.querySelector('.itsm-card').addEventListener('click',()=>{
+    ctx.page.redirect('/itsm')
+  })
 }
