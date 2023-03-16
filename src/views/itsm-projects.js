@@ -1,7 +1,7 @@
 
 import { credentials } from '../app.js'
 import { render, html } from '../lib.js'
-const itomPageTemplate = () => html`
+const itsmPageTemplate = () => html`
 <section class="welcome-page">
   <h1 class="welcome-heading">Welcome, Do It Wisers!<span class="smile" >&#9786;</span></h1>
 
@@ -94,7 +94,7 @@ const itomPageTemplate = () => html`
 `
 
 
-export async function itomPage(ctx) {
+export async function itsmPage(ctx) {
     
 
   let mainContentEl = document.getElementById('main-a')
@@ -103,7 +103,7 @@ export async function itomPage(ctx) {
   mainContentEl.style.overflow = 'auto';
 
 
-  ctx.render(itomPageTemplate());
+  ctx.render(itsmPageTemplate());
   let contentEl = document.querySelector('.content')
   let menu = document.querySelector('.menu')
   let currentInstance = document.querySelector('.currentInstance').innerHTML = `Current instance: <span class="color-instance">${credentials.instName}</span>`
@@ -121,12 +121,12 @@ export async function itomPage(ctx) {
 
   mainContentEl.style.display = 'block'
   let logOut = document.querySelector('.logout').style.display = 'block'
-  let itomProjectOptions = document.querySelector('.itom-projects-options')
-
-  itomProjectOptions.style.display ="block"
-  // let projectOptions = document.querySelector('.project-options').style.display='none'
+  let itsmProjectOptions = document.querySelector('.itsm-project-options')
+  console.log(itsmProjectOptions)
+  itsmProjectOptions.style.display ="block"
+  let projectOptions = document.querySelector('.project-options').style.display='none'
   
- 
+ let itomProjects = document.querySelector('.itom-projects-options').style.display='none'
 
   let allOptions = document.querySelectorAll('.options')
   allOptions.forEach((btn) => {
