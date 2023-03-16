@@ -685,4 +685,14 @@ a {
   margin: 0px;
   background: #293e408a;
 }
+
+.project-title {
+  background: #377669;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid;
+  color: white;
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */
