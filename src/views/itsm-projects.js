@@ -124,7 +124,7 @@ export async function itsmPage(ctx) {
   let itsmProjectOptions = document.querySelector('.itsm-project-options')
   console.log(itsmProjectOptions)
   itsmProjectOptions.style.display ="block"
-  let projectOptions = document.querySelector('.project-options').style.display='none'
+  // let projectOptions = document.querySelector('.project-options').style.display='none'
   
  let itomProjects = document.querySelector('.itom-projects-options').style.display='none'
 

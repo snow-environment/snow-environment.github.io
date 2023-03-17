@@ -13,6 +13,7 @@ import { projectSix } from './allTasks/projectSix.js'
 import { middleWarePage } from './middleware.js'
 import { itomPage } from './views/itom-projects.js'
 import { itsmPage } from './views/itsm-projects.js'
+import { itsmProjectOne } from './allTasks/itsmProjects/itsmProjectOne.js'
 const root = document.querySelector('.main-content')
  export const credentials ={
    instName:'',
@@ -30,6 +31,7 @@ page('/projects',middleWarePage)
 
 page('/itom',itomPage)
 page('/itsm',itsmPage)
+page('/itsm/1',itsmProjectOne)
 
 
 page('/itom/1',projectOne)
