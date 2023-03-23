@@ -122,8 +122,10 @@ export async function itomPage(ctx) {
   mainContentEl.style.display = 'block'
   let logOut = document.querySelector('.logout').style.display = 'block'
   let itomProjectOptions = document.querySelector('.itom-projects-options')
+  let itsmProjectOptions = document.querySelector('.itsm-project-options')
 
   itomProjectOptions.style.display ="block"
+  itsmProjectOptions.style.display ='none'
   // let projectOptions = document.querySelector('.project-options').style.display='none'
   
  

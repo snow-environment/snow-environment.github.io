@@ -191,6 +191,9 @@ label[for="instanceName"] {
 
     height: 100%;
     background: #293e40;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
 }
 
@@ -695,3 +698,7 @@ a {
 }
 
 
+.back-btn{
+    background-color: #74957b; 
+    border-top: solid 1px white;
+}
