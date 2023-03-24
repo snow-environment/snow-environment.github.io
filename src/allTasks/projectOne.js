@@ -174,6 +174,7 @@ export async function projectOne(ctx) {
   let validateButtons = document.querySelectorAll('.validate-task-btn').forEach(btn => {
     btn.addEventListener('click', onSubmit)
   });
+ 
   let mainContentEl = document.querySelector('.main-content')
   mainContentEl.style.overflow = 'auto'
 

@@ -1,4 +1,7 @@
+import { oneOne } from '../../allTests/ITSM_Projects/projectOne/testOne.js';
 import { render, html } from '../../lib.js'
+import { validation } from '../../util/validate.js';
+
 const itsmProjectOneTemplate = () => html`
 
 <section class="projectOne">
@@ -141,7 +144,7 @@ const itsmProjectOneTemplate = () => html`
     
     </ul>
     <div class="button-wrapper">
-      <button  class="validate-task-btn three">
+      <button  class="validate-task-btn one">
           Validate
         </button>
         <p class="not-validated">Requirements are not complete!</p>
@@ -177,9 +180,48 @@ for (let index = 0; index < taskWrappers.length - 1; index++) {
   taskWrappers[index].style.borderBottom ='none'
   
 }
-  console.log(allOptions)
+let validateButtons = document.querySelectorAll('.validate-task-btn')
+console.log(validateButtons)
 
-  // let currentClicked = allOptions[0];
-  // currentClicked.classList.add('clicked')
-  // console.log(currentClicked)
+validateButtons.forEach(btn => {
+  btn.addEventListener('click', onSubmit)
+});
+
+  async function onSubmit(e) {
+    e.preventDefault()
+    console.log('clicked')
+    let eTarget = e.target;
+    console.log(eTarget)
+    let eParent = eTarget.parentNode;
+    let notValidated = eParent.querySelector('.not-validated')
+console.log(notValidated)
+    notValidated.style.display = 'none'
+    eTarget.disabled = true;
+    eTarget.classList.add('no-hover')
+    eTarget.classList.add('grey-me')
+eTarget.textContent = 'Processing..'
+
+    let response = ''
+    if (eTarget.classList.contains('one')) {
+      response = await oneOne()
+   
+ console.log('contains one')
+
+    }
+    validation(response, eTarget, notValidated, 'p1')
+
+
+    
+
+
+
+
+
+
+//     // completeCheck(projectTasks,currentClicked)
+
+//   }
 }
+}
+//todo
+// test oneOne returning true.
