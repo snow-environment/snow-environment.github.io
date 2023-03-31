@@ -24,13 +24,13 @@ const loginPageTemplate = (onSubmit) => html`
             <p class="error-msg">Please provide working instance and correct credentials!</p>
 
                 
-            <input type="text" id="instanceName" name="instanceName" class="light-me-up" placeholder="dev123456" value="dev163343"/>
+            <input type="text" id="instanceName" name="instanceName" class="light-me-up" placeholder="dev123456" value="dev109438"/>
 
             <label for="instanceUserName">Instance User Name:</label>
             <input type="text" id="instanceUserName" name="instanceUserName" class="light-me-up" placeholder="admin" value="admin"/>
 
             <label for="instance-pass">Instance Password:</label>
-            <input type="password" id="instance-password" name="instance-password" class="light-me-up" placeholder="***********" value="s5^h8DOfHdhTChK$"/>
+            <input type="password" id="instance-password" name="instance-password" class="light-me-up" placeholder="***********" value="LrmsjVJB@8^3"/>
               <input type="submit" class="btn submit" value="Sign In" />
          
             </div>
